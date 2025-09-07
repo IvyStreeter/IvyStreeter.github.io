@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.1 SetUp | Perpetually trying to remember what I forgot</title>
-  <meta name="description" content="5.1 SetUp | Perpetually trying to remember what I forgot" />
+  <title>Chapter 1 Journal Club | Perpetually trying to remember what I forgot</title>
+  <meta name="description" content="Chapter 1 Journal Club | Perpetually trying to remember what I forgot" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.1 SetUp | Perpetually trying to remember what I forgot" />
+  <meta property="og:title" content="Chapter 1 Journal Club | Perpetually trying to remember what I forgot" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.1 SetUp | Perpetually trying to remember what I forgot" />
+  <meta name="twitter:title" content="Chapter 1 Journal Club | Perpetually trying to remember what I forgot" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-science.html"/>
-<link rel="next" href="statistical-inference.html"/>
+<link rel="prev" href="ivys-digital-garden.html"/>
+<link rel="next" href="immunology.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -461,135 +461,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="setup" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> SetUp<a href="setup.html#setup" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Information about set up:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="setup.html#cb1-1" tabindex="-1"></a>xfun<span class="sc">::</span><span class="fu">session_info</span>(<span class="fu">c</span>(<span class="st">&quot;bookdown&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;xfun&quot;</span>),</span>
-<span id="cb1-2"><a href="setup.html#cb1-2" tabindex="-1"></a>    <span class="at">dependencies =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<pre><code>## R version 4.5.0 (2025-04-11)
-## Platform: aarch64-apple-darwin20
-## Running under: macOS Sequoia 15.5
-## 
-## Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-## 
-## Package version:
-##   bookdown_0.43  knitr_1.50     rmarkdown_2.29 xfun_0.52     
-## 
-## Pandoc version: 3.6.4</code></pre>
-<div id="how-to-setup-vscode" class="section level3 unnumbered hasAnchor">
-<h3>How to setup VSCode<a href="setup.html#how-to-setup-vscode" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>About my system. This is what I’m using and how I set up my system. The average user I believe will need 24 GB of memory and a CPU greater than an intel i7 with 8+ cores for GPU and CPU. Storage is more of a preference as cloud storage is always available for purchase. For machine learning, it is recommended to have NVIDIA GPU. If you don’t have one, Google Colab is an alternative platform to these limits.</p>
-<ul>
-<li>MacBook Pro</li>
-<li>48 GB</li>
-<li>14-core CPU</li>
-<li>20-core GPU</li>
-</ul>
-<p>I run R in VSCode</p>
-<p>Check for home updates and update if needed.</p>
-<p>Install Homebrew</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="setup.html#cb3-1" tabindex="-1"></a><span class="ex">/bin/bash</span> <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
-<p>Update Homebrew</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="setup.html#cb4-1" tabindex="-1"></a><span class="ex">brew</span> update</span>
-<span id="cb4-2"><a href="setup.html#cb4-2" tabindex="-1"></a><span class="ex">brew</span> doctor</span></code></pre></div>
-<p>updated command line tools</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="setup.html#cb5-1" tabindex="-1"></a><span class="fu">sudo</span> rm <span class="at">-rf</span> /Library/Developer/CommandLineTools</span>
-<span id="cb5-2"><a href="setup.html#cb5-2" tabindex="-1"></a><span class="fu">sudo</span> xcode-select <span class="at">--install</span></span></code></pre></div>
-<p>Install mamba from the miniforge relseases and downloaded the latest arm64.sh</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="setup.html#cb6-1" tabindex="-1"></a><span class="bu">cd</span> ~/Downloads</span>
-<span id="cb6-2"><a href="setup.html#cb6-2" tabindex="-1"></a><span class="fu">chmod</span> +x Miniforge3-24.11.3-2-MacOSX-arm64</span>
-<span id="cb6-3"><a href="setup.html#cb6-3" tabindex="-1"></a><span class="ex">./Miniforge3-24.11.3-2-MacOSX-arm64</span></span>
-<span id="cb6-4"><a href="setup.html#cb6-4" tabindex="-1"></a><span class="ex">conda</span> install mamba <span class="at">-n</span> base <span class="at">-c</span> conda-forge</span>
-<span id="cb6-5"><a href="setup.html#cb6-5" tabindex="-1"></a><span class="ex">mamba</span> shell init <span class="at">-s</span> zsh <span class="at">-p</span> ~/miniforge3</span>
-<span id="cb6-6"><a href="setup.html#cb6-6" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="setup.html#cb6-7" tabindex="-1"></a><span class="bu">export</span> <span class="va">MAMBA_ROOT_PREFIX</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/miniforge3&quot;</span></span>
-<span id="cb6-8"><a href="setup.html#cb6-8" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/miniforge3/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
-<span id="cb6-9"><a href="setup.html#cb6-9" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span>
-<span id="cb6-10"><a href="setup.html#cb6-10" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="setup.html#cb6-11" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="setup.html#cb6-12" tabindex="-1"></a><span class="fu">which</span> mamba</span>
-<span id="cb6-13"><a href="setup.html#cb6-13" tabindex="-1"></a><span class="ex">mamba</span> <span class="at">--version</span></span></code></pre></div>
-<p>Python</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="setup.html#cb7-1" tabindex="-1"></a><span class="ex">mamba</span> install python=3.11</span>
-<span id="cb7-2"><a href="setup.html#cb7-2" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre></div>
-<p>Git</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="setup.html#cb8-1" tabindex="-1"></a><span class="ex">brew</span> install git</span>
-<span id="cb8-2"><a href="setup.html#cb8-2" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div>
-<p>VSCode</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="setup.html#cb9-1" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> visual-studio-code</span>
-<span id="cb9-2"><a href="setup.html#cb9-2" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> /Applications/Visual\ Studio\ Code.app</span></code></pre></div>
-<p>R and RStudio</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="setup.html#cb10-1" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> r</span>
-<span id="cb10-2"><a href="setup.html#cb10-2" tabindex="-1"></a><span class="ex">R</span> <span class="at">--version</span></span>
-<span id="cb10-3"><a href="setup.html#cb10-3" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="setup.html#cb10-4" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> rstudio</span>
-<span id="cb10-5"><a href="setup.html#cb10-5" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> visual-studio-code</span></code></pre></div>
-<p>pipx</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="setup.html#cb11-1" tabindex="-1"></a><span class="ex">mamba</span> install pipx <span class="at">-c</span> conda-forge</span>
-<span id="cb11-2"><a href="setup.html#cb11-2" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="setup.html#cb11-3" tabindex="-1"></a><span class="ex">pipx</span> ensurepath</span>
-<span id="cb11-4"><a href="setup.html#cb11-4" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span>
-<span id="cb11-5"><a href="setup.html#cb11-5" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="setup.html#cb11-6" tabindex="-1"></a><span class="ex">pipx</span> <span class="at">--version</span></span>
-<span id="cb11-7"><a href="setup.html#cb11-7" tabindex="-1"></a><span class="ex">pipx</span> install radian</span>
-<span id="cb11-8"><a href="setup.html#cb11-8" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$HOME</span><span class="st">/.local/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
-<span id="cb11-9"><a href="setup.html#cb11-9" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span></code></pre></div>
-<p>verify if it works</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="setup.html#cb12-1" tabindex="-1"></a><span class="fu">which</span> radian</span>
-<span id="cb12-2"><a href="setup.html#cb12-2" tabindex="-1"></a><span class="fu">file</span> <span class="va">$(</span><span class="fu">which</span> radian<span class="va">)</span></span></code></pre></div>
-<p>install R extensions on VSCode and these packages</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="setup.html#cb13-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;languageserver&quot;</span>, <span class="st">&quot;httpgd&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;data.table&quot;</span>,</span>
-<span id="cb13-2"><a href="setup.html#cb13-2" tabindex="-1"></a>    <span class="st">&quot;jsonlite&quot;</span>, <span class="st">&quot;rmarkdown&quot;</span>))</span></code></pre></div>
-</div>
-<div id="weird-behaviors" class="section level3 unnumbered hasAnchor">
-<h3>Weird behaviors:<a href="setup.html#weird-behaviors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>mabma would return a weird wrapper when called:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="setup.html#cb14-1" tabindex="-1"></a><span class="fu">mamba ()</span> <span class="kw">{</span></span>
-<span id="cb14-2"><a href="setup.html#cb14-2" tabindex="-1"></a>    <span class="ex">__mamba_wrap</span> <span class="st">&quot;</span><span class="va">$@</span><span class="st">&quot;</span></span>
-<span id="cb14-3"><a href="setup.html#cb14-3" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div>
-<p>to fix this I replaced the set up in .zshrc:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="setup.html#cb15-1" tabindex="-1"></a><span class="co"># &gt;&gt;&gt; mamba initialize &gt;&gt;&gt;</span></span>
-<span id="cb15-2"><a href="setup.html#cb15-2" tabindex="-1"></a><span class="bu">export</span> <span class="va">MAMBA_EXE</span><span class="op">=</span><span class="st">&quot;/Users/ivy/miniforge3/bin/mamba&quot;</span></span>
-<span id="cb15-3"><a href="setup.html#cb15-3" tabindex="-1"></a><span class="bu">export</span> <span class="va">MAMBA_ROOT_PREFIX</span><span class="op">=</span><span class="st">&quot;/Users/ivy/miniforge3&quot;</span></span>
-<span id="cb15-4"><a href="setup.html#cb15-4" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">&quot;/Users/ivy/miniforge3/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></span>
-<span id="cb15-5"><a href="setup.html#cb15-5" tabindex="-1"></a></span>
-<span id="cb15-6"><a href="setup.html#cb15-6" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="ot">-x</span> <span class="st">&quot;</span><span class="va">$MAMBA_EXE</span><span class="st">&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb15-7"><a href="setup.html#cb15-7" tabindex="-1"></a>  <span class="va">__mamba_setup</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$(</span><span class="st">&quot;</span><span class="va">$MAMBA_EXE</span><span class="st">&quot;</span> shell hook <span class="at">--shell</span> zsh <span class="at">--root-prefix</span> <span class="st">&quot;</span><span class="va">$MAMBA_ROOT_PREFIX</span><span class="st">&quot;</span> <span class="dv">2</span><span class="op">&gt;</span> /dev/null<span class="va">)</span><span class="st">&quot;</span></span>
-<span id="cb15-8"><a href="setup.html#cb15-8" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="va">$?</span> <span class="ot">-eq</span> 0 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
-<span id="cb15-9"><a href="setup.html#cb15-9" tabindex="-1"></a>    <span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$__mamba_setup</span><span class="st">&quot;</span></span>
-<span id="cb15-10"><a href="setup.html#cb15-10" tabindex="-1"></a>  <span class="cf">else</span></span>
-<span id="cb15-11"><a href="setup.html#cb15-11" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;⚠️ Warning: Mamba shell hook failed to initialize&quot;</span></span>
-<span id="cb15-12"><a href="setup.html#cb15-12" tabindex="-1"></a>    <span class="bu">alias</span> mamba=<span class="st">&quot;</span><span class="va">$MAMBA_EXE</span><span class="st">&quot;</span></span>
-<span id="cb15-13"><a href="setup.html#cb15-13" tabindex="-1"></a>  <span class="cf">fi</span></span>
-<span id="cb15-14"><a href="setup.html#cb15-14" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb15-15"><a href="setup.html#cb15-15" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;⚠️ Warning: Mamba not found at </span><span class="va">$MAMBA_EXE</span><span class="st">&quot;</span></span>
-<span id="cb15-16"><a href="setup.html#cb15-16" tabindex="-1"></a>  <span class="bu">alias</span> mamba=<span class="st">&quot;</span><span class="va">$MAMBA_EXE</span><span class="st">&quot;</span></span>
-<span id="cb15-17"><a href="setup.html#cb15-17" tabindex="-1"></a><span class="cf">fi</span></span>
-<span id="cb15-18"><a href="setup.html#cb15-18" tabindex="-1"></a><span class="co"># &lt;&lt;&lt; mamba initialize &lt;&lt;&lt;</span></span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="setup.html#cb16-1" tabindex="-1"></a><span class="co"># reloaded </span></span>
-<span id="cb16-2"><a href="setup.html#cb16-2" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span>
-<span id="cb16-3"><a href="setup.html#cb16-3" tabindex="-1"></a><span class="bu">exec</span> zsh  <span class="co"># or just restart your terminal</span></span>
-<span id="cb16-4"><a href="setup.html#cb16-4" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="setup.html#cb16-5" tabindex="-1"></a><span class="co"># next checked output</span></span>
-<span id="cb16-6"><a href="setup.html#cb16-6" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$MAMBA_EXE</span></span>
-<span id="cb16-7"><a href="setup.html#cb16-7" tabindex="-1"></a><span class="fu">which</span> mamba</span>
-<span id="cb16-8"><a href="setup.html#cb16-8" tabindex="-1"></a><span class="bu">type</span> mamba</span>
-<span id="cb16-9"><a href="setup.html#cb16-9" tabindex="-1"></a><span class="ex">mamba</span> <span class="at">--version</span></span></code></pre></div>
-<ul>
-<li>$MAMBA_EXE → /Users/ivy/miniforge3/bin/mamba</li>
-<li>which mamba → /Users/ivy/miniforge3/bin/mamba</li>
-<li>type mamba → mamba is /Users/ivy/miniforge3/bin/mamba (no function)</li>
-</ul>
-<p>and the wrapper was removed when i typed mamba</p>
-</div>
+<div id="journal-club" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Journal Club<a href="journal-club.html#journal-club" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Keeping up to date with latest literature and connecting recent advances in biotech.</p>
+<p>Coming soon</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-science.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistical-inference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ivys-digital-garden.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="immunology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
