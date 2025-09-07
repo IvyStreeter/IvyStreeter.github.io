@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 CS50 | Ivy’s Digital Garden</title>
-  <meta name="description" content="Chapter 1 CS50 | Ivy’s Digital Garden" />
+  <title>4.4 CS50 | Perpetually trying to remember what I forgot</title>
+  <meta name="description" content="4.4 CS50 | Perpetually trying to remember what I forgot" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 CS50 | Ivy’s Digital Garden" />
+  <meta property="og:title" content="4.4 CS50 | Perpetually trying to remember what I forgot" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 CS50 | Ivy’s Digital Garden" />
+  <meta name="twitter:title" content="4.4 CS50 | Perpetually trying to remember what I forgot" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="weird-behaviors.html"/>
-<link rel="next" href="introduction.html"/>
+<link rel="prev" href="bayesian-statistics.html"/>
+<link rel="next" href="deep-learning-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -123,7 +123,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
-<link rel="stylesheet" href="custom.css" type="text/css" />
 </head>
 
 <body>
@@ -136,70 +135,313 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="about-the-digital-garden.html"><a href="about-the-digital-garden.html"><i class="fa fa-check"></i>About the Digital Garden</a>
+<li class="chapter" data-level="" data-path="ivys-digital-garden.html"><a href="ivys-digital-garden.html"><i class="fa fa-check"></i>Ivy’s Digital Garden</a></li>
+<li class="chapter" data-level="1" data-path="immunology.html"><a href="immunology.html"><i class="fa fa-check"></i><b>1</b> Immunology</a></li>
+<li class="chapter" data-level="2" data-path="protein-engineering.html"><a href="protein-engineering.html"><i class="fa fa-check"></i><b>2</b> Protein Engineering</a></li>
+<li class="chapter" data-level="3" data-path="sequencing.html"><a href="sequencing.html"><i class="fa fa-check"></i><b>3</b> Sequencing</a></li>
+<li class="chapter" data-level="4" data-path="data-science.html"><a href="data-science.html"><i class="fa fa-check"></i><b>4</b> Data Science</a>
 <ul>
-<li class="chapter" data-level="" data-path="about-me.html"><a href="about-me.html"><i class="fa fa-check"></i>About me</a></li>
+<li class="chapter" data-level="4.1" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>4.1</b> SetUp</a>
+<ul>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#how-to-setup-vscode"><i class="fa fa-check"></i>How to setup VSCode</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#weird-behaviors"><i class="fa fa-check"></i>Weird behaviors:</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>SetUp</a>
+<li class="chapter" data-level="4.2" data-path="statistical-inference.html"><a href="statistical-inference.html"><i class="fa fa-check"></i><b>4.2</b> Statistical Inference:</a>
 <ul>
-<li class="chapter" data-level="" data-path="how-to-setup-vscode.html"><a href="how-to-setup-vscode.html"><i class="fa fa-check"></i>How to setup VSCode</a></li>
-<li class="chapter" data-level="" data-path="weird-behaviors.html"><a href="weird-behaviors.html"><i class="fa fa-check"></i>Weird behaviors:</a></li>
+<li class="chapter" data-level="4.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#why-statistical-inference"><i class="fa fa-check"></i><b>4.2.1</b> Why Statistical Inference</a></li>
+<li class="chapter" data-level="4.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#statistical-learning"><i class="fa fa-check"></i><b>4.2.2</b> Statistical Learning</a></li>
+<li class="chapter" data-level="4.2.3" data-path="statistical-inference.html"><a href="statistical-inference.html#linear-regression"><i class="fa fa-check"></i><b>4.2.3</b> Linear Regression</a></li>
+<li class="chapter" data-level="4.2.4" data-path="statistical-inference.html"><a href="statistical-inference.html#classification"><i class="fa fa-check"></i><b>4.2.4</b> Classification</a></li>
+<li class="chapter" data-level="4.2.5" data-path="statistical-inference.html"><a href="statistical-inference.html#resampling-methods"><i class="fa fa-check"></i><b>4.2.5</b> Resampling Methods</a></li>
+<li class="chapter" data-level="4.2.6" data-path="statistical-inference.html"><a href="statistical-inference.html#linear-model-selection-and-regularization"><i class="fa fa-check"></i><b>4.2.6</b> Linear Model Selection and Regularization</a></li>
+<li class="chapter" data-level="4.2.7" data-path="statistical-inference.html"><a href="statistical-inference.html#moving-beyond-linearity"><i class="fa fa-check"></i><b>4.2.7</b> Moving Beyond linearity</a></li>
+<li class="chapter" data-level="4.2.8" data-path="statistical-inference.html"><a href="statistical-inference.html#tree-based-methods"><i class="fa fa-check"></i><b>4.2.8</b> Tree-Based Methods</a>
+<ul>
+<li class="chapter" data-level="4.2.8.1" data-path="statistical-inference.html"><a href="statistical-inference.html#the-basics-of-decision-trees"><i class="fa fa-check"></i><b>4.2.8.1</b> The Basics of Decision Trees</a>
+<ul>
+<li class="chapter" data-level="4.2.8.1.1" data-path="statistical-inference.html"><a href="statistical-inference.html#regression-trees"><i class="fa fa-check"></i><b>4.2.8.1.1</b> Regression Trees</a></li>
+<li class="chapter" data-level="4.2.8.1.2" data-path="statistical-inference.html"><a href="statistical-inference.html#prediction-via-strartification-of-the-feature-space"><i class="fa fa-check"></i><b>4.2.8.1.2</b> Prediction via Strartification of the Feature Space</a></li>
+<li class="chapter" data-level="4.2.8.1.3" data-path="statistical-inference.html"><a href="statistical-inference.html#classification-trees"><i class="fa fa-check"></i><b>4.2.8.1.3</b> Classification Trees</a></li>
+<li class="chapter" data-level="4.2.8.1.4" data-path="statistical-inference.html"><a href="statistical-inference.html#trees-versus-linear-models"><i class="fa fa-check"></i><b>4.2.8.1.4</b> Trees Versus Linear Models</a></li>
+<li class="chapter" data-level="4.2.8.1.5" data-path="statistical-inference.html"><a href="statistical-inference.html#advantages-and-disadvantages-of-trees"><i class="fa fa-check"></i><b>4.2.8.1.5</b> Advantages and Disadvantages of Trees</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="cs50.html"><a href="cs50.html"><i class="fa fa-check"></i><b>1</b> CS50</a>
+<li class="chapter" data-level="4.2.8.2" data-path="statistical-inference.html"><a href="statistical-inference.html#bagging-random-forest-boosting"><i class="fa fa-check"></i><b>4.2.8.2</b> Bagging, Random Forest, Boosting</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
-<li class="chapter" data-level="1.2" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i><b>1.2</b> C</a></li>
-<li class="chapter" data-level="1.3" data-path="arrays.html"><a href="arrays.html"><i class="fa fa-check"></i><b>1.3</b> Arrays</a></li>
-<li class="chapter" data-level="1.4" data-path="memory.html"><a href="memory.html"><i class="fa fa-check"></i><b>1.4</b> Memory</a></li>
-<li class="chapter" data-level="1.5" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>1.5</b> Data Structures</a></li>
-<li class="chapter" data-level="1.6" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>1.6</b> Python</a></li>
-<li class="chapter" data-level="1.7" data-path="artificial-intelligence-1.html"><a href="artificial-intelligence-1.html"><i class="fa fa-check"></i><b>1.7</b> Artificial Intelligence</a></li>
-<li class="chapter" data-level="1.8" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i><b>1.8</b> SQL</a></li>
-<li class="chapter" data-level="1.9" data-path="html-css-javascript.html"><a href="html-css-javascript.html"><i class="fa fa-check"></i><b>1.9</b> HTML, CSS, JavaScript</a></li>
-<li class="chapter" data-level="1.10" data-path="flask.html"><a href="flask.html"><i class="fa fa-check"></i><b>1.10</b> Flask</a></li>
-<li class="chapter" data-level="1.11" data-path="the-end.html"><a href="the-end.html"><i class="fa fa-check"></i><b>1.11</b> The End</a></li>
-<li class="chapter" data-level="1.12" data-path="ace-reccomendation.html"><a href="ace-reccomendation.html"><i class="fa fa-check"></i><b>1.12</b> ACE Reccomendation</a></li>
+<li class="chapter" data-level="4.2.8.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#bagging"><i class="fa fa-check"></i><b>4.2.8.2.1</b> Bagging</a></li>
+<li class="chapter" data-level="4.2.8.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#random-forest"><i class="fa fa-check"></i><b>4.2.8.2.2</b> Random Forest</a></li>
+<li class="chapter" data-level="4.2.8.2.3" data-path="statistical-inference.html"><a href="statistical-inference.html#boosting"><i class="fa fa-check"></i><b>4.2.8.2.3</b> Boosting</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>2</b> Deep Learning</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="introduction-to-neural-networks-and-deep-learning.html"><a href="introduction-to-neural-networks-and-deep-learning.html"><i class="fa fa-check"></i><b>2.1</b> 9/5 Introduction to Neural Networks and Deep Learning,</a></li>
-<li class="chapter" data-level="2.2" data-path="gradient-descent-and-back-propagation.html"><a href="gradient-descent-and-back-propagation.html"><i class="fa fa-check"></i><b>2.2</b> 9/12 Gradient Descent and Back Propagation</a></li>
-<li class="chapter" data-level="2.3" data-path="keras.html"><a href="keras.html"><i class="fa fa-check"></i><b>2.3</b> 9/19 Keras</a></li>
-<li class="chapter" data-level="2.4" data-path="convolutional-neural-networks-cnns.html"><a href="convolutional-neural-networks-cnns.html"><i class="fa fa-check"></i><b>2.4</b> 9/26 Convolutional Neural Networks (CNNs)</a></li>
-<li class="chapter" data-level="2.5" data-path="visualizing-feature-maps-of-cnn-layers-locating-objects-in-images.html"><a href="visualizing-feature-maps-of-cnn-layers-locating-objects-in-images.html"><i class="fa fa-check"></i><b>2.5</b> 10/3 Visualizing Feature Maps of CNN Layers, Locating Objects in Images</a></li>
-<li class="chapter" data-level="2.6" data-path="transfer-learning-fine-tuning-augmentation.html"><a href="transfer-learning-fine-tuning-augmentation.html"><i class="fa fa-check"></i><b>2.6</b> 10/10: Transfer Learning, Fine Tuning, Augmentation</a></li>
-<li class="chapter" data-level="2.7" data-path="autoencoders-variational-autoencoders-and-manifold-hypothesis.html"><a href="autoencoders-variational-autoencoders-and-manifold-hypothesis.html"><i class="fa fa-check"></i><b>2.7</b> 10/17 Autoencoders, Variational Autoencoders and Manifold Hypothesis</a></li>
-<li class="chapter" data-level="2.8" data-path="natural-language-processing-nlp-doc2vec-like-api-s-and.html"><a href="natural-language-processing-nlp-doc2vec-like-api-s-and.html"><i class="fa fa-check"></i><b>2.8</b> 10/24 Natural Language Processing (NLP), Doc2Vec like API-s and</a></li>
-<li class="chapter" data-level="2.9" data-path="analysis-and-transcription-of-speech.html"><a href="analysis-and-transcription-of-speech.html"><i class="fa fa-check"></i><b>2.9</b> 10/31 Analysis and Transcription of Speech</a></li>
-<li class="chapter" data-level="2.10" data-path="sequence-analysis-seq2seq-models-and-machine-translation.html"><a href="sequence-analysis-seq2seq-models-and-machine-translation.html"><i class="fa fa-check"></i><b>2.10</b> 11/7 Sequence Analysis, Seq2Seq Models and Machine Translation</a></li>
-<li class="chapter" data-level="2.11" data-path="transformers.html"><a href="transformers.html"><i class="fa fa-check"></i><b>2.11</b> 11/14 Transformers</a></li>
-<li class="chapter" data-level="2.12" data-path="class-12-large-language-models-llms.html"><a href="class-12-large-language-models-llms.html"><i class="fa fa-check"></i><b>2.12</b> 11/21: Class 12: Large Language Models (LLMs)</a></li>
-<li class="chapter" data-level="2.13" data-path="class-13-generative-adversarial-networks-gans.html"><a href="class-13-generative-adversarial-networks-gans.html"><i class="fa fa-check"></i><b>2.13</b> 12/5: Class 13: Generative Adversarial Networks (GANs)</a></li>
-<li class="chapter" data-level="2.14" data-path="class-14-graphs-neural-networks-gnns.html"><a href="class-14-graphs-neural-networks-gnns.html"><i class="fa fa-check"></i><b>2.14</b> 12/12: Class 14: Graphs Neural Networks (GNNs)</a></li>
-<li class="chapter" data-level="2.15" data-path="the-final-project-presentations.html"><a href="the-final-project-presentations.html"><i class="fa fa-check"></i><b>2.15</b> 12/19: The Final Project Presentations</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html"><i class="fa fa-check"></i><b>3</b> Data Mining, Discovery, and Exploration</a>
+<li class="chapter" data-level="4.2.9" data-path="statistical-inference.html"><a href="statistical-inference.html#unsupervised-learning"><i class="fa fa-check"></i><b>4.2.9</b> Unsupervised learning</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="course-introduction-and-introduction-to-data-mining.html"><a href="course-introduction-and-introduction-to-data-mining.html"><i class="fa fa-check"></i><b>3.1</b> 9/3 Course introduction and introduction to data mining</a></li>
-<li class="chapter" data-level="3.2" data-path="data-mining-massive-and-streaming-data-part-1.html"><a href="data-mining-massive-and-streaming-data-part-1.html"><i class="fa fa-check"></i><b>3.2</b> 9/10 Data mining massive and streaming data, Part 1</a></li>
-<li class="chapter" data-level="3.3" data-path="data-mining-massive-and-streaming-data-part-2.html"><a href="data-mining-massive-and-streaming-data-part-2.html"><i class="fa fa-check"></i><b>3.3</b> 9/17 Data mining massive and streaming data, Part 2</a></li>
-<li class="chapter" data-level="3.4" data-path="mining-social-network-graphs.html"><a href="mining-social-network-graphs.html"><i class="fa fa-check"></i><b>3.4</b> 9/24 Mining social-network graphs</a></li>
-<li class="chapter" data-level="3.5" data-path="similarity-search-at-massive-scale-part-1.html"><a href="similarity-search-at-massive-scale-part-1.html"><i class="fa fa-check"></i><b>3.5</b> 10/1 Similarity search at massive scale, Part 1</a></li>
-<li class="chapter" data-level="3.6" data-path="similarity-search-at-massive-scale-part-2.html"><a href="similarity-search-at-massive-scale-part-2.html"><i class="fa fa-check"></i><b>3.6</b> 10/8 Similarity search at massive scale, Part 2</a></li>
-<li class="chapter" data-level="3.7" data-path="information-retrieval-for-document-and-web-search.html"><a href="information-retrieval-for-document-and-web-search.html"><i class="fa fa-check"></i><b>3.7</b> 10/15 Information retrieval for document and web search</a></li>
-<li class="chapter" data-level="3.8" data-path="learning-to-rank-for-search-and-recommendation-part-1.html"><a href="learning-to-rank-for-search-and-recommendation-part-1.html"><i class="fa fa-check"></i><b>3.8</b> 10/22 Learning to rank for search and recommendation, Part 1</a></li>
-<li class="chapter" data-level="3.9" data-path="learning-to-rank-for-search-and-recommendation-part-2.html"><a href="learning-to-rank-for-search-and-recommendation-part-2.html"><i class="fa fa-check"></i><b>3.9</b> 10/29 Learning to rank for search and recommendation, Part 2</a></li>
-<li class="chapter" data-level="3.10" data-path="clustering-algorithms-part-1.html"><a href="clustering-algorithms-part-1.html"><i class="fa fa-check"></i><b>3.10</b> 11/5 Clustering Algorithms, Part 1</a></li>
-<li class="chapter" data-level="3.11" data-path="clustering-algorithms-part-2.html"><a href="clustering-algorithms-part-2.html"><i class="fa fa-check"></i><b>3.11</b> 11/12 Clustering Algorithms, Part 2</a></li>
-<li class="chapter" data-level="3.12" data-path="dimensionality-reduction.html"><a href="dimensionality-reduction.html"><i class="fa fa-check"></i><b>3.12</b> 11/19 Dimensionality reduction</a></li>
-<li class="chapter" data-level="3.13" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>3.13</b> 11/23</a></li>
-<li class="chapter" data-level="3.14" data-path="frequent-item-sets-market-basket-analysis.html"><a href="frequent-item-sets-market-basket-analysis.html"><i class="fa fa-check"></i><b>3.14</b> 12/3 Frequent item sets; market basket analysis</a></li>
-<li class="chapter" data-level="3.15" data-path="additional-topics.html"><a href="additional-topics.html"><i class="fa fa-check"></i><b>3.15</b> 12/10 Additional Topics</a></li>
-<li class="chapter" data-level="3.16" data-path="final-project-due.html"><a href="final-project-due.html"><i class="fa fa-check"></i><b>3.16</b> 12/17: Final Project Due</a></li>
+<li class="chapter" data-level="4.2.9.1" data-path="statistical-inference.html"><a href="statistical-inference.html#challenges-in-unsupervised-learning"><i class="fa fa-check"></i><b>4.2.9.1</b> Challenges in unsupervised learning</a></li>
+<li class="chapter" data-level="4.2.9.2" data-path="statistical-inference.html"><a href="statistical-inference.html#principal-components-analysis-pca"><i class="fa fa-check"></i><b>4.2.9.2</b> Principal Components Analysis (PCA)</a>
+<ul>
+<li class="chapter" data-level="4.2.9.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#what-are-principal-components"><i class="fa fa-check"></i><b>4.2.9.2.1</b> What are principal components?</a></li>
+<li class="chapter" data-level="4.2.9.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#another-interpretation-of-principle-components"><i class="fa fa-check"></i><b>4.2.9.2.2</b> Another interpretation of Principle Components</a></li>
+<li class="chapter" data-level="4.2.9.2.3" data-path="statistical-inference.html"><a href="statistical-inference.html#the-proportion-of-variance-explained-pve-in-pca"><i class="fa fa-check"></i><b>4.2.9.2.3</b> The Proportion of Variance Explained (PVE) in PCA</a></li>
+<li class="chapter" data-level="4.2.9.2.4" data-path="statistical-inference.html"><a href="statistical-inference.html#uniqueness-of-the-principal-components"><i class="fa fa-check"></i><b>4.2.9.2.4</b> Uniqueness of the Principal Components</a></li>
+<li class="chapter" data-level="4.2.9.2.5" data-path="statistical-inference.html"><a href="statistical-inference.html#deciding-how-many-principal-components-to-use"><i class="fa fa-check"></i><b>4.2.9.2.5</b> Deciding How Many Principal Components to Use</a></li>
+<li class="chapter" data-level="4.2.9.2.6" data-path="statistical-inference.html"><a href="statistical-inference.html#other-uses-for-principal-components"><i class="fa fa-check"></i><b>4.2.9.2.6</b> Other uses for principal components</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="c-for-complete-beginners.html"><a href="c-for-complete-beginners.html"><i class="fa fa-check"></i><b>4</b> C++ For Complete Beginners</a>
+<li class="chapter" data-level="4.2.9.3" data-path="statistical-inference.html"><a href="statistical-inference.html#clustering-methods"><i class="fa fa-check"></i><b>4.2.9.3</b> Clustering methods</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="basics-and-fundamentals.html"><a href="basics-and-fundamentals.html"><i class="fa fa-check"></i><b>4.1</b> Basics and Fundamentals</a></li>
+<li class="chapter" data-level="4.2.9.3.1" data-path="statistical-inference.html"><a href="statistical-inference.html#k-means-clustering"><i class="fa fa-check"></i><b>4.2.9.3.1</b> K-means clustering</a></li>
+<li class="chapter" data-level="4.2.9.3.2" data-path="statistical-inference.html"><a href="statistical-inference.html#hierarchial-clustering"><i class="fa fa-check"></i><b>4.2.9.3.2</b> Hierarchial clustering</a></li>
+<li class="chapter" data-level="4.2.9.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#practical-issues-in-clustering"><i class="fa fa-check"></i><b>4.2.9.3.3</b> Practical Issues in Clustering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10" data-path="statistical-inference.html"><a href="statistical-inference.html#support-vector-machines"><i class="fa fa-check"></i><b>4.2.10</b> Support Vector Machines</a>
+<ul>
+<li class="chapter" data-level="4.2.10.1" data-path="statistical-inference.html"><a href="statistical-inference.html#maximal-margin-classifier"><i class="fa fa-check"></i><b>4.2.10.1</b> Maximal Margin Classifier</a>
+<ul>
+<li class="chapter" data-level="4.2.10.1.1" data-path="statistical-inference.html"><a href="statistical-inference.html#what-is-a-hyperplane"><i class="fa fa-check"></i><b>4.2.10.1.1</b> What is a hyperplane?</a></li>
+<li class="chapter" data-level="4.2.10.1.2" data-path="statistical-inference.html"><a href="statistical-inference.html#classification-using-a-seperating-hyperplane"><i class="fa fa-check"></i><b>4.2.10.1.2</b> Classification Using a Seperating hyperplane</a></li>
+<li class="chapter" data-level="4.2.10.1.3" data-path="statistical-inference.html"><a href="statistical-inference.html#maximal-margin-classifier-1"><i class="fa fa-check"></i><b>4.2.10.1.3</b> Maximal Margin Classifier</a></li>
+<li class="chapter" data-level="4.2.10.1.4" data-path="statistical-inference.html"><a href="statistical-inference.html#construction-of-the-maximal-margin-classifier"><i class="fa fa-check"></i><b>4.2.10.1.4</b> Construction of the Maximal Margin Classifier</a></li>
+<li class="chapter" data-level="4.2.10.1.5" data-path="statistical-inference.html"><a href="statistical-inference.html#the-non-separable-case"><i class="fa fa-check"></i><b>4.2.10.1.5</b> The Non-separable Case</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.2" data-path="statistical-inference.html"><a href="statistical-inference.html#support-vector-classifiers"><i class="fa fa-check"></i><b>4.2.10.2</b> Support Vector Classifiers</a>
+<ul>
+<li class="chapter" data-level="4.2.10.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#overview-of-the-support-vector-classifier"><i class="fa fa-check"></i><b>4.2.10.2.1</b> Overview of the Support Vector Classifier</a></li>
+<li class="chapter" data-level="4.2.10.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#details-of-the-support-vector-classifier"><i class="fa fa-check"></i><b>4.2.10.2.2</b> Details of the Support Vector Classifier</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.3" data-path="statistical-inference.html"><a href="statistical-inference.html#support-vector-machines-1"><i class="fa fa-check"></i><b>4.2.10.3</b> Support Vector Machines</a>
+<ul>
+<li class="chapter" data-level="4.2.10.3.1" data-path="statistical-inference.html"><a href="statistical-inference.html#classification-with-non-linerar-decision-boundaries"><i class="fa fa-check"></i><b>4.2.10.3.1</b> Classification with Non-Linerar Decision Boundaries</a></li>
+<li class="chapter" data-level="4.2.10.3.2" data-path="statistical-inference.html"><a href="statistical-inference.html#the-supoort-vector-machines"><i class="fa fa-check"></i><b>4.2.10.3.2</b> The Supoort Vector Machines</a></li>
+<li class="chapter" data-level="4.2.10.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#an-application-to-the-heart-disease-data"><i class="fa fa-check"></i><b>4.2.10.3.3</b> An Application to the Heart Disease Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.4" data-path="statistical-inference.html"><a href="statistical-inference.html#svm-with-more-than-two-classes"><i class="fa fa-check"></i><b>4.2.10.4</b> SVM with More than Two classes</a>
+<ul>
+<li class="chapter" data-level="4.2.10.4.1" data-path="statistical-inference.html"><a href="statistical-inference.html#one-versus-one-classification"><i class="fa fa-check"></i><b>4.2.10.4.1</b> One-Versus-One Classification</a></li>
+<li class="chapter" data-level="4.2.10.4.2" data-path="statistical-inference.html"><a href="statistical-inference.html#one-versus-all-classification"><i class="fa fa-check"></i><b>4.2.10.4.2</b> One-Versus-All Classification</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.5" data-path="statistical-inference.html"><a href="statistical-inference.html#relationship-to-logistic-regression"><i class="fa fa-check"></i><b>4.2.10.5</b> Relationship to Logistic Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11" data-path="statistical-inference.html"><a href="statistical-inference.html#deep-learning"><i class="fa fa-check"></i><b>4.2.11</b> Deep Learning</a>
+<ul>
+<li class="chapter" data-level="4.2.11.1" data-path="statistical-inference.html"><a href="statistical-inference.html#single-layer-neural-network"><i class="fa fa-check"></i><b>4.2.11.1</b> Single Layer Neural Network</a></li>
+<li class="chapter" data-level="4.2.11.2" data-path="statistical-inference.html"><a href="statistical-inference.html#multilayer-neural-networks"><i class="fa fa-check"></i><b>4.2.11.2</b> Multilayer Neural networks</a></li>
+<li class="chapter" data-level="4.2.11.3" data-path="statistical-inference.html"><a href="statistical-inference.html#convolution-neural-networks"><i class="fa fa-check"></i><b>4.2.11.3</b> Convolution Neural Networks</a>
+<ul>
+<li class="chapter" data-level="4.2.11.3.1" data-path="statistical-inference.html"><a href="statistical-inference.html#convolution-layer"><i class="fa fa-check"></i><b>4.2.11.3.1</b> Convolution Layer</a></li>
+<li class="chapter" data-level="4.2.11.3.2" data-path="statistical-inference.html"><a href="statistical-inference.html#pooling-layers"><i class="fa fa-check"></i><b>4.2.11.3.2</b> Pooling layers</a></li>
+<li class="chapter" data-level="4.2.11.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#architecture-of-a-convolution-neural-network"><i class="fa fa-check"></i><b>4.2.11.3.3</b> Architecture of a convolution neural network</a></li>
+<li class="chapter" data-level="4.2.11.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#data-augmentation"><i class="fa fa-check"></i><b>4.2.11.3.4</b> Data Augmentation</a></li>
+<li class="chapter" data-level="4.2.11.3.5" data-path="statistical-inference.html"><a href="statistical-inference.html#results-using-a-pretrained-classifier"><i class="fa fa-check"></i><b>4.2.11.3.5</b> Results Using a Pretrained Classifier</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11.4" data-path="statistical-inference.html"><a href="statistical-inference.html#document-classification"><i class="fa fa-check"></i><b>4.2.11.4</b> Document Classification</a>
+<ul>
+<li class="chapter" data-level="4.2.11.4.1" data-path="statistical-inference.html"><a href="statistical-inference.html#reccurent-neural-networks"><i class="fa fa-check"></i><b>4.2.11.4.1</b> Reccurent Neural networks</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11.5" data-path="statistical-inference.html"><a href="statistical-inference.html#when-to-use-deep-learning"><i class="fa fa-check"></i><b>4.2.11.5</b> When to Use Deep Learning</a></li>
+<li class="chapter" data-level="4.2.11.6" data-path="statistical-inference.html"><a href="statistical-inference.html#fitting-a-neural-network"><i class="fa fa-check"></i><b>4.2.11.6</b> Fitting a Neural Network</a>
+<ul>
+<li class="chapter" data-level="4.2.11.6.1" data-path="statistical-inference.html"><a href="statistical-inference.html#backpropagation"><i class="fa fa-check"></i><b>4.2.11.6.1</b> Backpropagation</a></li>
+<li class="chapter" data-level="4.2.11.6.2" data-path="statistical-inference.html"><a href="statistical-inference.html#regulaization-and-stochastic-gradient-descent"><i class="fa fa-check"></i><b>4.2.11.6.2</b> Regulaization and Stochastic Gradient Descent</a></li>
+<li class="chapter" data-level="4.2.11.6.3" data-path="statistical-inference.html"><a href="statistical-inference.html#dropout-learning"><i class="fa fa-check"></i><b>4.2.11.6.3</b> Dropout Learning</a></li>
+<li class="chapter" data-level="4.2.11.6.4" data-path="statistical-inference.html"><a href="statistical-inference.html#network-tuning"><i class="fa fa-check"></i><b>4.2.11.6.4</b> Network Tuning</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11.7" data-path="statistical-inference.html"><a href="statistical-inference.html#interpolation-and-double-descent"><i class="fa fa-check"></i><b>4.2.11.7</b> Interpolation and Double Descent</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html"><i class="fa fa-check"></i><b>4.3</b> Bayesian Statistics:</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#properties-of-conditional-probability"><i class="fa fa-check"></i><b>4.3.1</b> Properties of Conditional Probability</a></li>
+<li class="chapter" data-level="4.3.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#application-of-bayes-theorem-examples"><i class="fa fa-check"></i><b>4.3.2</b> Application of Bayes Theorem: Examples</a></li>
+<li class="chapter" data-level="4.3.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#independence"><i class="fa fa-check"></i><b>4.3.3</b> Independence</a></li>
+<li class="chapter" data-level="4.3.4" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#random-variables-joint-distributions-law-of-large-numbers-lln-central-limit-theorem-clt"><i class="fa fa-check"></i><b>4.3.4</b> Random Variables; Joint Distributions; Law of Large Numbers (LLN); Central Limit Theorem (CLT)</a></li>
+<li class="chapter" data-level="4.3.5" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#common-probability-distributions-introduction-to-bayesian-inference-one-parameter-models"><i class="fa fa-check"></i><b>4.3.5</b> Common Probability Distributions; Introduction to Bayesian Inference; One-parameter Models</a></li>
+<li class="chapter" data-level="4.3.6" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#exponential-family-frequentist-confidence-interval-bayesian-credible-interval"><i class="fa fa-check"></i><b>4.3.6</b> Exponential Family; Frequentist Confidence Interval; Bayesian (Credible) Interval</a></li>
+<li class="chapter" data-level="4.3.7" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#sufficiency-rao-blackwell-theorem"><i class="fa fa-check"></i><b>4.3.7</b> Sufficiency; Rao-Blackwell Theorem;</a></li>
+<li class="chapter" data-level="4.3.8" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#monte-carlo-approximation"><i class="fa fa-check"></i><b>4.3.8</b> Monte Carlo Approximation</a>
+<ul>
+<li class="chapter" data-level="4.3.8.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#monte-carlo-expectation"><i class="fa fa-check"></i><b>4.3.8.1</b> Monte Carlo Expectation</a></li>
+<li class="chapter" data-level="4.3.8.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#additional-information-from-monte-carlo-approximation-other-than-estimating-parameters"><i class="fa fa-check"></i><b>4.3.8.2</b> Additional information from Monte Carlo approximation, other than estimating parameters</a></li>
+<li class="chapter" data-level="4.3.8.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#understanding-discrepencies"><i class="fa fa-check"></i><b>4.3.8.3</b> Understanding discrepencies</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.9" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#normal-model"><i class="fa fa-check"></i><b>4.3.9</b> Normal Model</a>
+<ul>
+<li class="chapter" data-level="4.3.9.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#conjugate-analysis"><i class="fa fa-check"></i><b>4.3.9.1</b> Conjugate analysis</a></li>
+<li class="chapter" data-level="4.3.9.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#precision-and-combining-information"><i class="fa fa-check"></i><b>4.3.9.2</b> Precision and combining information</a></li>
+<li class="chapter" data-level="4.3.9.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#prediction-for-a-new-observation"><i class="fa fa-check"></i><b>4.3.9.3</b> Prediction for a new observation</a></li>
+<li class="chapter" data-level="4.3.9.4" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#joint-inference-for-the-mean-and-variance"><i class="fa fa-check"></i><b>4.3.9.4</b> Joint inference for the mean and variance</a></li>
+<li class="chapter" data-level="4.3.9.5" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#posterior-inference"><i class="fa fa-check"></i><b>4.3.9.5</b> Posterior inference</a></li>
+<li class="chapter" data-level="4.3.9.6" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#monte-carlo-sampling"><i class="fa fa-check"></i><b>4.3.9.6</b> Monte Carlo sampling</a></li>
+<li class="chapter" data-level="4.3.9.7" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#improper-priors"><i class="fa fa-check"></i><b>4.3.9.7</b> Improper Priors</a></li>
+<li class="chapter" data-level="4.3.9.8" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#bias-variance-and-mean-squared-error-mse"><i class="fa fa-check"></i><b>4.3.9.8</b> Bias, Variance, and Mean Squared Error (MSE);</a></li>
+<li class="chapter" data-level="4.3.9.9" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#prior-specification-based-on-expectations"><i class="fa fa-check"></i><b>4.3.9.9</b> Prior specification based on expectations</a></li>
+<li class="chapter" data-level="4.3.9.10" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#the-normal-model-on-non-normal-data"><i class="fa fa-check"></i><b>4.3.9.10</b> The normal model on non-normal data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.10" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#posterior-approximation-with-the-gibbs-sampler."><i class="fa fa-check"></i><b>4.3.10</b> Posterior approximation with the Gibbs sampler.</a>
+<ul>
+<li class="chapter" data-level="4.3.10.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#a-semiconjugate-prior-distribution"><i class="fa fa-check"></i><b>4.3.10.1</b> A semiconjugate prior distribution</a></li>
+<li class="chapter" data-level="4.3.10.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#discrete-approximations"><i class="fa fa-check"></i><b>4.3.10.2</b> Discrete approximations</a></li>
+<li class="chapter" data-level="4.3.10.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#sampling-from-the-conditional-distributions"><i class="fa fa-check"></i><b>4.3.10.3</b> Sampling from the conditional distributions</a></li>
+<li class="chapter" data-level="4.3.10.4" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#gibbs-sampling"><i class="fa fa-check"></i><b>4.3.10.4</b> Gibbs sampling</a></li>
+<li class="chapter" data-level="4.3.10.5" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#general-properties-of-the-gibbs-sampler"><i class="fa fa-check"></i><b>4.3.10.5</b> General properties of the Gibbs sampler</a></li>
+<li class="chapter" data-level="4.3.10.6" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#introduction-to-mcmc-diagnostics"><i class="fa fa-check"></i><b>4.3.10.6</b> Introduction to MCMC diagnostics</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.11" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#multivariate-normal-model"><i class="fa fa-check"></i><b>4.3.11</b> Multivariate Normal Model</a></li>
+<li class="chapter" data-level="4.3.12" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#group-comparisons-and-hierarchial-modeling"><i class="fa fa-check"></i><b>4.3.12</b> Group comparisons and hierarchial modeling</a></li>
+<li class="chapter" data-level="4.3.13" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#linear-regression-1"><i class="fa fa-check"></i><b>4.3.13</b> Linear Regression</a></li>
+<li class="chapter" data-level="4.3.14" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#nonconjugate-priors-and-metropolis-hastings-algorithm"><i class="fa fa-check"></i><b>4.3.14</b> Nonconjugate priors and Metropolis-Hastings algorithm</a>
+<ul>
+<li class="chapter" data-level="4.3.14.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#irreducibility-aperiodicity-and-recurrency"><i class="fa fa-check"></i><b>4.3.14.1</b> Irreducibility, Aperiodicity, and Recurrency</a></li>
+<li class="chapter" data-level="4.3.14.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#ergodic-theorem"><i class="fa fa-check"></i><b>4.3.14.2</b> Ergodic Theorem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="cs50.html"><a href="cs50.html"><i class="fa fa-check"></i><b>4.4</b> CS50</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="cs50.html"><a href="cs50.html#introduction"><i class="fa fa-check"></i><b>4.4.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="4.4.1.1" data-path="cs50.html"><a href="cs50.html#unicode"><i class="fa fa-check"></i><b>4.4.1.1</b> Unicode</a></li>
+<li class="chapter" data-level="4.4.1.2" data-path="cs50.html"><a href="cs50.html#color"><i class="fa fa-check"></i><b>4.4.1.2</b> Color</a></li>
+<li class="chapter" data-level="4.4.1.3" data-path="cs50.html"><a href="cs50.html#algorithms"><i class="fa fa-check"></i><b>4.4.1.3</b> Algorithms</a></li>
+<li class="chapter" data-level="4.4.1.4" data-path="cs50.html"><a href="cs50.html#artificial-intelligence"><i class="fa fa-check"></i><b>4.4.1.4</b> Artificial Intelligence</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4.2" data-path="cs50.html"><a href="cs50.html#c"><i class="fa fa-check"></i><b>4.4.2</b> C</a>
+<ul>
+<li class="chapter" data-level="4.4.2.1" data-path="cs50.html"><a href="cs50.html#running-cs50-locally"><i class="fa fa-check"></i><b>4.4.2.1</b> Running CS50 locally</a></li>
+<li class="chapter" data-level="4.4.2.2" data-path="cs50.html"><a href="cs50.html#source-code"><i class="fa fa-check"></i><b>4.4.2.2</b> Source code</a></li>
+<li class="chapter" data-level="4.4.2.3" data-path="cs50.html"><a href="cs50.html#from-scratch-to-c"><i class="fa fa-check"></i><b>4.4.2.3</b> From Scratch to C</a></li>
+<li class="chapter" data-level="4.4.2.4" data-path="cs50.html"><a href="cs50.html#header-files"><i class="fa fa-check"></i><b>4.4.2.4</b> Header Files</a></li>
+<li class="chapter" data-level="4.4.2.5" data-path="cs50.html"><a href="cs50.html#hello-you"><i class="fa fa-check"></i><b>4.4.2.5</b> Hello, You</a></li>
+<li class="chapter" data-level="4.4.2.6" data-path="cs50.html"><a href="cs50.html#terminal-commands"><i class="fa fa-check"></i><b>4.4.2.6</b> Terminal Commands</a></li>
+<li class="chapter" data-level="4.4.2.7" data-path="cs50.html"><a href="cs50.html#types"><i class="fa fa-check"></i><b>4.4.2.7</b> Types</a></li>
+<li class="chapter" data-level="4.4.2.8" data-path="cs50.html"><a href="cs50.html#conditionals"><i class="fa fa-check"></i><b>4.4.2.8</b> Conditionals</a></li>
+<li class="chapter" data-level="4.4.2.9" data-path="cs50.html"><a href="cs50.html#variables-and-compare.c"><i class="fa fa-check"></i><b>4.4.2.9</b> Variables and compare.c</a></li>
+<li class="chapter" data-level="4.4.2.10" data-path="cs50.html"><a href="cs50.html#agree.c"><i class="fa fa-check"></i><b>4.4.2.10</b> agree.c</a></li>
+<li class="chapter" data-level="4.4.2.11" data-path="cs50.html"><a href="cs50.html#loops-cat.c"><i class="fa fa-check"></i><b>4.4.2.11</b> Loops cat.c</a></li>
+<li class="chapter" data-level="4.4.2.12" data-path="cs50.html"><a href="cs50.html#functions"><i class="fa fa-check"></i><b>4.4.2.12</b> Functions</a></li>
+<li class="chapter" data-level="4.4.2.13" data-path="cs50.html"><a href="cs50.html#correctness-design-style"><i class="fa fa-check"></i><b>4.4.2.13</b> Correctness, Design, Style</a></li>
+<li class="chapter" data-level="4.4.2.14" data-path="cs50.html"><a href="cs50.html#mario"><i class="fa fa-check"></i><b>4.4.2.14</b> Mario</a></li>
+<li class="chapter" data-level="4.4.2.15" data-path="cs50.html"><a href="cs50.html#calculator.c"><i class="fa fa-check"></i><b>4.4.2.15</b> calculator.c</a></li>
+<li class="chapter" data-level="4.4.2.16" data-path="cs50.html"><a href="cs50.html#integer-overflow"><i class="fa fa-check"></i><b>4.4.2.16</b> Integer Overflow</a></li>
+<li class="chapter" data-level="4.4.2.17" data-path="cs50.html"><a href="cs50.html#boeing"><i class="fa fa-check"></i><b>4.4.2.17</b> Boeing</a></li>
+<li class="chapter" data-level="4.4.2.18" data-path="cs50.html"><a href="cs50.html#pacman"><i class="fa fa-check"></i><b>4.4.2.18</b> Pacman</a></li>
+<li class="chapter" data-level="4.4.2.19" data-path="cs50.html"><a href="cs50.html#truncation"><i class="fa fa-check"></i><b>4.4.2.19</b> Truncation</a></li>
+<li class="chapter" data-level="4.4.2.20" data-path="cs50.html"><a href="cs50.html#type-casting"><i class="fa fa-check"></i><b>4.4.2.20</b> Type Casting</a></li>
+<li class="chapter" data-level="4.4.2.21" data-path="cs50.html"><a href="cs50.html#floating-point-imprecision"><i class="fa fa-check"></i><b>4.4.2.21</b> Floating-Point Imprecision</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4.3" data-path="cs50.html"><a href="cs50.html#arrays"><i class="fa fa-check"></i><b>4.4.3</b> Arrays</a></li>
+<li class="chapter" data-level="4.4.4" data-path="cs50.html"><a href="cs50.html#memory"><i class="fa fa-check"></i><b>4.4.4</b> Memory</a></li>
+<li class="chapter" data-level="4.4.5" data-path="cs50.html"><a href="cs50.html#data-structures"><i class="fa fa-check"></i><b>4.4.5</b> Data Structures</a></li>
+<li class="chapter" data-level="4.4.6" data-path="cs50.html"><a href="cs50.html#python"><i class="fa fa-check"></i><b>4.4.6</b> Python</a></li>
+<li class="chapter" data-level="4.4.7" data-path="cs50.html"><a href="cs50.html#artificial-intelligence-1"><i class="fa fa-check"></i><b>4.4.7</b> Artificial Intelligence</a></li>
+<li class="chapter" data-level="4.4.8" data-path="cs50.html"><a href="cs50.html#sql"><i class="fa fa-check"></i><b>4.4.8</b> SQL</a></li>
+<li class="chapter" data-level="4.4.9" data-path="cs50.html"><a href="cs50.html#html-css-javascript"><i class="fa fa-check"></i><b>4.4.9</b> HTML, CSS, JavaScript</a></li>
+<li class="chapter" data-level="4.4.10" data-path="cs50.html"><a href="cs50.html#flask"><i class="fa fa-check"></i><b>4.4.10</b> Flask</a></li>
+<li class="chapter" data-level="4.4.11" data-path="cs50.html"><a href="cs50.html#the-end"><i class="fa fa-check"></i><b>4.4.11</b> The End</a></li>
+<li class="chapter" data-level="4.4.12" data-path="cs50.html"><a href="cs50.html#ace-reccomendation"><i class="fa fa-check"></i><b>4.4.12</b> ACE Reccomendation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="deep-learning-1.html"><a href="deep-learning-1.html"><i class="fa fa-check"></i><b>4.5</b> Deep Learning</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="deep-learning-1.html"><a href="deep-learning-1.html#introduction-to-neural-networks-and-deep-learning"><i class="fa fa-check"></i><b>4.5.1</b> 9/5 Introduction to Neural Networks and Deep Learning,</a></li>
+<li class="chapter" data-level="4.5.2" data-path="deep-learning-1.html"><a href="deep-learning-1.html#gradient-descent-and-back-propagation"><i class="fa fa-check"></i><b>4.5.2</b> 9/12 Gradient Descent and Back Propagation</a></li>
+<li class="chapter" data-level="4.5.3" data-path="deep-learning-1.html"><a href="deep-learning-1.html#keras"><i class="fa fa-check"></i><b>4.5.3</b> 9/19 Keras</a></li>
+<li class="chapter" data-level="4.5.4" data-path="deep-learning-1.html"><a href="deep-learning-1.html#convolutional-neural-networks-cnns"><i class="fa fa-check"></i><b>4.5.4</b> 9/26 Convolutional Neural Networks (CNNs)</a></li>
+<li class="chapter" data-level="4.5.5" data-path="deep-learning-1.html"><a href="deep-learning-1.html#visualizing-feature-maps-of-cnn-layers-locating-objects-in-images"><i class="fa fa-check"></i><b>4.5.5</b> 10/3 Visualizing Feature Maps of CNN Layers, Locating Objects in Images</a></li>
+<li class="chapter" data-level="4.5.6" data-path="deep-learning-1.html"><a href="deep-learning-1.html#transfer-learning-fine-tuning-augmentation"><i class="fa fa-check"></i><b>4.5.6</b> 10/10: Transfer Learning, Fine Tuning, Augmentation</a></li>
+<li class="chapter" data-level="4.5.7" data-path="deep-learning-1.html"><a href="deep-learning-1.html#autoencoders-variational-autoencoders-and-manifold-hypothesis"><i class="fa fa-check"></i><b>4.5.7</b> 10/17 Autoencoders, Variational Autoencoders and Manifold Hypothesis</a></li>
+<li class="chapter" data-level="4.5.8" data-path="deep-learning-1.html"><a href="deep-learning-1.html#natural-language-processing-nlp-doc2vec-like-api-s-and"><i class="fa fa-check"></i><b>4.5.8</b> 10/24 Natural Language Processing (NLP), Doc2Vec like API-s and</a></li>
+<li class="chapter" data-level="4.5.9" data-path="deep-learning-1.html"><a href="deep-learning-1.html#analysis-and-transcription-of-speech"><i class="fa fa-check"></i><b>4.5.9</b> 10/31 Analysis and Transcription of Speech</a></li>
+<li class="chapter" data-level="4.5.10" data-path="deep-learning-1.html"><a href="deep-learning-1.html#sequence-analysis-seq2seq-models-and-machine-translation"><i class="fa fa-check"></i><b>4.5.10</b> 11/7 Sequence Analysis, Seq2Seq Models and Machine Translation</a></li>
+<li class="chapter" data-level="4.5.11" data-path="deep-learning-1.html"><a href="deep-learning-1.html#transformers"><i class="fa fa-check"></i><b>4.5.11</b> 11/14 Transformers</a></li>
+<li class="chapter" data-level="4.5.12" data-path="deep-learning-1.html"><a href="deep-learning-1.html#class-12-large-language-models-llms"><i class="fa fa-check"></i><b>4.5.12</b> 11/21: Class 12: Large Language Models (LLMs)</a></li>
+<li class="chapter" data-level="4.5.13" data-path="deep-learning-1.html"><a href="deep-learning-1.html#class-13-generative-adversarial-networks-gans"><i class="fa fa-check"></i><b>4.5.13</b> 12/5: Class 13: Generative Adversarial Networks (GANs)</a></li>
+<li class="chapter" data-level="4.5.14" data-path="deep-learning-1.html"><a href="deep-learning-1.html#class-14-graphs-neural-networks-gnns"><i class="fa fa-check"></i><b>4.5.14</b> 12/12: Class 14: Graphs Neural Networks (GNNs)</a></li>
+<li class="chapter" data-level="4.5.15" data-path="deep-learning-1.html"><a href="deep-learning-1.html#the-final-project-presentations"><i class="fa fa-check"></i><b>4.5.15</b> 12/19: The Final Project Presentations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html"><i class="fa fa-check"></i><b>4.6</b> Data Mining, Discovery, and Exploration</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#course-introduction-and-introduction-to-data-mining"><i class="fa fa-check"></i><b>4.6.1</b> 9/3 Course introduction and introduction to data mining</a>
+<ul>
+<li class="chapter" data-level="4.6.1.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#what-is-data-mining"><i class="fa fa-check"></i><b>4.6.1.1</b> What is data mining?</a></li>
+<li class="chapter" data-level="4.6.1.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#goals-of-data-mining"><i class="fa fa-check"></i><b>4.6.1.2</b> Goals of data mining</a></li>
+<li class="chapter" data-level="4.6.1.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#limitations"><i class="fa fa-check"></i><b>4.6.1.3</b> Limitations</a></li>
+<li class="chapter" data-level="4.6.1.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#bonferronis-principle"><i class="fa fa-check"></i><b>4.6.1.4</b> Bonferroni’s Principle</a></li>
+<li class="chapter" data-level="4.6.1.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#what-is-a-hash-function-a-hash-table"><i class="fa fa-check"></i><b>4.6.1.5</b> What is a hash function, a hash table?</a></li>
+<li class="chapter" data-level="4.6.1.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#hashing-for-managing-massive-data-sets"><i class="fa fa-check"></i><b>4.6.1.6</b> Hashing for managing massive data sets</a></li>
+<li class="chapter" data-level="4.6.1.7" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#scalable-hypothesis-test-algorithms-for-data-mining"><i class="fa fa-check"></i><b>4.6.1.7</b> Scalable hypothesis test algorithms for data mining</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#data-mining-massive-and-streaming-data-part-1"><i class="fa fa-check"></i><b>4.6.2</b> 9/10 Data mining massive and streaming data, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.2.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-nature-of-streaming-data"><i class="fa fa-check"></i><b>4.6.2.1</b> The nature of streaming data</a></li>
+<li class="chapter" data-level="4.6.2.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#architectures-for-streaming-data"><i class="fa fa-check"></i><b>4.6.2.2</b> Architectures for streaming data</a></li>
+<li class="chapter" data-level="4.6.2.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#filters-and-counting-for-streams"><i class="fa fa-check"></i><b>4.6.2.3</b> Filters and counting for streams</a></li>
+<li class="chapter" data-level="4.6.2.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#updating-statistics-with-streams"><i class="fa fa-check"></i><b>4.6.2.4</b> Updating statistics with streams</a></li>
+<li class="chapter" data-level="4.6.2.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#quantile-estimation-for-streams"><i class="fa fa-check"></i><b>4.6.2.5</b> Quantile estimation for streams</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#data-mining-massive-and-streaming-data-part-2"><i class="fa fa-check"></i><b>4.6.3</b> 9/17 Data mining massive and streaming data, Part 2</a></li>
+<li class="chapter" data-level="4.6.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#mining-social-network-graphs"><i class="fa fa-check"></i><b>4.6.4</b> 9/24 Mining social-network graphs</a>
+<ul>
+<li class="chapter" data-level="4.6.4.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#nature-of-social-network-graphs"><i class="fa fa-check"></i><b>4.6.4.1</b> Nature of social-network graphs</a></li>
+<li class="chapter" data-level="4.6.4.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#centrality-and-influence"><i class="fa fa-check"></i><b>4.6.4.2</b> Centrality and influence</a></li>
+<li class="chapter" data-level="4.6.4.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#clustering-graphs"><i class="fa fa-check"></i><b>4.6.4.3</b> Clustering graphs</a></li>
+<li class="chapter" data-level="4.6.4.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#spectral-decomposition-of-graphs"><i class="fa fa-check"></i><b>4.6.4.4</b> Spectral decomposition of graphs</a></li>
+<li class="chapter" data-level="4.6.4.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#overlapping-communities-time-permitting"><i class="fa fa-check"></i><b>4.6.4.5</b> Overlapping communities – time permitting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#similarity-search-at-massive-scale-part-1"><i class="fa fa-check"></i><b>4.6.5</b> 10/1 Similarity search at massive scale, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.5.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#distance-measures"><i class="fa fa-check"></i><b>4.6.5.1</b> Distance measures</a></li>
+<li class="chapter" data-level="4.6.5.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#similarity-measures"><i class="fa fa-check"></i><b>4.6.5.2</b> Similarity measures</a></li>
+<li class="chapter" data-level="4.6.5.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#search-with-kd-trees"><i class="fa fa-check"></i><b>4.6.5.3</b> Search with KD-trees</a></li>
+<li class="chapter" data-level="4.6.5.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#approximate-similarity-search-at-massive-scale"><i class="fa fa-check"></i><b>4.6.5.4</b> Approximate similarity search at massive scale</a></li>
+<li class="chapter" data-level="4.6.5.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#indexes-for-massive-similarity-serarch"><i class="fa fa-check"></i><b>4.6.5.5</b> Indexes for massive similarity serarch</a></li>
+<li class="chapter" data-level="4.6.5.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#evaluation-of-approximate-similarity-search-algorithms"><i class="fa fa-check"></i><b>4.6.5.6</b> Evaluation of approximate similarity search algorithms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#similarity-search-at-massive-scale-part-2"><i class="fa fa-check"></i><b>4.6.6</b> 10/8 Similarity search at massive scale, Part 2</a></li>
+<li class="chapter" data-level="4.6.7" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#information-retrieval-for-document-and-web-search"><i class="fa fa-check"></i><b>4.6.7</b> 10/15 Information retrieval for document and web search</a>
+<ul>
+<li class="chapter" data-level="4.6.7.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#dense-vs.-sparse-embedding-for-documents-search"><i class="fa fa-check"></i><b>4.6.7.1</b> Dense vs. sparse embedding for documents search</a></li>
+<li class="chapter" data-level="4.6.7.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#dense-neural-embedding-algorithms"><i class="fa fa-check"></i><b>4.6.7.2</b> Dense neural embedding algorithms</a></li>
+<li class="chapter" data-level="4.6.7.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#sparse-embedding-algorithms"><i class="fa fa-check"></i><b>4.6.7.3</b> Sparse embedding algorithms</a></li>
+<li class="chapter" data-level="4.6.7.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#term-expansion-algorithms"><i class="fa fa-check"></i><b>4.6.7.4</b> Term expansion algorithms</a></li>
+<li class="chapter" data-level="4.6.7.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#embedding-images-and-clip"><i class="fa fa-check"></i><b>4.6.7.5</b> Embedding images and CLIP</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.8" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#learning-to-rank-for-search-and-recommendation-part-1"><i class="fa fa-check"></i><b>4.6.8</b> 10/22 Learning to rank for search and recommendation, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.8.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#embedding-high-cardinality-features"><i class="fa fa-check"></i><b>4.6.8.1</b> Embedding high cardinality features</a></li>
+<li class="chapter" data-level="4.6.8.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#content-based-methods"><i class="fa fa-check"></i><b>4.6.8.2</b> Content based methods</a></li>
+<li class="chapter" data-level="4.6.8.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#collaborative-filtering"><i class="fa fa-check"></i><b>4.6.8.3</b> Collaborative filtering</a></li>
+<li class="chapter" data-level="4.6.8.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#latent-variable-algorithms"><i class="fa fa-check"></i><b>4.6.8.4</b> Latent variable algorithms</a></li>
+<li class="chapter" data-level="4.6.8.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-pagerank-algorithm"><i class="fa fa-check"></i><b>4.6.8.5</b> The PageRank algorithm</a></li>
+<li class="chapter" data-level="4.6.8.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#priority-queues-and-heaps"><i class="fa fa-check"></i><b>4.6.8.6</b> Priority queues and heaps</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.9" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#learning-to-rank-for-search-and-recommendation-part-2"><i class="fa fa-check"></i><b>4.6.9</b> 10/29 Learning to rank for search and recommendation, Part 2</a></li>
+<li class="chapter" data-level="4.6.10" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#clustering-algorithms-part-1"><i class="fa fa-check"></i><b>4.6.10</b> 11/5 Clustering Algorithms, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.10.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#finding-structure-in-data"><i class="fa fa-check"></i><b>4.6.10.1</b> Finding structure in data</a></li>
+<li class="chapter" data-level="4.6.10.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-k-means-algorithm"><i class="fa fa-check"></i><b>4.6.10.2</b> The k-means algorithm</a></li>
+<li class="chapter" data-level="4.6.10.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#problems-with-evaluating-clustering-results"><i class="fa fa-check"></i><b>4.6.10.3</b> Problems with evaluating clustering results</a></li>
+<li class="chapter" data-level="4.6.10.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#probabilistic-clustering-dealing-with-uncertainty"><i class="fa fa-check"></i><b>4.6.10.4</b> Probabilistic clustering, dealing with uncertainty</a></li>
+<li class="chapter" data-level="4.6.10.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#agglomerative-hierarchical-clustering-and-k-medoids-algorithms-for-non-euclidean-spaces"><i class="fa fa-check"></i><b>4.6.10.5</b> Agglomerative hierarchical clustering and k-medoids algorithms for non-Euclidean spaces</a></li>
+<li class="chapter" data-level="4.6.10.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#density-based-clustering-algorithms"><i class="fa fa-check"></i><b>4.6.10.6</b> Density-based clustering algorithms</a></li>
+<li class="chapter" data-level="4.6.10.7" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#graph-based-clustering-algorithms"><i class="fa fa-check"></i><b>4.6.10.7</b> Graph-based clustering algorithms</a></li>
+<li class="chapter" data-level="4.6.10.8" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#database-scale-clustering-algorithms"><i class="fa fa-check"></i><b>4.6.10.8</b> Database scale clustering algorithms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.11" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#clustering-algorithms-part-2"><i class="fa fa-check"></i><b>4.6.11</b> 11/12 Clustering Algorithms, Part 2</a></li>
+<li class="chapter" data-level="4.6.12" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#dimensionality-reduction"><i class="fa fa-check"></i><b>4.6.12</b> 11/19 Dimensionality reduction</a>
+<ul>
+<li class="chapter" data-level="4.6.12.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#eigenvalues-and-pca"><i class="fa fa-check"></i><b>4.6.12.1</b> Eigenvalues and PCA</a></li>
+<li class="chapter" data-level="4.6.12.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#singular-value-decomposition-and-its-interpretation"><i class="fa fa-check"></i><b>4.6.12.2</b> Singular value decomposition and its interpretation</a></li>
+<li class="chapter" data-level="4.6.12.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#manifold-learning-and-nonlinear-spaces"><i class="fa fa-check"></i><b>4.6.12.3</b> Manifold learning and nonlinear spaces</a></li>
+<li class="chapter" data-level="4.6.12.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#spectral-embedding"><i class="fa fa-check"></i><b>4.6.12.4</b> Spectral embedding</a></li>
+<li class="chapter" data-level="4.6.12.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-umap-algorithm"><i class="fa fa-check"></i><b>4.6.12.5</b> The UMAP algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.13" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#section"><i class="fa fa-check"></i><b>4.6.13</b> 11/23</a></li>
+<li class="chapter" data-level="4.6.14" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#frequent-item-sets-market-basket-analysis"><i class="fa fa-check"></i><b>4.6.14</b> 12/3 Frequent item sets; market basket analysis</a>
+<ul>
+<li class="chapter" data-level="4.6.14.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#market-basket-models"><i class="fa fa-check"></i><b>4.6.14.1</b> Market basket models</a></li>
+<li class="chapter" data-level="4.6.14.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-a-priori-algorithm"><i class="fa fa-check"></i><b>4.6.14.2</b> The A-Priori algorithm</a></li>
+<li class="chapter" data-level="4.6.14.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#limited-pass-algorithms"><i class="fa fa-check"></i><b>4.6.14.3</b> Limited pass algorithms</a></li>
+<li class="chapter" data-level="4.6.14.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#streaming-algorithms-time-permitting"><i class="fa fa-check"></i><b>4.6.14.4</b> Streaming algorithms – time permitting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.15" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#additional-topics"><i class="fa fa-check"></i><b>4.6.15</b> 12/10 Additional Topics</a></li>
+<li class="chapter" data-level="4.6.16" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#final-project-due"><i class="fa fa-check"></i><b>4.6.16</b> 12/17: Final Project Due</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -210,7 +452,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ivy’s Digital Garden</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Perpetually trying to remember what I forgot</a>
           </h1>
         </div>
 
@@ -218,16 +460,891 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cs50" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> CS50<a href="cs50.html#cs50" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="cs50" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> CS50<a href="cs50.html#cs50" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Introduction<a href="cs50.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Course covers Scratch, C, Python, and SQL, with a focus on problem-solving and critical thinking skills.</li>
+<li>Unary notation, also known as base one, is a system where counting is done using individual units, such as fingers, with each unit representing one digit, and this system is used when counting people or objects one by one, literally using fingers as digits</li>
+<li>The question of how high one can count with one human hand is posed and the correct answer is actually 31, which can be achieved by using patterns and combinations of fingers</li>
+<li>The binary system, also known as base 2, is a system that uses two potential states, such as down or up, or black and white, to represent information, and this system is used by computers to understand and process data</li>
+<li>In the binary system, information is represented using binary digits, also known as bits, which can have a value of either zero or one, and this is in contrast to the decimal system, which uses 10 digits to represent information</li>
+<li>Computers use millions of tiny light switches, known as transistors, to store information, and these transistors can be turned on or off to represent zeros and ones, allowing computers to store and process information</li>
+<li>To count higher than zero or one, multiple bits, or light bulbs, are needed, and with three bits, a computer can represent numbers up to seven, using different combinations of zeros and ones to represent each number</li>
+<li>Computers represent numbers using a binary system, where a series of switches or light bulbs can be turned on or off to represent different values, such as 0 and 1, with the pattern off off off representing 0, off on off representing 2, and on on on representing 7</li>
+<li>The binary system uses a base 2 number system, where each digit can have one of two values, 0 or 1, and the columns are weighted differently, with the rightmost column being the ones column, the next column being the twos column, and so on, using powers of 2</li>
+<li>The powers of 2 are used to weight the columns in the binary system, with the first column being 2 to the 0, the second column being 2 to the 1, and so on, allowing computers to count from 0 to 7 using only 3 digits</li>
+<li>A byte, or eight bits, can represent a range of decimal numbers from 0 to 255, and this range is calculated by adding the powers of two represented by each bit, so if all the bits are ones, the total is 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1, which equals 255</li>
+<li>The use of powers of two, such as 255 and 256, is common in the computer world and programming because these are the typical units of measurement used by systems, and understanding these concepts can help clarify how computers represent and process information</li>
+</ul>
+<div id="unicode" class="section level4 hasAnchor" number="4.4.1.1">
+<h4><span class="header-section-number">4.4.1.1</span> Unicode<a href="cs50.html#unicode" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Computers initially used eight bits to represent characters, which limited the number of possible characters to 256, sufficient for the English alphabet but not for other languages that have more glyphs, and nowadays computers use more bits, such as 16, 24, or 32 bits, to represent a wider range of characters</li>
+<li>With 32 bits, it is possible to represent as many as 4 billion possible characters, which is a significant increase from the initial 256 characters, and this has enabled the representation of all human languages, past, present, and future, as well as pictograms like smiley faces and emojis</li>
+<li>The goal of the Unicode system is to be backwards compatible with the existing character set, known as ASI, and to represent all human languages, as well as pictograms and emojis, using a super set of representations that can be 16, 24, or 32 bits</li>
+<li>The Unicode Consortium releases new emojis every year, which can cause compatibility issues if devices are not updated with the latest software, resulting in some emojis not being displayed correctly, and the popularity of emojis can be seen in a cloud diagram that shows the size of each emoji indicating its relative popularity</li>
+</ul>
+</div>
+<div id="color" class="section level4 hasAnchor" number="4.4.1.2">
+<h4><span class="header-section-number">4.4.1.2</span> Color<a href="cs50.html#color" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Computers represent color using a system called RGB, which stands for red, green, and blue, and this system is used to allocate some number of bits or bytes to represent the color of a single dot, or pixel, on the screen</li>
+<li>The RGB system typically uses three numbers, or three bytes, which is 24 bits per pixel, to represent the color of a pixel, with each number representing the amount of red, green, and blue in the color</li>
+<li>Each of the three numbers in the RGB system uses eight bits, or one byte, to represent the amount of red, green, and blue, with the highest possible value being 255, and the actual value representing a proportion of this maximum amount</li>
+<li>When a computer combines the wavelengths of light represented by the RGB values, it produces a specific color, such as a medium amount of red, a medium amount of green, and a little bit of blue, which results in the color code for a single dot, representing a specific shade of yellow</li>
+<li>The pattern of three bytes, such as 72, 73, and 33, is used to represent the color of a single pixel, and this pattern is repeated for every pixel on the screen, with the combination of these pixels creating the image that is perceived by humans</li>
+<li>Digital photographs are made up of millions of bytes, with each byte corresponding to one of the pixels on the screen, and at least three bytes are used to represent every one of these dots, resulting in large file sizes, such as 1 megabyte or 10 megabytes, depending on the resolution of the image</li>
+<li>Representation: Computers represent colors using a combination of bytes, with millions of bytes used to represent images, and this representation is made possible by fancy compression software that can use fewer bytes, but in general, it is the combination of these bytes that allows for color representation</li>
+<li>Videos are represented as a series of images, similar to flipbooks, where the human mind perceives motion when individual images are displayed in rapid succession, with videos typically consisting of 30 or 24 frames per second, making them large files to download due to the high number of images</li>
+<li>Sound can be represented using numbers that correspond to specific frequencies, which have a direct relationship to the pitch of a note, and additional numbers can be used to represent volume and duration, allowing for the digital representation of music</li>
+<li>The representation of musical notes can be achieved by assigning specific patterns to each note, such as A, A sharp, and C, and using multiple bytes to represent the pitch, volume, and duration of each note, similar to how RGB values represent colors</li>
+<li>The interpretation of zeros and ones depends on the context in which they are used, such as a calculator program interpreting a pattern as numbers, a text messaging program interpreting it as letters, or Photoshop interpreting it as a color, and programmers have the power to write code that tells the computer how to treat these patterns</li>
+</ul>
+</div>
+<div id="algorithms" class="section level4 hasAnchor" number="4.4.1.3">
+<h4><span class="header-section-number">4.4.1.3</span> Algorithms<a href="cs50.html#algorithms" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>An algorithm is a set of step-by-step instructions for solving a problem, and it is essential to express oneself correctly and precisely when creating an algorithm, as explored in the concept of converting problems to solutions</li>
+<li>The notion of an algorithm is introduced as a precise description of how to do something, with the operative word being “precise”, and an example of trimming a beard is used to illustrate this concept</li>
+<li>Pseudocode: Implementing algorithms as programmers or computer scientists involves translating conceptual ideas into code, which can be expressed in various programming languages such as C, C++, Python, R, or Ruby, and for now, pseudo code can be used as an intermediate step</li>
+<li>Pseudo code is not a formal language and can be written in various ways, with the goal of being precise and finite, and it can be used to break down complex tasks into step-by-step instructions, as demonstrated with the example of finding a person in a phone book</li>
+<li>The process of finding a person in a phone book can be broken down into steps, including picking up the phone book, opening to the middle of the book, looking at the page, and checking if the person is on the page, with conditional actions based on the outcome of each step</li>
+<li>The example of finding a person in a phone book illustrates the importance of considering all possible scenarios, including the case where the person is not in the book, which can be a common source of errors in software development if not properly handled</li>
+<li>Pseudo code can include verbs or actions, which are referred to as functions, and conditional statements, such as if-else statements, which are used to make decisions based on Boolean expressions, which are questions with a yes or no answer</li>
+<li>Boolean expressions are named after mathematician Boolean and are used to make decisions in code, with indentation playing a crucial role in determining the logical flow of the program, as seen in the example of finding a person in a phone book</li>
+<li>The use of pseudo code and conditional statements can help programmers anticipate and handle potential errors, such as the case where a person is not in the phone book, and can help prevent bugs and mistakes in software development</li>
+<li>The characteristics of pseudo code, including the use of functions, conditionals, and Boolean expressions, will be used throughout the discussion, with a focus on developing a more technical understanding of these concepts</li>
+<li>The example of finding a person in a phone book demonstrates the importance of using indentation to convey logical significance in pseudo code and many programming languages, with the indentation determining which actions to take based on the outcome of conditional statements</li>
+<li>Most computer programs have four fundamental characteristics, including the ability to make decisions and create cycles or loops, and even in relatively simple real-world algorithms, these characteristics are present, as seen in the example of searching for John Harvard in a phone book</li>
+<li>The use of loops in programming can potentially create an infinite loop, where the program gets stuck in a cycle forever, but in the case of the phone book algorithm, the loop will eventually stop because the problem is being divided and conquered, and the phone book will eventually run out</li>
+<li>The algorithm for searching the phone book will stop when John Harvard is found or when the entire phone book has been searched, and this is guaranteed to happen because the problem is being broken down into smaller parts</li>
+<li>When writing code, it is possible to accidentally create an infinite loop, which can cause the computer to become unresponsive, but there are ways to terminate or break out of these conditions, and these techniques will be explored later</li>
+<li>The concepts of loops and decision-making will be used to solve real-world problems, including visual and audio problems, and these solutions will be explored after a break</li>
+<li>The ability to write code that can solve complex problems and potentially take control of the computer is a powerful tool, but it requires careful attention to detail to avoid creating bugs or infinite loops</li>
+<li>The techniques for terminating or breaking out of infinite loops and solving real-world problems will be demonstrated, allowing users to write code that can be used to solve a wide range of problems</li>
+</ul>
+</div>
+<div id="artificial-intelligence" class="section level4 hasAnchor" number="4.4.1.4">
+<h4><span class="header-section-number">4.4.1.4</span> Artificial Intelligence<a href="cs50.html#artificial-intelligence" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Artificial intelligence has been a prominent topic in recent months and years, and it will be revisited at the end of the course to explore its connection to the concepts learned throughout, particularly in relation to writing code</li>
+<li>Implementing a chatbot that answers questions and has conversations can be done using pseudo code, which may involve conditional statements, such as responding with “hello” if the user says “hello”, but this approach can become impractical with a large number of possibilities</li>
+<li>The number of conditional statements required to handle various questions and responses can escalate quickly, making it impossible for programmers to write an infinite number of conditionals, and this is where artificial intelligence comes in to figure out the responses based on probability and statistics</li>
+<li>Artificial intelligence, such as chatbots, is typically trained on large amounts of data, allowing it to learn and respond to questions without requiring an infinite number of conditional statements, and this is often achieved using large language models and neural networks</li>
+<li>Neural networks are inspired by the human brain’s neural structure, where each circle represents a neuron, and the arrows represent pathways between them, and these networks are trained on huge amounts of data to produce answers to questions based on probability and statistics</li>
+<li>The goal of neural networks is to output the most probabilistically likely answer to a given question, and this approach is used by companies like Google and Microsoft to power their AI systems, without relying on programmers to anticipate every possible question</li>
+<li>The concept of using a rubber duck as a debugging tool has been around for a long time, where programmers talk to the duck to explain their code and identify errors, and this idea is also used in CS50’s own AI persona, which takes the form of a rubber duck</li>
+<li>The technique of “rubber duck debugging” or “rubber ducking” involves talking through a problem to a physical or virtual entity, like a duck, to help clarify and solve the issue, and this technique can be a valuable programming tool</li>
+<li>Virtual tools, such as chat GPT, are not allowed to be used in the class due to policy, but students are encouraged to use CS50’s own AI-based tools, which are designed to guide students towards solutions without providing outright answers</li>
+<li>CS50’s AI-based tools will be available throughout the course and can be accessed through a specific URL, as well as being embedded in the Visual Studio code programming environment, where a virtual “duck” will also be present</li>
+<li>The course will cover programming concepts, including the use of AI, and will start with writing code in a language other than C, as the code written in C can look cryptic and is not the focus of the initial lessons</li>
+<li>The initial focus of the course will be on a more visual incarnation of programming, rather than the zeros and ones that the computer understands as input, and actual programming will be done after a short break</li>
+<li>The programming environment that will be used is a cloud-based version of Visual Studio code, where students will be able to access the virtual “duck” and other tools to help with their programming tasks</li>
+<li>Computers only understand code written in zeros and ones, but programmers will be writing code at a higher level, using languages that are more understandable and easier to work with, such as C, Python, and JavaScript, with the understanding that computers can represent higher numbers using zeros and ones</li>
+<li>The programming language C is an older language that remains popular due to its speed and ability to make devices operate quickly, and it will provide a conceptual foundation for introducing other languages, even though it may seem scary at first due to its punctuation and syntax</li>
+<li>The value of learning C is not that it will be used directly in most jobs, but rather that it will provide a foundation for understanding other languages, such as Python and JavaScript, which offer more functionality and abstract away some of the details that will be focused on in the coming days</li>
+</ul>
+</div>
+</div>
+<div id="c" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> C<a href="cs50.html#c" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="running-cs50-locally" class="section level4 hasAnchor" number="4.4.2.1">
+<h4><span class="header-section-number">4.4.2.1</span> Running CS50 locally<a href="cs50.html#running-cs50-locally" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>Download the CS50 Library from <a href="https://github.com/cs50/libcs50/releases" class="uri">https://github.com/cs50/libcs50/releases</a></li>
+<li>1b. Extract/unzip the downloaded zipped folder</li>
+<li>Open Terminal and change directory to the unzipped CS50 library folder. For example if folder is on desktop and the folder is named libcs50-10.1.0 , then terminal command should be: cd desktop/libcs50-10.1.0</li>
+<li>Still in terminal after changing directory, then run the command: sudo make install</li>
+<li>After installation, close terminal, go to visual studio and write your C program #include &lt;cs50.h&gt;</li>
+</ol>
+<pre><code>export DYLD_LIBRARY_PATH=/usr/local/lib
+g++ cppTest/helloworld.cpp -o cppTest/helloworld -lcs50
+
+\\ if in same directory
+./FileName</code></pre>
+<p>link to set up.
+<a href="https://stackoverflow.com/questions/76893704/how-can-i-include-the-cs50-h-file" class="uri">https://stackoverflow.com/questions/76893704/how-can-i-include-the-cs50-h-file</a></p>
+<p>Better yet, add this to your profile so you don’t need to set it up every time you open a new terminal window. Add the following line to your ~/.bash_profile or ~/.zshrc file:</p>
+<p>Configure the c_cpp_properties.json file to inclute the path to the CS50 library (header file).</p>
+<pre><code>            &quot;includePath&quot;: [
+                &quot;${workspaceFolder}/**&quot;,
+                &quot;/usr/local/include/&quot;
+            ],</code></pre>
+<p>Not discussed in this lecture, but make default make settings do not work on my local computer. Create a Makefile in the directory with my C programs with the following content.</p>
+<pre><code>CC = gcc
+CFLAGS = -lcs50
+
+# Default target: compile the executable with the same name as the .c file (without extension)
+%: %.c
+    $(CC) $&lt; -o $@ $(CFLAGS)</code></pre>
+<p>Then by make command, the executable will be created with the same name as the .c file, and it will link to the cs50 library.</p>
+</div>
+<div id="source-code" class="section level4 hasAnchor" number="4.4.2.2">
+<h4><span class="header-section-number">4.4.2.2</span> Source code<a href="cs50.html#source-code" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Programmers in the real world write source code, which is a little English-like but has its own patterns and special syntax, and this is what software developers and engineers do, but computers only understand zeros and ones, also known as binary system</li>
+<li>Computers use patterns of bits to represent not only numbers, letters, colors, images, and sounds but also fundamental functionality such as printing, playing, and loading, and these patterns are built into devices like Macs, PCs, and phones</li>
+<li>The process of translating source code into machine code that computers understand is done using a compiler, a special program that takes source code as input and produces machine code as output, and the course will focus on a compiler that supports the C language</li>
+<li>Visual Studio Code for CS50: The tool used for CS50 problem sets is Visual Studio Code, or VS Code for short, which is a popular industry standard tool that can be accessed through a cloud-based version at cs50.dev, requiring a free GitHub account to sign in</li>
+<li>The cloud-based version of VS Code has CS50-specific features pre-installed, and users can download the software for free onto their Mac or PC later in the term to program offline, although it is suggested to wait until they are comfortable with the cloud-based environment</li>
+<li>The VS Code interface includes tabs for code at the top right, a terminal window at the bottom for a command line interface, a File Explorer at the top left, and an activity bar with icons for various features, including a CS50-specific chat bot</li>
+<li>VS Code automatically highlights and colorizes code to draw attention to different ideas in the program, and it allows users to use their keyboard more efficiently than their mouse or trackpad</li>
+<li>The terminal window in VS Code is a command line interface, abbreviated as CLI, where users can type commands to run programs, which may feel like a step backwards initially but will provide more power and efficiency</li>
+<li>The graphical user interface, abbreviated as GUI, in VS Code includes buttons, icons, and menus, and it is built into the software along with the command line interface</li>
+<li>The activity bar in VS Code includes a duck icon, which is a CS50-specific chat bot that users can ask questions to throughout the process, and it can be accessed by logging in to the cloud-based version of VS Code</li>
+<li>The command line interface in VS Code will be introduced and used, allowing users to type commands to run programs and providing more efficiency and power beyond the graphical user interface</li>
+<li>The use of VS Code will involve a combination of graphical and command line interfaces, providing users with a comprehensive programming environment</li>
+<li>Hello, World: The problem sets each week are where students will learn how to program, with the lectures introducing concepts, ideas, and primitives to get started, and it is through actually doing the problem sets that muscle memory and practice will come</li>
+<li>To get started with programming, the code will be written in a terminal window, and the file will be named with a dot C extension by convention, such as hello.c, with attention to details like lowercase letters and no spaces</li>
+<li>When writing code in C, it is important to be precise, as computers are not forgiving, and mistakes like miscapitalization, misspelling, or adding too many spaces can occur, but muscle memory will come with practice</li>
+<li>The program will be typed out in VS Code, including lines like include stdio.h, int main void, and printf, with curly braces and proper punctuation, and this code will be automatically saved by VS Code or can be saved manually with control or Command S</li>
+<li>The written code will be displayed in the Code tab, with color coding, and a visual icon will indicate that the file exists in the account, which is stored in a cloud container, similar to iCloud or Google Drive</li>
+</ul>
+</div>
+<div id="from-scratch-to-c" class="section level4 hasAnchor" number="4.4.2.3">
+<h4><span class="header-section-number">4.4.2.3</span> From Scratch to C<a href="cs50.html#from-scratch-to-c" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>The idea is to compare Scratch programs with their equivalent in C, using the example of a “Hello, world” program, and understanding that the syntax may seem overwhelming at first, but there is a rhyme and reason to how Scratch was designed</li>
+<li>In Scratch, there is a function called “say” that takes an input or argument, which is provided in a white oval, and the equivalent in C is the word “print”, or more specifically “printf”, which allows for formatting text in various ways</li>
+<li>The input or argument in C is surrounded by double quotes, and not single quotes, and it can include escape sequences such as “” to indicate a new line, which is essential for telling the computer exactly what to do</li>
+<li>The backslash “n” in C is an escape sequence that indicates a new line, and it is necessary to include it at the end of a “printf” statement to move the prompt to the next line, which is considered good practice</li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb21-1"><a href="cs50.html#cb21-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb21-2"><a href="cs50.html#cb21-2" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="cs50.html#cb21-3" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb21-4"><a href="cs50.html#cb21-4" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb21-5"><a href="cs50.html#cb21-5" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;hello, world</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb21-6"><a href="cs50.html#cb21-6" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb21-7"><a href="cs50.html#cb21-7" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<pre><code>## /opt/homebrew/opt/llvm/bin/clang -I&quot;/Library/Frameworks/R.framework/Resources/include&quot; -DNDEBUG   -I/opt/homebrew/opt/llvm/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c c1730f320ec3c.c -o c1730f320ec3c.o
+## /opt/homebrew/opt/llvm/bin/clang -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -L/Library/Frameworks/R.framework/Resources/lib -L/opt/homebrew/opt/llvm/lib -Wl,-rpath,/opt/homebrew/opt/llvm/lib -o c1730f320ec3c.so c1730f320ec3c.o -F/Library/Frameworks/R.framework/.. -framework R</code></pre>
+<ul>
+<li>If the backslash “n” is omitted, the prompt will appear on the same line as the output, which may look confusing and is not the intended behavior of the program</li>
+</ul>
+<p>output:</p>
+<pre><code>hello, world$</code></pre>
+<ul>
+<li>In programming, it is essential to tell the computer exactly what to do, and using escape sequences like “” is a way to do that, rather than relying on physical line breaks in the code, which can be confusing for the computer</li>
+<li>The use of functions like printf is similar to f of x notation in mathematics, where f is a function, x is an argument or input, and the output is a side effect, which is something that happens on the screen, visually</li>
+<li>In C, there are several escape sequences, including backslash n for a new line and backslash r, which moves the cursor to the beginning of the line, and to print an actual double quote, it needs to be escaped to avoid confusion</li>
+</ul>
+<pre><code>\n
+\r
+\&quot;
+\&#39;
+\\</code></pre>
+<ul>
+<li>The computer reads code top to bottom, left to right, and needs precise instructions, so when printing a quotation mark, it should be escaped to be displayed literally on the screen</li>
+<li>To print a literal backslash, it is necessary to use backslash backslash, as the backslash is used as a special character to indicate escape sequences, and this convention was developed to solve problems that humans encountered in the past</li>
+<li>The concept of side effects from functions will be contrasted with other types of outputs from functions, and the use of single quotes in other contexts will be discussed later</li>
+</ul>
+</div>
+<div id="header-files" class="section level4 hasAnchor" number="4.4.2.4">
+<h4><span class="header-section-number">4.4.2.4</span> Header Files<a href="cs50.html#header-files" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>At the top of a C program file, there is typically a line that includes a header file, which is a file that ends in .h and contains functionality that comes with the system or programming language, such as standard io.h, which is included using the line #include &lt;stdio.h&gt;</li>
+<li>If a header file is not included at the top of the code, the program will not have access to the library, which is a collection of code written by someone else, and will result in an error, such as a call to an undeclared library function, when trying to compile the program</li>
+<li>Contains the code for functions like printf, and including this file in a program allows the programmer to use these functions</li>
+<li>Correct filename is stdio.h, not studio.h, which is a common mistake</li>
+<li>Manual pages were documented long ago for those more comfortable with programming. A user friendly version is available at manual.cs50.io as well as the original documentation</li>
+</ul>
+</div>
+<div id="hello-you" class="section level4 hasAnchor" number="4.4.2.5">
+<h4><span class="header-section-number">4.4.2.5</span> Hello, You<a href="cs50.html#hello-you" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Use cs50.h to make our life easier to get user input until the training wheels are taken off</li>
+</ul>
+<p>example get_string function:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb25-1"><a href="cs50.html#cb25-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb25-2"><a href="cs50.html#cb25-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb25-3"><a href="cs50.html#cb25-3" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="cs50.html#cb25-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb25-5"><a href="cs50.html#cb25-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb25-6"><a href="cs50.html#cb25-6" tabindex="-1"></a>    string answer <span class="op">=</span> get_string<span class="op">(</span><span class="st">&quot;What&#39;s your name? &quot;</span><span class="op">);</span></span>
+<span id="cb25-7"><a href="cs50.html#cb25-7" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Hello, </span><span class="sc">%s\n</span><span class="st">&quot;</span><span class="op">,</span> answer<span class="op">);</span></span>
+<span id="cb25-8"><a href="cs50.html#cb25-8" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li><p>A semicolon is required at the end of the line of code to complete the statement</p></li>
+<li><p>Printf can take multiple inputs, inputs are separated by commas, with no need for multiple parentheses or ovals, and it is a good practice to separate arguments with single spaces</p></li>
+<li><p>Functions in C, like in math class, follow a pattern of function name, parentheses, and inputs separated by commas, and each statement in C should end with a semicolon, as seen on lines 6 and 7 of the code</p></li>
+<li><p>Besides running a program, there are other commands that can be run in the terminal window, such as “ls”, and the user can interact with the program by entering input, like “What’s your name?”, and the program will respond accordingly</p></li>
+</ul>
+</div>
+<div id="terminal-commands" class="section level4 hasAnchor" number="4.4.2.6">
+<h4><span class="header-section-number">4.4.2.6</span> Terminal Commands<a href="cs50.html#terminal-commands" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>cd
+cp 
+ls 
+mkdir 
+mv 
+rm 
+rmdir
+
+mv hello.c old.c
+mv old.c hello.c 
+
+cp hello.c backup.c
+rm backup.c
+
+mv hello.c .. </code></pre>
+<ul>
+<li>cp for copy</li>
+<li>mkdir for make directory</li>
+<li>mv for move</li>
+<li>rm for remove</li>
+<li>rmdir for remove directory, which can be used to manage files and folders</li>
+</ul>
+</div>
+<div id="types" class="section level4 hasAnchor" number="4.4.2.7">
+<h4><span class="header-section-number">4.4.2.7</span> Types<a href="cs50.html#types" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>cd50 library</p>
+<pre><code>get_char // %c 
+get_double // %d ?
+get_float // %f
+get_int // %i
+get_long // %li
+get_string // %s</code></pre>
+</div>
+<div id="conditionals" class="section level4 hasAnchor" number="4.4.2.8">
+<h4><span class="header-section-number">4.4.2.8</span> Conditionals<a href="cs50.html#conditionals" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>if (x &lt; y)
+{
+    printf(&quot;x is less than y\n&quot;);
+}
+else
+{
+    printf(&quot;x is not less than y\n&quot;);
+}</code></pre>
+<p>less code is more</p>
+<pre><code>if (x &lt; y)
+{
+    printf(&quot;x is less than y\n&quot;);
+}
+else if (x &gt; y)
+{
+    printf(&quot;x is greater than y\n&quot;);
+}
+else
+{
+    printf(&quot;x is equal to y\n&quot;);
+}</code></pre>
+</div>
+<div id="variables-and-compare.c" class="section level4 hasAnchor" number="4.4.2.9">
+<h4><span class="header-section-number">4.4.2.9</span> Variables and compare.c<a href="cs50.html#variables-and-compare.c" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>int counter = 0;
+counter = counter + 1;
+counter += 1;
+counter++; // only works for incrementing by 1
+counter--; // only works for decrementing by 1</code></pre>
+<ul>
+<li>Bad code wastes computing time. Make the code simple and it will be efficient.</li>
+</ul>
+</div>
+<div id="agree.c" class="section level4 hasAnchor" number="4.4.2.10">
+<h4><span class="header-section-number">4.4.2.10</span> agree.c<a href="cs50.html#agree.c" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<pre><code>bool 
+char 
+double 
+float 
+int 
+long 
+string </code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb32-1"><a href="cs50.html#cb32-1" tabindex="-1"></a></span>
+<span id="cb32-2"><a href="cs50.html#cb32-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb32-3"><a href="cs50.html#cb32-3" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb32-4"><a href="cs50.html#cb32-4" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb32-5"><a href="cs50.html#cb32-5" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="cs50.html#cb32-6" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb32-7"><a href="cs50.html#cb32-7" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb32-8"><a href="cs50.html#cb32-8" tabindex="-1"></a>    <span class="dt">char</span> c <span class="op">=</span> get_char<span class="op">(</span><span class="st">&quot;Do you agree? (y/n) &quot;</span><span class="op">);</span></span>
+<span id="cb32-9"><a href="cs50.html#cb32-9" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;y&#39;</span><span class="op">)</span></span>
+<span id="cb32-10"><a href="cs50.html#cb32-10" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb32-11"><a href="cs50.html#cb32-11" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb32-12"><a href="cs50.html#cb32-12" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb32-13"><a href="cs50.html#cb32-13" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;n&#39;</span><span class="op">)</span></span>
+<span id="cb32-14"><a href="cs50.html#cb32-14" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb32-15"><a href="cs50.html#cb32-15" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Not agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb32-16"><a href="cs50.html#cb32-16" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb32-17"><a href="cs50.html#cb32-17" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Use single quotes for single chars</li>
+<li>Use double quotes for strings</li>
+<li>get_char, prompts the user again and again until a single char is entered, and it ignores inputs that are too long, such as “YES”</li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb33-1"><a href="cs50.html#cb33-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb33-2"><a href="cs50.html#cb33-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb33-3"><a href="cs50.html#cb33-3" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="cs50.html#cb33-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb33-5"><a href="cs50.html#cb33-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb33-6"><a href="cs50.html#cb33-6" tabindex="-1"></a>    <span class="dt">char</span> c <span class="op">=</span> get_char<span class="op">(</span><span class="st">&quot;Do you agree? (y/n) &quot;</span><span class="op">);</span></span>
+<span id="cb33-7"><a href="cs50.html#cb33-7" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;y&#39;</span><span class="op">)</span></span>
+<span id="cb33-8"><a href="cs50.html#cb33-8" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb33-9"><a href="cs50.html#cb33-9" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb33-10"><a href="cs50.html#cb33-10" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb33-11"><a href="cs50.html#cb33-11" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;Y&#39;</span><span class="op">)</span></span>
+<span id="cb33-12"><a href="cs50.html#cb33-12" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb33-13"><a href="cs50.html#cb33-13" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb33-14"><a href="cs50.html#cb33-14" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb33-15"><a href="cs50.html#cb33-15" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;n&#39;</span><span class="op">)</span></span>
+<span id="cb33-16"><a href="cs50.html#cb33-16" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb33-17"><a href="cs50.html#cb33-17" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Not agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb33-18"><a href="cs50.html#cb33-18" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb33-19"><a href="cs50.html#cb33-19" tabindex="-1"></a>        <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;N&#39;</span><span class="op">)</span></span>
+<span id="cb33-20"><a href="cs50.html#cb33-20" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb33-21"><a href="cs50.html#cb33-21" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Not agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb33-22"><a href="cs50.html#cb33-22" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb33-23"><a href="cs50.html#cb33-23" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>The improved program still has limitations, but redundent</li>
+</ul>
+<div class="sourceCode" id="cb34"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb34-1"><a href="cs50.html#cb34-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb34-2"><a href="cs50.html#cb34-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb34-3"><a href="cs50.html#cb34-3" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="cs50.html#cb34-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb34-5"><a href="cs50.html#cb34-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb34-6"><a href="cs50.html#cb34-6" tabindex="-1"></a>    <span class="dt">char</span> c <span class="op">=</span> get_char<span class="op">(</span><span class="st">&quot;Do you agree? (y/n) &quot;</span><span class="op">);</span></span>
+<span id="cb34-7"><a href="cs50.html#cb34-7" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;y&#39;</span> <span class="op">||</span> c <span class="op">==</span> <span class="ch">&#39;Y&#39;</span><span class="op">)</span></span>
+<span id="cb34-8"><a href="cs50.html#cb34-8" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb34-9"><a href="cs50.html#cb34-9" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb34-10"><a href="cs50.html#cb34-10" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb34-11"><a href="cs50.html#cb34-11" tabindex="-1"></a>    <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;n&#39;</span> <span class="op">||</span> c <span class="op">==</span> <span class="ch">&#39;N&#39;</span><span class="op">)</span></span>
+<span id="cb34-12"><a href="cs50.html#cb34-12" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb34-13"><a href="cs50.html#cb34-13" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Not agreed</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb34-14"><a href="cs50.html#cb34-14" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb34-15"><a href="cs50.html#cb34-15" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Use ||, meaning “or”, to expand on conditionals without being redundant. &amp;&amp; is to for “and”.</li>
+</ul>
+</div>
+<div id="loops-cat.c" class="section level4 hasAnchor" number="4.4.2.11">
+<h4><span class="header-section-number">4.4.2.11</span> Loops cat.c<a href="cs50.html#loops-cat.c" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb35"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb35-1"><a href="cs50.html#cb35-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb35-2"><a href="cs50.html#cb35-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb35-3"><a href="cs50.html#cb35-3" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="cs50.html#cb35-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb35-5"><a href="cs50.html#cb35-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb35-6"><a href="cs50.html#cb35-6" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb35-7"><a href="cs50.html#cb35-7" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb35-8"><a href="cs50.html#cb35-8" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb35-9"><a href="cs50.html#cb35-9" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Use loops to reduce redundancy</li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb36-1"><a href="cs50.html#cb36-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb36-2"><a href="cs50.html#cb36-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb36-3"><a href="cs50.html#cb36-3" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="cs50.html#cb36-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb36-5"><a href="cs50.html#cb36-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb36-6"><a href="cs50.html#cb36-6" tabindex="-1"></a>    print i <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb36-7"><a href="cs50.html#cb36-7" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb36-8"><a href="cs50.html#cb36-8" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb36-9"><a href="cs50.html#cb36-9" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb36-10"><a href="cs50.html#cb36-10" tabindex="-1"></a>        i <span class="op">--;</span></span>
+<span id="cb36-11"><a href="cs50.html#cb36-11" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb36-12"><a href="cs50.html#cb36-12" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Alternatively, count up, which is more conventional.</li>
+</ul>
+<div class="sourceCode" id="cb37"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb37-1"><a href="cs50.html#cb37-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb37-2"><a href="cs50.html#cb37-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb37-3"><a href="cs50.html#cb37-3" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="cs50.html#cb37-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb37-5"><a href="cs50.html#cb37-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb37-6"><a href="cs50.html#cb37-6" tabindex="-1"></a>    <span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb37-7"><a href="cs50.html#cb37-7" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb37-8"><a href="cs50.html#cb37-8" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb37-9"><a href="cs50.html#cb37-9" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb37-10"><a href="cs50.html#cb37-10" tabindex="-1"></a>        i<span class="op">++;</span></span>
+<span id="cb37-11"><a href="cs50.html#cb37-11" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb37-12"><a href="cs50.html#cb37-12" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>So commonly used there’s another way to express this with “for”</li>
+</ul>
+<div class="sourceCode" id="cb38"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb38-1"><a href="cs50.html#cb38-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb38-2"><a href="cs50.html#cb38-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb38-3"><a href="cs50.html#cb38-3" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="cs50.html#cb38-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb38-5"><a href="cs50.html#cb38-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb38-6"><a href="cs50.html#cb38-6" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb38-7"><a href="cs50.html#cb38-7" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb38-8"><a href="cs50.html#cb38-8" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb38-9"><a href="cs50.html#cb38-9" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb38-10"><a href="cs50.html#cb38-10" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Bad code, meow forever</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb39-1"><a href="cs50.html#cb39-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb39-2"><a href="cs50.html#cb39-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb39-3"><a href="cs50.html#cb39-3" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="cs50.html#cb39-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb39-5"><a href="cs50.html#cb39-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb39-6"><a href="cs50.html#cb39-6" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span><span class="kw">true</span><span class="op">)</span></span>
+<span id="cb39-7"><a href="cs50.html#cb39-7" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb39-8"><a href="cs50.html#cb39-8" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb39-9"><a href="cs50.html#cb39-9" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb39-10"><a href="cs50.html#cb39-10" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+</div>
+<div id="functions" class="section level4 hasAnchor" number="4.4.2.12">
+<h4><span class="header-section-number">4.4.2.12</span> Functions<a href="cs50.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb40"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb40-1"><a href="cs50.html#cb40-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb40-2"><a href="cs50.html#cb40-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb40-3"><a href="cs50.html#cb40-3" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="cs50.html#cb40-4" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb40-5"><a href="cs50.html#cb40-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb40-6"><a href="cs50.html#cb40-6" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb40-7"><a href="cs50.html#cb40-7" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb40-8"><a href="cs50.html#cb40-8" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-9"><a href="cs50.html#cb40-9" tabindex="-1"></a></span>
+<span id="cb40-10"><a href="cs50.html#cb40-10" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb40-11"><a href="cs50.html#cb40-11" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb40-12"><a href="cs50.html#cb40-12" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb40-13"><a href="cs50.html#cb40-13" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb40-14"><a href="cs50.html#cb40-14" tabindex="-1"></a>        meow<span class="op">();</span></span>
+<span id="cb40-15"><a href="cs50.html#cb40-15" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb40-16"><a href="cs50.html#cb40-16" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>void meow(void) means no input no output</p>
+<ul>
+<li>When creating and using a custom function, it should be placed before its usage in the code, or declared at the top of the file with a prototype to inform the compiler about the function’s existence and usage. Improves readibility and compilers read top to bottom.</li>
+</ul>
+<div class="sourceCode" id="cb41"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb41-1"><a href="cs50.html#cb41-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb41-2"><a href="cs50.html#cb41-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb41-3"><a href="cs50.html#cb41-3" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="cs50.html#cb41-4" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">void</span><span class="op">);</span></span>
+<span id="cb41-5"><a href="cs50.html#cb41-5" tabindex="-1"></a></span>
+<span id="cb41-6"><a href="cs50.html#cb41-6" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb41-7"><a href="cs50.html#cb41-7" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb41-8"><a href="cs50.html#cb41-8" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb41-9"><a href="cs50.html#cb41-9" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb41-10"><a href="cs50.html#cb41-10" tabindex="-1"></a>        meow<span class="op">();</span></span>
+<span id="cb41-11"><a href="cs50.html#cb41-11" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb41-12"><a href="cs50.html#cb41-12" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb41-13"><a href="cs50.html#cb41-13" tabindex="-1"></a></span>
+<span id="cb41-14"><a href="cs50.html#cb41-14" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb41-15"><a href="cs50.html#cb41-15" tabindex="-1"></a></span>
+<span id="cb41-16"><a href="cs50.html#cb41-16" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb41-17"><a href="cs50.html#cb41-17" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb41-18"><a href="cs50.html#cb41-18" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Final version</li>
+</ul>
+<div class="sourceCode" id="cb42"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb42-1"><a href="cs50.html#cb42-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb42-2"><a href="cs50.html#cb42-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb42-3"><a href="cs50.html#cb42-3" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="cs50.html#cb42-4" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">);</span></span>
+<span id="cb42-5"><a href="cs50.html#cb42-5" tabindex="-1"></a></span>
+<span id="cb42-6"><a href="cs50.html#cb42-6" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb42-7"><a href="cs50.html#cb42-7" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb42-8"><a href="cs50.html#cb42-8" tabindex="-1"></a>    meow<span class="op">(</span><span class="dv">3</span><span class="op">);</span></span>
+<span id="cb42-9"><a href="cs50.html#cb42-9" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb42-10"><a href="cs50.html#cb42-10" tabindex="-1"></a></span>
+<span id="cb42-11"><a href="cs50.html#cb42-11" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">)</span> </span>
+<span id="cb42-12"><a href="cs50.html#cb42-12" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb42-13"><a href="cs50.html#cb42-13" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb42-14"><a href="cs50.html#cb42-14" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="cs50.html#cb42-15" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb42-16"><a href="cs50.html#cb42-16" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb42-17"><a href="cs50.html#cb42-17" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb42-18"><a href="cs50.html#cb42-18" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>prompt the user for number of meows</li>
+</ul>
+<div class="sourceCode" id="cb43"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb43-1"><a href="cs50.html#cb43-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb43-2"><a href="cs50.html#cb43-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb43-3"><a href="cs50.html#cb43-3" tabindex="-1"></a></span>
+<span id="cb43-4"><a href="cs50.html#cb43-4" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">);</span></span>
+<span id="cb43-5"><a href="cs50.html#cb43-5" tabindex="-1"></a></span>
+<span id="cb43-6"><a href="cs50.html#cb43-6" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb43-7"><a href="cs50.html#cb43-7" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb43-8"><a href="cs50.html#cb43-8" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;Number: &quot;</span><span class="op">);</span></span>
+<span id="cb43-9"><a href="cs50.html#cb43-9" tabindex="-1"></a>    meow<span class="op">(</span>n<span class="op">);</span></span>
+<span id="cb43-10"><a href="cs50.html#cb43-10" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb43-11"><a href="cs50.html#cb43-11" tabindex="-1"></a></span>
+<span id="cb43-12"><a href="cs50.html#cb43-12" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">)</span> </span>
+<span id="cb43-13"><a href="cs50.html#cb43-13" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb43-14"><a href="cs50.html#cb43-14" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb43-15"><a href="cs50.html#cb43-15" tabindex="-1"></a></span>
+<span id="cb43-16"><a href="cs50.html#cb43-16" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb43-17"><a href="cs50.html#cb43-17" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb43-18"><a href="cs50.html#cb43-18" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb43-19"><a href="cs50.html#cb43-19" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Scope means that variables only exist within the scope in which they are created, typically inside the curly braces where they are defined, and using the same variable name in different scopes does not refer to the same variable (i.e., only in the curly braces where it was defined)</li>
+<li>You can declare the variable outside the scope and define it within a scope/ give it a Value</li>
+<li>do while, will loop while a question is true</li>
+</ul>
+<div class="sourceCode" id="cb44"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb44-1"><a href="cs50.html#cb44-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb44-2"><a href="cs50.html#cb44-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb44-3"><a href="cs50.html#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="cs50.html#cb44-4" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">);</span></span>
+<span id="cb44-5"><a href="cs50.html#cb44-5" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="cs50.html#cb44-6" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb44-7"><a href="cs50.html#cb44-7" tabindex="-1"></a><span class="op">{</span>   </span>
+<span id="cb44-8"><a href="cs50.html#cb44-8" tabindex="-1"></a>    <span class="dt">int</span> n<span class="op">;</span></span>
+<span id="cb44-9"><a href="cs50.html#cb44-9" tabindex="-1"></a>    <span class="cf">do</span></span>
+<span id="cb44-10"><a href="cs50.html#cb44-10" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb44-11"><a href="cs50.html#cb44-11" tabindex="-1"></a>      n <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;Number: &quot;</span><span class="op">);</span></span>
+<span id="cb44-12"><a href="cs50.html#cb44-12" tabindex="-1"></a>    <span class="op">}</span> </span>
+<span id="cb44-13"><a href="cs50.html#cb44-13" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb44-14"><a href="cs50.html#cb44-14" tabindex="-1"></a>    meow<span class="op">(</span>n<span class="op">);</span></span>
+<span id="cb44-15"><a href="cs50.html#cb44-15" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb44-16"><a href="cs50.html#cb44-16" tabindex="-1"></a></span>
+<span id="cb44-17"><a href="cs50.html#cb44-17" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">)</span> </span>
+<span id="cb44-18"><a href="cs50.html#cb44-18" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb44-19"><a href="cs50.html#cb44-19" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb44-20"><a href="cs50.html#cb44-20" tabindex="-1"></a></span>
+<span id="cb44-21"><a href="cs50.html#cb44-21" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb44-22"><a href="cs50.html#cb44-22" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb44-23"><a href="cs50.html#cb44-23" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+<ul>
+<li>What about a positive number.get_positive_int that solves the common problem of prompting the user for a positive number, which can be reused in other programs. This method cleans the code for legibility.</li>
+</ul>
+<div class="sourceCode" id="cb45"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb45-1"><a href="cs50.html#cb45-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb45-2"><a href="cs50.html#cb45-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb45-3"><a href="cs50.html#cb45-3" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="cs50.html#cb45-4" tabindex="-1"></a><span class="dt">int</span> get_positive_int<span class="op">(</span><span class="dt">void</span><span class="op">);</span></span>
+<span id="cb45-5"><a href="cs50.html#cb45-5" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">);</span></span>
+<span id="cb45-6"><a href="cs50.html#cb45-6" tabindex="-1"></a></span>
+<span id="cb45-7"><a href="cs50.html#cb45-7" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb45-8"><a href="cs50.html#cb45-8" tabindex="-1"></a><span class="op">{</span>   </span>
+<span id="cb45-9"><a href="cs50.html#cb45-9" tabindex="-1"></a>    <span class="dt">int</span> times <span class="op">=</span> get_positive_int<span class="op">();</span></span>
+<span id="cb45-10"><a href="cs50.html#cb45-10" tabindex="-1"></a>    meow<span class="op">(</span>n<span class="op">);</span></span>
+<span id="cb45-11"><a href="cs50.html#cb45-11" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb45-12"><a href="cs50.html#cb45-12" tabindex="-1"></a></span>
+<span id="cb45-13"><a href="cs50.html#cb45-13" tabindex="-1"></a><span class="dt">int</span> get_positive_int<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb45-14"><a href="cs50.html#cb45-14" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb45-15"><a href="cs50.html#cb45-15" tabindex="-1"></a>    <span class="dt">int</span> n<span class="op">;</span></span>
+<span id="cb45-16"><a href="cs50.html#cb45-16" tabindex="-1"></a>    <span class="cf">do</span></span>
+<span id="cb45-17"><a href="cs50.html#cb45-17" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb45-18"><a href="cs50.html#cb45-18" tabindex="-1"></a>        n <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;Number: &quot;</span><span class="op">);</span></span>
+<span id="cb45-19"><a href="cs50.html#cb45-19" tabindex="-1"></a>    <span class="op">}</span> </span>
+<span id="cb45-20"><a href="cs50.html#cb45-20" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb45-21"><a href="cs50.html#cb45-21" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb45-22"><a href="cs50.html#cb45-22" tabindex="-1"></a></span>
+<span id="cb45-23"><a href="cs50.html#cb45-23" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">)</span> </span>
+<span id="cb45-24"><a href="cs50.html#cb45-24" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb45-25"><a href="cs50.html#cb45-25" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb45-26"><a href="cs50.html#cb45-26" tabindex="-1"></a></span>
+<span id="cb45-27"><a href="cs50.html#cb45-27" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb45-28"><a href="cs50.html#cb45-28" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb45-29"><a href="cs50.html#cb45-29" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb45-30"><a href="cs50.html#cb45-30" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>The function get_positive_int is supposed to return an integer value, (as declared in the prototype denoted by int), and has no input, whereas the meow function has input but no output, instead producing a visual side effect by printing to the screen. This is sort of opposite of what we want, so we need to correct the code for this,</li>
+</ul>
+<div class="sourceCode" id="cb46"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb46-1"><a href="cs50.html#cb46-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb46-2"><a href="cs50.html#cb46-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb46-3"><a href="cs50.html#cb46-3" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="cs50.html#cb46-4" tabindex="-1"></a><span class="dt">int</span> get_positive_int<span class="op">(</span><span class="dt">void</span><span class="op">);</span></span>
+<span id="cb46-5"><a href="cs50.html#cb46-5" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">);</span></span>
+<span id="cb46-6"><a href="cs50.html#cb46-6" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="cs50.html#cb46-7" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb46-8"><a href="cs50.html#cb46-8" tabindex="-1"></a><span class="op">{</span>   </span>
+<span id="cb46-9"><a href="cs50.html#cb46-9" tabindex="-1"></a>    <span class="dt">int</span> times <span class="op">=</span> get_positive_int<span class="op">();</span></span>
+<span id="cb46-10"><a href="cs50.html#cb46-10" tabindex="-1"></a>    meow<span class="op">(</span>times<span class="op">);</span> <span class="co">//fix this </span></span>
+<span id="cb46-11"><a href="cs50.html#cb46-11" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb46-12"><a href="cs50.html#cb46-12" tabindex="-1"></a></span>
+<span id="cb46-13"><a href="cs50.html#cb46-13" tabindex="-1"></a><span class="dt">int</span> get_positive_int<span class="op">(</span><span class="dt">void</span><span class="op">)</span> </span>
+<span id="cb46-14"><a href="cs50.html#cb46-14" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb46-15"><a href="cs50.html#cb46-15" tabindex="-1"></a>    <span class="dt">int</span> n<span class="op">;</span></span>
+<span id="cb46-16"><a href="cs50.html#cb46-16" tabindex="-1"></a>    <span class="cf">do</span></span>
+<span id="cb46-17"><a href="cs50.html#cb46-17" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb46-18"><a href="cs50.html#cb46-18" tabindex="-1"></a>        n <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;Number: &quot;</span><span class="op">);</span></span>
+<span id="cb46-19"><a href="cs50.html#cb46-19" tabindex="-1"></a>    <span class="op">}</span> </span>
+<span id="cb46-20"><a href="cs50.html#cb46-20" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>n <span class="op">&lt;</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb46-21"><a href="cs50.html#cb46-21" tabindex="-1"></a>    <span class="cf">return</span> n<span class="op">;</span> <span class="co">//Here is the keyword</span></span>
+<span id="cb46-22"><a href="cs50.html#cb46-22" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb46-23"><a href="cs50.html#cb46-23" tabindex="-1"></a></span>
+<span id="cb46-24"><a href="cs50.html#cb46-24" tabindex="-1"></a><span class="dt">void</span> meow<span class="op">(</span><span class="dt">int</span> n<span class="op">)</span> </span>
+<span id="cb46-25"><a href="cs50.html#cb46-25" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb46-26"><a href="cs50.html#cb46-26" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb46-27"><a href="cs50.html#cb46-27" tabindex="-1"></a></span>
+<span id="cb46-28"><a href="cs50.html#cb46-28" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb46-29"><a href="cs50.html#cb46-29" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;meow</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb46-30"><a href="cs50.html#cb46-30" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb46-31"><a href="cs50.html#cb46-31" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+</div>
+<div id="correctness-design-style" class="section level4 hasAnchor" number="4.4.2.13">
+<h4><span class="header-section-number">4.4.2.13</span> Correctness, Design, Style<a href="cs50.html#correctness-design-style" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Correctness is the most important aspect of programming, as it refers to whether the code does what it is supposed to do, and without it, the code is pointless</li>
+<li>Design is a qualitative aspect of programming that involves structuring the code in a way that makes it better, similar to getting feedback on an English essay, and it can be improved with tools like “design50”</li>
+<li>Style is a purely aesthetic aspect of programming that refers to how the code looks, whether it is nicely printed, and whether other people can read and understand it, with tools like “style50” available to evaluate it</li>
+<li>The CS50 programming environment provides tools to evaluate the quality of code in terms of correctness, design, and style, including a command line tool called “check50” that checks for correctness, and “style50” and “design50” tools that provide feedback on style and design</li>
+<li>Testing code is an important aspect of programming, not just for grading, but also in the real world, where colleagues or oneself would write tests to ensure that systems are designed correctly, with tools like “check50” available to help find mistakes</li>
+<li>The “design50” tool, available in VS Code, provides qualitative advice on how to improve code, and users can also ask humans for feedback on their code, making it easier to improve design and style</li>
+<li>After ensuring correctness, design, and style, users can move on to solving real-world problems, starting with simple ones, and can use the tools and feedback provided to improve their coding skills</li>
+</ul>
+</div>
+<div id="mario" class="section level4 hasAnchor" number="4.4.2.14">
+<h4><span class="header-section-number">4.4.2.14</span> Mario<a href="cs50.html#mario" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb47"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb47-1"><a href="cs50.html#cb47-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb47-2"><a href="cs50.html#cb47-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb47-3"><a href="cs50.html#cb47-3" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="cs50.html#cb47-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb47-5"><a href="cs50.html#cb47-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb47-6"><a href="cs50.html#cb47-6" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> row <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> row <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> row<span class="op">++)</span></span>
+<span id="cb47-7"><a href="cs50.html#cb47-7" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb47-8"><a href="cs50.html#cb47-8" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> col <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> col <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> col<span class="op">++)</span></span>
+<span id="cb47-9"><a href="cs50.html#cb47-9" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb47-10"><a href="cs50.html#cb47-10" tabindex="-1"></a>          printf<span class="op">(</span><span class="st">&quot;#&quot;</span><span class="op">);</span></span>
+<span id="cb47-11"><a href="cs50.html#cb47-11" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb47-12"><a href="cs50.html#cb47-12" tabindex="-1"></a>      printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb47-13"><a href="cs50.html#cb47-13" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb47-14"><a href="cs50.html#cb47-14" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Here’s the next version of the bricks with a constant n</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb48-1"><a href="cs50.html#cb48-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb48-2"><a href="cs50.html#cb48-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb48-3"><a href="cs50.html#cb48-3" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="cs50.html#cb48-4" tabindex="-1"></a><span class="dt">void</span> print_row<span class="op">(</span><span class="dt">int</span> n<span class="op">);</span></span>
+<span id="cb48-5"><a href="cs50.html#cb48-5" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="cs50.html#cb48-6" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb48-7"><a href="cs50.html#cb48-7" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb48-8"><a href="cs50.html#cb48-8" tabindex="-1"></a>    <span class="co">// Constant n</span></span>
+<span id="cb48-9"><a href="cs50.html#cb48-9" tabindex="-1"></a>    <span class="dt">const</span> <span class="dt">int</span> n <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb48-10"><a href="cs50.html#cb48-10" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb48-11"><a href="cs50.html#cb48-11" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb48-12"><a href="cs50.html#cb48-12" tabindex="-1"></a>        print_row<span class="op">(</span>n<span class="op">);</span></span>
+<span id="cb48-13"><a href="cs50.html#cb48-13" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb48-14"><a href="cs50.html#cb48-14" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb48-15"><a href="cs50.html#cb48-15" tabindex="-1"></a></span>
+<span id="cb48-16"><a href="cs50.html#cb48-16" tabindex="-1"></a><span class="dt">void</span> print_row<span class="op">(</span><span class="dt">int</span> n<span class="op">)</span></span>
+<span id="cb48-17"><a href="cs50.html#cb48-17" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb48-18"><a href="cs50.html#cb48-18" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb48-19"><a href="cs50.html#cb48-19" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb48-20"><a href="cs50.html#cb48-20" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;#&quot;</span><span class="op">);</span></span>
+<span id="cb48-21"><a href="cs50.html#cb48-21" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb48-22"><a href="cs50.html#cb48-22" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb48-23"><a href="cs50.html#cb48-23" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Here’s the final version modulized with input from user</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb49-1"><a href="cs50.html#cb49-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb49-2"><a href="cs50.html#cb49-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb49-3"><a href="cs50.html#cb49-3" tabindex="-1"></a></span>
+<span id="cb49-4"><a href="cs50.html#cb49-4" tabindex="-1"></a><span class="dt">void</span> print_row<span class="op">(</span><span class="dt">int</span> bricks<span class="op">);</span></span>
+<span id="cb49-5"><a href="cs50.html#cb49-5" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="cs50.html#cb49-6" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb49-7"><a href="cs50.html#cb49-7" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb49-8"><a href="cs50.html#cb49-8" tabindex="-1"></a>    <span class="co">// Constant n</span></span>
+<span id="cb49-9"><a href="cs50.html#cb49-9" tabindex="-1"></a>    <span class="dt">const</span> <span class="dt">int</span> n <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb49-10"><a href="cs50.html#cb49-10" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb49-11"><a href="cs50.html#cb49-11" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb49-12"><a href="cs50.html#cb49-12" tabindex="-1"></a>        print_row<span class="op">(</span>i <span class="op">+</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb49-13"><a href="cs50.html#cb49-13" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb49-14"><a href="cs50.html#cb49-14" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb49-15"><a href="cs50.html#cb49-15" tabindex="-1"></a></span>
+<span id="cb49-16"><a href="cs50.html#cb49-16" tabindex="-1"></a><span class="dt">void</span> print_row<span class="op">(</span><span class="dt">int</span> bricks<span class="op">)</span></span>
+<span id="cb49-17"><a href="cs50.html#cb49-17" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb49-18"><a href="cs50.html#cb49-18" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> bricks<span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb49-19"><a href="cs50.html#cb49-19" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb49-20"><a href="cs50.html#cb49-20" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;#&quot;</span><span class="op">);</span></span>
+<span id="cb49-21"><a href="cs50.html#cb49-21" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb49-22"><a href="cs50.html#cb49-22" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb49-23"><a href="cs50.html#cb49-23" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+</div>
+<div id="calculator.c" class="section level4 hasAnchor" number="4.4.2.15">
+<h4><span class="header-section-number">4.4.2.15</span> calculator.c<a href="cs50.html#calculator.c" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb50"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb50-1"><a href="cs50.html#cb50-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb50-2"><a href="cs50.html#cb50-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb50-3"><a href="cs50.html#cb50-3" tabindex="-1"></a></span>
+<span id="cb50-4"><a href="cs50.html#cb50-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb50-5"><a href="cs50.html#cb50-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb50-6"><a href="cs50.html#cb50-6" tabindex="-1"></a>    <span class="dt">int</span> x <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">);</span></span>
+<span id="cb50-7"><a href="cs50.html#cb50-7" tabindex="-1"></a>    <span class="dt">int</span> y <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;y: &quot;</span><span class="op">);</span></span>
+<span id="cb50-8"><a href="cs50.html#cb50-8" tabindex="-1"></a></span>
+<span id="cb50-9"><a href="cs50.html#cb50-9" tabindex="-1"></a>    <span class="dt">int</span> z <span class="op">=</span> x <span class="op">+</span> y<span class="op">;</span></span>
+<span id="cb50-10"><a href="cs50.html#cb50-10" tabindex="-1"></a></span>
+<span id="cb50-11"><a href="cs50.html#cb50-11" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%i\n</span><span class="st">&quot;</span><span class="op">,</span> z<span class="op">);</span></span>
+<span id="cb50-12"><a href="cs50.html#cb50-12" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>We can eliminate the variable “z” and directly print the result of the addition, which simplifies the code and reduces the chance of bugs</li>
+</ul>
+<div class="sourceCode" id="cb51"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb51-1"><a href="cs50.html#cb51-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb51-2"><a href="cs50.html#cb51-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb51-3"><a href="cs50.html#cb51-3" tabindex="-1"></a></span>
+<span id="cb51-4"><a href="cs50.html#cb51-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb51-5"><a href="cs50.html#cb51-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb51-6"><a href="cs50.html#cb51-6" tabindex="-1"></a>    <span class="dt">int</span> x <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">);</span></span>
+<span id="cb51-7"><a href="cs50.html#cb51-7" tabindex="-1"></a>    <span class="dt">int</span> y <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;y: &quot;</span><span class="op">);</span></span>
+<span id="cb51-8"><a href="cs50.html#cb51-8" tabindex="-1"></a></span>
+<span id="cb51-9"><a href="cs50.html#cb51-9" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%i\n</span><span class="st">&quot;</span><span class="op">,</span> x <span class="op">+</span> y<span class="op">);</span></span>
+<span id="cb51-10"><a href="cs50.html#cb51-10" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>You can simplify the code, however, it is important to consider the design and readability of the code, as well as the potential for future changes or additions to the program. This is an example of bad code design:</li>
+</ul>
+<div class="sourceCode" id="cb52"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb52-1"><a href="cs50.html#cb52-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb52-2"><a href="cs50.html#cb52-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb52-3"><a href="cs50.html#cb52-3" tabindex="-1"></a></span>
+<span id="cb52-4"><a href="cs50.html#cb52-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb52-5"><a href="cs50.html#cb52-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb52-6"><a href="cs50.html#cb52-6" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%i\n</span><span class="st">&quot;</span><span class="op">,</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">)</span> <span class="op">+</span> get_int<span class="op">(</span><span class="st">&quot;y: &quot;</span><span class="op">));</span></span>
+<span id="cb52-7"><a href="cs50.html#cb52-7" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Doubling calculation</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb53-1"><a href="cs50.html#cb53-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb53-2"><a href="cs50.html#cb53-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb53-3"><a href="cs50.html#cb53-3" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="cs50.html#cb53-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb53-5"><a href="cs50.html#cb53-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb53-6"><a href="cs50.html#cb53-6" tabindex="-1"></a>    <span class="dt">int</span> x <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">);</span></span>
+<span id="cb53-7"><a href="cs50.html#cb53-7" tabindex="-1"></a></span>
+<span id="cb53-8"><a href="cs50.html#cb53-8" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%i\n</span><span class="st">&quot;</span><span class="op">,</span> x <span class="op">*</span> <span class="dv">2</span><span class="op">);</span></span>
+<span id="cb53-9"><a href="cs50.html#cb53-9" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>But what if we want to write a proper program</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb54-1"><a href="cs50.html#cb54-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb54-2"><a href="cs50.html#cb54-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb54-3"><a href="cs50.html#cb54-3" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="cs50.html#cb54-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb54-5"><a href="cs50.html#cb54-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb54-6"><a href="cs50.html#cb54-6" tabindex="-1"></a>    <span class="dt">int</span> dollars <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb54-7"><a href="cs50.html#cb54-7" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span><span class="kw">true</span><span class="op">)</span></span>
+<span id="cb54-8"><a href="cs50.html#cb54-8" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb54-9"><a href="cs50.html#cb54-9" tabindex="-1"></a>        <span class="dt">char</span> c <span class="op">=</span> get_char<span class="op">(</span><span class="st">&quot;Here&#39;s $</span><span class="sc">%i</span><span class="st">. Double it and give it to the next person?</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> dollars<span class="op">);</span></span>
+<span id="cb54-10"><a href="cs50.html#cb54-10" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>c <span class="op">==</span> <span class="ch">&#39;y&#39;</span><span class="op">)</span></span>
+<span id="cb54-11"><a href="cs50.html#cb54-11" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb54-12"><a href="cs50.html#cb54-12" tabindex="-1"></a>            dollars <span class="op">*=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb54-13"><a href="cs50.html#cb54-13" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb54-14"><a href="cs50.html#cb54-14" tabindex="-1"></a>        <span class="cf">else</span></span>
+<span id="cb54-15"><a href="cs50.html#cb54-15" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb54-16"><a href="cs50.html#cb54-16" tabindex="-1"></a>            <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb54-17"><a href="cs50.html#cb54-17" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb54-18"><a href="cs50.html#cb54-18" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb54-19"><a href="cs50.html#cb54-19" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Here&#39;s $</span><span class="sc">%i\n</span><span class="st">&quot;</span><span class="op">,</span> dollars<span class="op">);</span></span>
+<span id="cb54-20"><a href="cs50.html#cb54-20" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>However, the code eventually encounters a problem where the number becomes too large to be stored, due to the limited number of bits available to store integers, typically 32 bits, which can only count up to 4 billion, due to interger overflow</li>
+</ul>
+</div>
+<div id="integer-overflow" class="section level4 hasAnchor" number="4.4.2.16">
+<h4><span class="header-section-number">4.4.2.16</span> Integer Overflow<a href="cs50.html#integer-overflow" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Integer overflow is a fundamental problem with computers where if you count high enough, things will just start to break, especially when using languages like C or C++ that do not anticipate this issue, and it occurs because there is a finite amount of memory</li>
+<li>When using a limited number of bits, such as 32 bits or even just three bits, you will eventually overflow, and this can be demonstrated with a simple example of counting in binary using three bits, where attempting to count to 8 results in an overflow and wrapping back to 0</li>
+<li>One way to avoid integer overflow is to use a longer data type, such as a long, which is typically 64 bits and can count much higher than an int, but it is still finite and will eventually overflow if you need a 65th bit that the computer has not allocated.</li>
+</ul>
+</div>
+<div id="boeing" class="section level4 hasAnchor" number="4.4.2.17">
+<h4><span class="header-section-number">4.4.2.17</span> Boeing<a href="cs50.html#boeing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>A real world issue with integer overflow occured with the Boeing 787 airplane. It could lose all electrical power after 248 days due to the generator control units going into failsafe mode, which was caused by a software counter overflow.</li>
+<li>The software counter overflow occurred because Boeing used a 32-bit integer to count tenths of seconds, and after 248 days, the counter would overflow, causing the plane’s systems to malfunction</li>
+<li>The solution is to reboot the plane. This resets all variables back to their original values, giving the system more time before the counter would overflow again, and this solution was used until the actual software issue was fixed.</li>
+</ul>
+</div>
+<div id="pacman" class="section level4 hasAnchor" number="4.4.2.18">
+<h4><span class="header-section-number">4.4.2.18</span> Pacman<a href="cs50.html#pacman" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>The original Pac-Man game from the 1980s had a limitation of only 255 levels due to its use of 8 bits, which can represent 256 values, but since counting starts at 0, it can only go up to 255</li>
+<li>When skilled players reached level 256, the game exhibited unusual behavior, such as fruit overwriting other elements on the screen, because the game’s makers did not anticipate anyone reaching that level and did not allocate sufficient memory or implement a condition to handle this scenario</li>
+</ul>
+</div>
+<div id="truncation" class="section level4 hasAnchor" number="4.4.2.19">
+<h4><span class="header-section-number">4.4.2.19</span> Truncation<a href="cs50.html#truncation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb55"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb55-1"><a href="cs50.html#cb55-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb55-2"><a href="cs50.html#cb55-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb55-3"><a href="cs50.html#cb55-3" tabindex="-1"></a></span>
+<span id="cb55-4"><a href="cs50.html#cb55-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb55-5"><a href="cs50.html#cb55-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb55-6"><a href="cs50.html#cb55-6" tabindex="-1"></a>    <span class="dt">int</span> x <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">);</span></span>
+<span id="cb55-7"><a href="cs50.html#cb55-7" tabindex="-1"></a>    <span class="dt">int</span> y <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;y: &quot;</span><span class="op">);</span></span>
+<span id="cb55-8"><a href="cs50.html#cb55-8" tabindex="-1"></a></span>
+<span id="cb55-9"><a href="cs50.html#cb55-9" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%i\n</span><span class="st">&quot;</span><span class="op">,</span> x <span class="op">/</span> y<span class="op">);</span></span>
+<span id="cb55-10"><a href="cs50.html#cb55-10" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>When working with integers in programming, using big integers with 64, 128, or 256 bits is possible, but it requires a language or library that can dynamically allocate memory, which many languages do not support by default</li>
+<li>int returns int values only</li>
+<li>Potential solutions: format code with type casting or modifying the program to handle decimal numbers</li>
+</ul>
+</div>
+<div id="type-casting" class="section level4 hasAnchor" number="4.4.2.20">
+<h4><span class="header-section-number">4.4.2.20</span> Type Casting<a href="cs50.html#type-casting" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb56"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb56-1"><a href="cs50.html#cb56-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb56-2"><a href="cs50.html#cb56-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb56-3"><a href="cs50.html#cb56-3" tabindex="-1"></a></span>
+<span id="cb56-4"><a href="cs50.html#cb56-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb56-5"><a href="cs50.html#cb56-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb56-6"><a href="cs50.html#cb56-6" tabindex="-1"></a>    <span class="dt">int</span> x <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">);</span></span>
+<span id="cb56-7"><a href="cs50.html#cb56-7" tabindex="-1"></a>    <span class="dt">int</span> y <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;y: &quot;</span><span class="op">);</span></span>
+<span id="cb56-8"><a href="cs50.html#cb56-8" tabindex="-1"></a></span>
+<span id="cb56-9"><a href="cs50.html#cb56-9" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%f\n</span><span class="st">&quot;</span><span class="op">,</span> <span class="op">(</span><span class="dt">float</span><span class="op">)</span> x <span class="op">/</span> y<span class="op">);</span></span>
+<span id="cb56-10"><a href="cs50.html#cb56-10" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>To format a float to a specific number of significant digits, the printf function can be used with a syntax that includes numbers in between the percent sign and the letter, such as “.5” to format the number to five significant digits</li>
+</ul>
+<div class="sourceCode" id="cb57"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb57-1"><a href="cs50.html#cb57-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb57-2"><a href="cs50.html#cb57-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb57-3"><a href="cs50.html#cb57-3" tabindex="-1"></a></span>
+<span id="cb57-4"><a href="cs50.html#cb57-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb57-5"><a href="cs50.html#cb57-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb57-6"><a href="cs50.html#cb57-6" tabindex="-1"></a>    <span class="dt">int</span> x <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">);</span></span>
+<span id="cb57-7"><a href="cs50.html#cb57-7" tabindex="-1"></a>    <span class="dt">int</span> y <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;y: &quot;</span><span class="op">);</span></span>
+<span id="cb57-8"><a href="cs50.html#cb57-8" tabindex="-1"></a></span>
+<span id="cb57-9"><a href="cs50.html#cb57-9" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%.3f\n</span><span class="st">&quot;</span><span class="op">,</span> <span class="op">(</span><span class="dt">float</span><span class="op">)</span> x <span class="op">/</span> y<span class="op">);</span></span>
+<span id="cb57-10"><a href="cs50.html#cb57-10" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Formatting floats in printf %.#f</li>
+</ul>
+<div class="sourceCode" id="cb58"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb58-1"><a href="cs50.html#cb58-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;cs50.h&gt;</span></span>
+<span id="cb58-2"><a href="cs50.html#cb58-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span><span class="pp"> </span></span>
+<span id="cb58-3"><a href="cs50.html#cb58-3" tabindex="-1"></a></span>
+<span id="cb58-4"><a href="cs50.html#cb58-4" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span></span>
+<span id="cb58-5"><a href="cs50.html#cb58-5" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb58-6"><a href="cs50.html#cb58-6" tabindex="-1"></a>    <span class="dt">int</span> x <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;x: &quot;</span><span class="op">);</span></span>
+<span id="cb58-7"><a href="cs50.html#cb58-7" tabindex="-1"></a>    <span class="dt">int</span> y <span class="op">=</span> get_int<span class="op">(</span><span class="st">&quot;y: &quot;</span><span class="op">);</span></span>
+<span id="cb58-8"><a href="cs50.html#cb58-8" tabindex="-1"></a></span>
+<span id="cb58-9"><a href="cs50.html#cb58-9" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">%.50f\n</span><span class="st">&quot;</span><span class="op">,</span> <span class="op">(</span><span class="dt">float</span><span class="op">)</span> x <span class="op">/</span> y<span class="op">);</span></span>
+<span id="cb58-10"><a href="cs50.html#cb58-10" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ul>
+<li>Floating-point imprecision is due to the way computers represent numbers with binary. This leads to small errors in calculations, and this imprecision can be observed when calculating simple divisions, such as 1 divided by 3, which results in a long string of digits that may not be entirely accurate</li>
+</ul>
+</div>
+<div id="floating-point-imprecision" class="section level4 hasAnchor" number="4.4.2.21">
+<h4><span class="header-section-number">4.4.2.21</span> Floating-Point Imprecision<a href="cs50.html#floating-point-imprecision" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>The issue of floating-point imprecision is similar to the problem of overflow, where the limited number of bits used to represent numbers can lead to mistakes in code, and using a finite number of bits means that only a limited number of patterns and thus a limited number of floating point values can be represented</p></li>
+<li><p>The use of a finite number of bits to represent numbers means that computers can only represent a limited number of real numbers, which is a challenge because there are infinitely many real numbers in the world, and this limitation can be mitigated by using more bits, such as switching from float to double</p></li>
+<li><p>A historical example of a similar problem is the Y2K problem, where computers were using only two digits to represent years, which caused concerns about what would happen when the year 2000 arrived, but the world was able to update its systems in time to avoid major issues</p></li>
+<li><p>A similar problem is looming on the horizon, where computers have been using 32-bit integers to keep track of time, which will eventually max out and cause clocks to overflow on January 19, 2038, potentially causing problems, but this can be solved by using more bits</p></li>
+<li><p>The solution to these problems is to use more bits, which is now more feasible due to the increased availability of storage, and this can be achieved by throwing both hardware and software at the problem</p></li>
+<li><p>The problem of floating-point imprecision and overflow is not limited to floating-point numbers, but also applies to other areas, such as keeping track of time, and it is essential to be aware of these limitations to avoid mistakes in code and to find solutions to these problems</p></li>
+</ul>
+</div>
+</div>
+<div id="arrays" class="section level3 hasAnchor" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> Arrays<a href="cs50.html#arrays" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="memory" class="section level3 hasAnchor" number="4.4.4">
+<h3><span class="header-section-number">4.4.4</span> Memory<a href="cs50.html#memory" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="data-structures" class="section level3 hasAnchor" number="4.4.5">
+<h3><span class="header-section-number">4.4.5</span> Data Structures<a href="cs50.html#data-structures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="python" class="section level3 hasAnchor" number="4.4.6">
+<h3><span class="header-section-number">4.4.6</span> Python<a href="cs50.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="artificial-intelligence-1" class="section level3 hasAnchor" number="4.4.7">
+<h3><span class="header-section-number">4.4.7</span> Artificial Intelligence<a href="cs50.html#artificial-intelligence-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="sql" class="section level3 hasAnchor" number="4.4.8">
+<h3><span class="header-section-number">4.4.8</span> SQL<a href="cs50.html#sql" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="html-css-javascript" class="section level3 hasAnchor" number="4.4.9">
+<h3><span class="header-section-number">4.4.9</span> HTML, CSS, JavaScript<a href="cs50.html#html-css-javascript" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="flask" class="section level3 hasAnchor" number="4.4.10">
+<h3><span class="header-section-number">4.4.10</span> Flask<a href="cs50.html#flask" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="the-end" class="section level3 hasAnchor" number="4.4.11">
+<h3><span class="header-section-number">4.4.11</span> The End<a href="cs50.html#the-end" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ace-reccomendation" class="section level3 hasAnchor" number="4.4.12">
+<h3><span class="header-section-number">4.4.12</span> ACE Reccomendation<a href="cs50.html#ace-reccomendation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="weird-behaviors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bayesian-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deep-learning-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -272,13 +1389,26 @@ gitbook.start({
   "download": null,
   "search": false,
   "toc": {
-    "collapse": "subsection",
-    "collapsed": true
+    "collapse": "section"
   }
 });
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

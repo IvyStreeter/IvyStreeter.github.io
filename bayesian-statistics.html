@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.3 Bayesian Statistics: | Perpetually trying to remember what I forgot</title>
+  <meta name="description" content="4.3 Bayesian Statistics: | Perpetually trying to remember what I forgot" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.3 Bayesian Statistics: | Perpetually trying to remember what I forgot" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.3 Bayesian Statistics: | Perpetually trying to remember what I forgot" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="statistical-inference.html"/>
+<link rel="next" href="cs50.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="ivys-digital-garden.html"><a href="ivys-digital-garden.html"><i class="fa fa-check"></i>Ivy’s Digital Garden</a></li>
+<li class="chapter" data-level="1" data-path="immunology.html"><a href="immunology.html"><i class="fa fa-check"></i><b>1</b> Immunology</a></li>
+<li class="chapter" data-level="2" data-path="protein-engineering.html"><a href="protein-engineering.html"><i class="fa fa-check"></i><b>2</b> Protein Engineering</a></li>
+<li class="chapter" data-level="3" data-path="sequencing.html"><a href="sequencing.html"><i class="fa fa-check"></i><b>3</b> Sequencing</a></li>
+<li class="chapter" data-level="4" data-path="data-science.html"><a href="data-science.html"><i class="fa fa-check"></i><b>4</b> Data Science</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>4.1</b> SetUp</a>
+<ul>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#how-to-setup-vscode"><i class="fa fa-check"></i>How to setup VSCode</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html#weird-behaviors"><i class="fa fa-check"></i>Weird behaviors:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="statistical-inference.html"><a href="statistical-inference.html"><i class="fa fa-check"></i><b>4.2</b> Statistical Inference:</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#why-statistical-inference"><i class="fa fa-check"></i><b>4.2.1</b> Why Statistical Inference</a></li>
+<li class="chapter" data-level="4.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#statistical-learning"><i class="fa fa-check"></i><b>4.2.2</b> Statistical Learning</a></li>
+<li class="chapter" data-level="4.2.3" data-path="statistical-inference.html"><a href="statistical-inference.html#linear-regression"><i class="fa fa-check"></i><b>4.2.3</b> Linear Regression</a></li>
+<li class="chapter" data-level="4.2.4" data-path="statistical-inference.html"><a href="statistical-inference.html#classification"><i class="fa fa-check"></i><b>4.2.4</b> Classification</a></li>
+<li class="chapter" data-level="4.2.5" data-path="statistical-inference.html"><a href="statistical-inference.html#resampling-methods"><i class="fa fa-check"></i><b>4.2.5</b> Resampling Methods</a></li>
+<li class="chapter" data-level="4.2.6" data-path="statistical-inference.html"><a href="statistical-inference.html#linear-model-selection-and-regularization"><i class="fa fa-check"></i><b>4.2.6</b> Linear Model Selection and Regularization</a></li>
+<li class="chapter" data-level="4.2.7" data-path="statistical-inference.html"><a href="statistical-inference.html#moving-beyond-linearity"><i class="fa fa-check"></i><b>4.2.7</b> Moving Beyond linearity</a></li>
+<li class="chapter" data-level="4.2.8" data-path="statistical-inference.html"><a href="statistical-inference.html#tree-based-methods"><i class="fa fa-check"></i><b>4.2.8</b> Tree-Based Methods</a>
+<ul>
+<li class="chapter" data-level="4.2.8.1" data-path="statistical-inference.html"><a href="statistical-inference.html#the-basics-of-decision-trees"><i class="fa fa-check"></i><b>4.2.8.1</b> The Basics of Decision Trees</a>
+<ul>
+<li class="chapter" data-level="4.2.8.1.1" data-path="statistical-inference.html"><a href="statistical-inference.html#regression-trees"><i class="fa fa-check"></i><b>4.2.8.1.1</b> Regression Trees</a></li>
+<li class="chapter" data-level="4.2.8.1.2" data-path="statistical-inference.html"><a href="statistical-inference.html#prediction-via-strartification-of-the-feature-space"><i class="fa fa-check"></i><b>4.2.8.1.2</b> Prediction via Strartification of the Feature Space</a></li>
+<li class="chapter" data-level="4.2.8.1.3" data-path="statistical-inference.html"><a href="statistical-inference.html#classification-trees"><i class="fa fa-check"></i><b>4.2.8.1.3</b> Classification Trees</a></li>
+<li class="chapter" data-level="4.2.8.1.4" data-path="statistical-inference.html"><a href="statistical-inference.html#trees-versus-linear-models"><i class="fa fa-check"></i><b>4.2.8.1.4</b> Trees Versus Linear Models</a></li>
+<li class="chapter" data-level="4.2.8.1.5" data-path="statistical-inference.html"><a href="statistical-inference.html#advantages-and-disadvantages-of-trees"><i class="fa fa-check"></i><b>4.2.8.1.5</b> Advantages and Disadvantages of Trees</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.8.2" data-path="statistical-inference.html"><a href="statistical-inference.html#bagging-random-forest-boosting"><i class="fa fa-check"></i><b>4.2.8.2</b> Bagging, Random Forest, Boosting</a>
+<ul>
+<li class="chapter" data-level="4.2.8.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#bagging"><i class="fa fa-check"></i><b>4.2.8.2.1</b> Bagging</a></li>
+<li class="chapter" data-level="4.2.8.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#random-forest"><i class="fa fa-check"></i><b>4.2.8.2.2</b> Random Forest</a></li>
+<li class="chapter" data-level="4.2.8.2.3" data-path="statistical-inference.html"><a href="statistical-inference.html#boosting"><i class="fa fa-check"></i><b>4.2.8.2.3</b> Boosting</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.2.9" data-path="statistical-inference.html"><a href="statistical-inference.html#unsupervised-learning"><i class="fa fa-check"></i><b>4.2.9</b> Unsupervised learning</a>
+<ul>
+<li class="chapter" data-level="4.2.9.1" data-path="statistical-inference.html"><a href="statistical-inference.html#challenges-in-unsupervised-learning"><i class="fa fa-check"></i><b>4.2.9.1</b> Challenges in unsupervised learning</a></li>
+<li class="chapter" data-level="4.2.9.2" data-path="statistical-inference.html"><a href="statistical-inference.html#principal-components-analysis-pca"><i class="fa fa-check"></i><b>4.2.9.2</b> Principal Components Analysis (PCA)</a>
+<ul>
+<li class="chapter" data-level="4.2.9.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#what-are-principal-components"><i class="fa fa-check"></i><b>4.2.9.2.1</b> What are principal components?</a></li>
+<li class="chapter" data-level="4.2.9.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#another-interpretation-of-principle-components"><i class="fa fa-check"></i><b>4.2.9.2.2</b> Another interpretation of Principle Components</a></li>
+<li class="chapter" data-level="4.2.9.2.3" data-path="statistical-inference.html"><a href="statistical-inference.html#the-proportion-of-variance-explained-pve-in-pca"><i class="fa fa-check"></i><b>4.2.9.2.3</b> The Proportion of Variance Explained (PVE) in PCA</a></li>
+<li class="chapter" data-level="4.2.9.2.4" data-path="statistical-inference.html"><a href="statistical-inference.html#uniqueness-of-the-principal-components"><i class="fa fa-check"></i><b>4.2.9.2.4</b> Uniqueness of the Principal Components</a></li>
+<li class="chapter" data-level="4.2.9.2.5" data-path="statistical-inference.html"><a href="statistical-inference.html#deciding-how-many-principal-components-to-use"><i class="fa fa-check"></i><b>4.2.9.2.5</b> Deciding How Many Principal Components to Use</a></li>
+<li class="chapter" data-level="4.2.9.2.6" data-path="statistical-inference.html"><a href="statistical-inference.html#other-uses-for-principal-components"><i class="fa fa-check"></i><b>4.2.9.2.6</b> Other uses for principal components</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.9.3" data-path="statistical-inference.html"><a href="statistical-inference.html#clustering-methods"><i class="fa fa-check"></i><b>4.2.9.3</b> Clustering methods</a>
+<ul>
+<li class="chapter" data-level="4.2.9.3.1" data-path="statistical-inference.html"><a href="statistical-inference.html#k-means-clustering"><i class="fa fa-check"></i><b>4.2.9.3.1</b> K-means clustering</a></li>
+<li class="chapter" data-level="4.2.9.3.2" data-path="statistical-inference.html"><a href="statistical-inference.html#hierarchial-clustering"><i class="fa fa-check"></i><b>4.2.9.3.2</b> Hierarchial clustering</a></li>
+<li class="chapter" data-level="4.2.9.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#practical-issues-in-clustering"><i class="fa fa-check"></i><b>4.2.9.3.3</b> Practical Issues in Clustering</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10" data-path="statistical-inference.html"><a href="statistical-inference.html#support-vector-machines"><i class="fa fa-check"></i><b>4.2.10</b> Support Vector Machines</a>
+<ul>
+<li class="chapter" data-level="4.2.10.1" data-path="statistical-inference.html"><a href="statistical-inference.html#maximal-margin-classifier"><i class="fa fa-check"></i><b>4.2.10.1</b> Maximal Margin Classifier</a>
+<ul>
+<li class="chapter" data-level="4.2.10.1.1" data-path="statistical-inference.html"><a href="statistical-inference.html#what-is-a-hyperplane"><i class="fa fa-check"></i><b>4.2.10.1.1</b> What is a hyperplane?</a></li>
+<li class="chapter" data-level="4.2.10.1.2" data-path="statistical-inference.html"><a href="statistical-inference.html#classification-using-a-seperating-hyperplane"><i class="fa fa-check"></i><b>4.2.10.1.2</b> Classification Using a Seperating hyperplane</a></li>
+<li class="chapter" data-level="4.2.10.1.3" data-path="statistical-inference.html"><a href="statistical-inference.html#maximal-margin-classifier-1"><i class="fa fa-check"></i><b>4.2.10.1.3</b> Maximal Margin Classifier</a></li>
+<li class="chapter" data-level="4.2.10.1.4" data-path="statistical-inference.html"><a href="statistical-inference.html#construction-of-the-maximal-margin-classifier"><i class="fa fa-check"></i><b>4.2.10.1.4</b> Construction of the Maximal Margin Classifier</a></li>
+<li class="chapter" data-level="4.2.10.1.5" data-path="statistical-inference.html"><a href="statistical-inference.html#the-non-separable-case"><i class="fa fa-check"></i><b>4.2.10.1.5</b> The Non-separable Case</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.2" data-path="statistical-inference.html"><a href="statistical-inference.html#support-vector-classifiers"><i class="fa fa-check"></i><b>4.2.10.2</b> Support Vector Classifiers</a>
+<ul>
+<li class="chapter" data-level="4.2.10.2.1" data-path="statistical-inference.html"><a href="statistical-inference.html#overview-of-the-support-vector-classifier"><i class="fa fa-check"></i><b>4.2.10.2.1</b> Overview of the Support Vector Classifier</a></li>
+<li class="chapter" data-level="4.2.10.2.2" data-path="statistical-inference.html"><a href="statistical-inference.html#details-of-the-support-vector-classifier"><i class="fa fa-check"></i><b>4.2.10.2.2</b> Details of the Support Vector Classifier</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.3" data-path="statistical-inference.html"><a href="statistical-inference.html#support-vector-machines-1"><i class="fa fa-check"></i><b>4.2.10.3</b> Support Vector Machines</a>
+<ul>
+<li class="chapter" data-level="4.2.10.3.1" data-path="statistical-inference.html"><a href="statistical-inference.html#classification-with-non-linerar-decision-boundaries"><i class="fa fa-check"></i><b>4.2.10.3.1</b> Classification with Non-Linerar Decision Boundaries</a></li>
+<li class="chapter" data-level="4.2.10.3.2" data-path="statistical-inference.html"><a href="statistical-inference.html#the-supoort-vector-machines"><i class="fa fa-check"></i><b>4.2.10.3.2</b> The Supoort Vector Machines</a></li>
+<li class="chapter" data-level="4.2.10.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#an-application-to-the-heart-disease-data"><i class="fa fa-check"></i><b>4.2.10.3.3</b> An Application to the Heart Disease Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.4" data-path="statistical-inference.html"><a href="statistical-inference.html#svm-with-more-than-two-classes"><i class="fa fa-check"></i><b>4.2.10.4</b> SVM with More than Two classes</a>
+<ul>
+<li class="chapter" data-level="4.2.10.4.1" data-path="statistical-inference.html"><a href="statistical-inference.html#one-versus-one-classification"><i class="fa fa-check"></i><b>4.2.10.4.1</b> One-Versus-One Classification</a></li>
+<li class="chapter" data-level="4.2.10.4.2" data-path="statistical-inference.html"><a href="statistical-inference.html#one-versus-all-classification"><i class="fa fa-check"></i><b>4.2.10.4.2</b> One-Versus-All Classification</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.10.5" data-path="statistical-inference.html"><a href="statistical-inference.html#relationship-to-logistic-regression"><i class="fa fa-check"></i><b>4.2.10.5</b> Relationship to Logistic Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11" data-path="statistical-inference.html"><a href="statistical-inference.html#deep-learning"><i class="fa fa-check"></i><b>4.2.11</b> Deep Learning</a>
+<ul>
+<li class="chapter" data-level="4.2.11.1" data-path="statistical-inference.html"><a href="statistical-inference.html#single-layer-neural-network"><i class="fa fa-check"></i><b>4.2.11.1</b> Single Layer Neural Network</a></li>
+<li class="chapter" data-level="4.2.11.2" data-path="statistical-inference.html"><a href="statistical-inference.html#multilayer-neural-networks"><i class="fa fa-check"></i><b>4.2.11.2</b> Multilayer Neural networks</a></li>
+<li class="chapter" data-level="4.2.11.3" data-path="statistical-inference.html"><a href="statistical-inference.html#convolution-neural-networks"><i class="fa fa-check"></i><b>4.2.11.3</b> Convolution Neural Networks</a>
+<ul>
+<li class="chapter" data-level="4.2.11.3.1" data-path="statistical-inference.html"><a href="statistical-inference.html#convolution-layer"><i class="fa fa-check"></i><b>4.2.11.3.1</b> Convolution Layer</a></li>
+<li class="chapter" data-level="4.2.11.3.2" data-path="statistical-inference.html"><a href="statistical-inference.html#pooling-layers"><i class="fa fa-check"></i><b>4.2.11.3.2</b> Pooling layers</a></li>
+<li class="chapter" data-level="4.2.11.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#architecture-of-a-convolution-neural-network"><i class="fa fa-check"></i><b>4.2.11.3.3</b> Architecture of a convolution neural network</a></li>
+<li class="chapter" data-level="4.2.11.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#data-augmentation"><i class="fa fa-check"></i><b>4.2.11.3.4</b> Data Augmentation</a></li>
+<li class="chapter" data-level="4.2.11.3.5" data-path="statistical-inference.html"><a href="statistical-inference.html#results-using-a-pretrained-classifier"><i class="fa fa-check"></i><b>4.2.11.3.5</b> Results Using a Pretrained Classifier</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11.4" data-path="statistical-inference.html"><a href="statistical-inference.html#document-classification"><i class="fa fa-check"></i><b>4.2.11.4</b> Document Classification</a>
+<ul>
+<li class="chapter" data-level="4.2.11.4.1" data-path="statistical-inference.html"><a href="statistical-inference.html#reccurent-neural-networks"><i class="fa fa-check"></i><b>4.2.11.4.1</b> Reccurent Neural networks</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11.5" data-path="statistical-inference.html"><a href="statistical-inference.html#when-to-use-deep-learning"><i class="fa fa-check"></i><b>4.2.11.5</b> When to Use Deep Learning</a></li>
+<li class="chapter" data-level="4.2.11.6" data-path="statistical-inference.html"><a href="statistical-inference.html#fitting-a-neural-network"><i class="fa fa-check"></i><b>4.2.11.6</b> Fitting a Neural Network</a>
+<ul>
+<li class="chapter" data-level="4.2.11.6.1" data-path="statistical-inference.html"><a href="statistical-inference.html#backpropagation"><i class="fa fa-check"></i><b>4.2.11.6.1</b> Backpropagation</a></li>
+<li class="chapter" data-level="4.2.11.6.2" data-path="statistical-inference.html"><a href="statistical-inference.html#regulaization-and-stochastic-gradient-descent"><i class="fa fa-check"></i><b>4.2.11.6.2</b> Regulaization and Stochastic Gradient Descent</a></li>
+<li class="chapter" data-level="4.2.11.6.3" data-path="statistical-inference.html"><a href="statistical-inference.html#dropout-learning"><i class="fa fa-check"></i><b>4.2.11.6.3</b> Dropout Learning</a></li>
+<li class="chapter" data-level="4.2.11.6.4" data-path="statistical-inference.html"><a href="statistical-inference.html#network-tuning"><i class="fa fa-check"></i><b>4.2.11.6.4</b> Network Tuning</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2.11.7" data-path="statistical-inference.html"><a href="statistical-inference.html#interpolation-and-double-descent"><i class="fa fa-check"></i><b>4.2.11.7</b> Interpolation and Double Descent</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html"><i class="fa fa-check"></i><b>4.3</b> Bayesian Statistics:</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#properties-of-conditional-probability"><i class="fa fa-check"></i><b>4.3.1</b> Properties of Conditional Probability</a></li>
+<li class="chapter" data-level="4.3.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#application-of-bayes-theorem-examples"><i class="fa fa-check"></i><b>4.3.2</b> Application of Bayes Theorem: Examples</a></li>
+<li class="chapter" data-level="4.3.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#independence"><i class="fa fa-check"></i><b>4.3.3</b> Independence</a></li>
+<li class="chapter" data-level="4.3.4" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#random-variables-joint-distributions-law-of-large-numbers-lln-central-limit-theorem-clt"><i class="fa fa-check"></i><b>4.3.4</b> Random Variables; Joint Distributions; Law of Large Numbers (LLN); Central Limit Theorem (CLT)</a></li>
+<li class="chapter" data-level="4.3.5" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#common-probability-distributions-introduction-to-bayesian-inference-one-parameter-models"><i class="fa fa-check"></i><b>4.3.5</b> Common Probability Distributions; Introduction to Bayesian Inference; One-parameter Models</a></li>
+<li class="chapter" data-level="4.3.6" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#exponential-family-frequentist-confidence-interval-bayesian-credible-interval"><i class="fa fa-check"></i><b>4.3.6</b> Exponential Family; Frequentist Confidence Interval; Bayesian (Credible) Interval</a></li>
+<li class="chapter" data-level="4.3.7" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#sufficiency-rao-blackwell-theorem"><i class="fa fa-check"></i><b>4.3.7</b> Sufficiency; Rao-Blackwell Theorem;</a></li>
+<li class="chapter" data-level="4.3.8" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#monte-carlo-approximation"><i class="fa fa-check"></i><b>4.3.8</b> Monte Carlo Approximation</a>
+<ul>
+<li class="chapter" data-level="4.3.8.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#monte-carlo-expectation"><i class="fa fa-check"></i><b>4.3.8.1</b> Monte Carlo Expectation</a></li>
+<li class="chapter" data-level="4.3.8.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#additional-information-from-monte-carlo-approximation-other-than-estimating-parameters"><i class="fa fa-check"></i><b>4.3.8.2</b> Additional information from Monte Carlo approximation, other than estimating parameters</a></li>
+<li class="chapter" data-level="4.3.8.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#understanding-discrepencies"><i class="fa fa-check"></i><b>4.3.8.3</b> Understanding discrepencies</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.9" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#normal-model"><i class="fa fa-check"></i><b>4.3.9</b> Normal Model</a>
+<ul>
+<li class="chapter" data-level="4.3.9.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#conjugate-analysis"><i class="fa fa-check"></i><b>4.3.9.1</b> Conjugate analysis</a></li>
+<li class="chapter" data-level="4.3.9.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#precision-and-combining-information"><i class="fa fa-check"></i><b>4.3.9.2</b> Precision and combining information</a></li>
+<li class="chapter" data-level="4.3.9.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#prediction-for-a-new-observation"><i class="fa fa-check"></i><b>4.3.9.3</b> Prediction for a new observation</a></li>
+<li class="chapter" data-level="4.3.9.4" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#joint-inference-for-the-mean-and-variance"><i class="fa fa-check"></i><b>4.3.9.4</b> Joint inference for the mean and variance</a></li>
+<li class="chapter" data-level="4.3.9.5" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#posterior-inference"><i class="fa fa-check"></i><b>4.3.9.5</b> Posterior inference</a></li>
+<li class="chapter" data-level="4.3.9.6" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#monte-carlo-sampling"><i class="fa fa-check"></i><b>4.3.9.6</b> Monte Carlo sampling</a></li>
+<li class="chapter" data-level="4.3.9.7" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#improper-priors"><i class="fa fa-check"></i><b>4.3.9.7</b> Improper Priors</a></li>
+<li class="chapter" data-level="4.3.9.8" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#bias-variance-and-mean-squared-error-mse"><i class="fa fa-check"></i><b>4.3.9.8</b> Bias, Variance, and Mean Squared Error (MSE);</a></li>
+<li class="chapter" data-level="4.3.9.9" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#prior-specification-based-on-expectations"><i class="fa fa-check"></i><b>4.3.9.9</b> Prior specification based on expectations</a></li>
+<li class="chapter" data-level="4.3.9.10" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#the-normal-model-on-non-normal-data"><i class="fa fa-check"></i><b>4.3.9.10</b> The normal model on non-normal data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.10" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#posterior-approximation-with-the-gibbs-sampler."><i class="fa fa-check"></i><b>4.3.10</b> Posterior approximation with the Gibbs sampler.</a>
+<ul>
+<li class="chapter" data-level="4.3.10.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#a-semiconjugate-prior-distribution"><i class="fa fa-check"></i><b>4.3.10.1</b> A semiconjugate prior distribution</a></li>
+<li class="chapter" data-level="4.3.10.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#discrete-approximations"><i class="fa fa-check"></i><b>4.3.10.2</b> Discrete approximations</a></li>
+<li class="chapter" data-level="4.3.10.3" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#sampling-from-the-conditional-distributions"><i class="fa fa-check"></i><b>4.3.10.3</b> Sampling from the conditional distributions</a></li>
+<li class="chapter" data-level="4.3.10.4" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#gibbs-sampling"><i class="fa fa-check"></i><b>4.3.10.4</b> Gibbs sampling</a></li>
+<li class="chapter" data-level="4.3.10.5" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#general-properties-of-the-gibbs-sampler"><i class="fa fa-check"></i><b>4.3.10.5</b> General properties of the Gibbs sampler</a></li>
+<li class="chapter" data-level="4.3.10.6" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#introduction-to-mcmc-diagnostics"><i class="fa fa-check"></i><b>4.3.10.6</b> Introduction to MCMC diagnostics</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3.11" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#multivariate-normal-model"><i class="fa fa-check"></i><b>4.3.11</b> Multivariate Normal Model</a></li>
+<li class="chapter" data-level="4.3.12" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#group-comparisons-and-hierarchial-modeling"><i class="fa fa-check"></i><b>4.3.12</b> Group comparisons and hierarchial modeling</a></li>
+<li class="chapter" data-level="4.3.13" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#linear-regression-1"><i class="fa fa-check"></i><b>4.3.13</b> Linear Regression</a></li>
+<li class="chapter" data-level="4.3.14" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#nonconjugate-priors-and-metropolis-hastings-algorithm"><i class="fa fa-check"></i><b>4.3.14</b> Nonconjugate priors and Metropolis-Hastings algorithm</a>
+<ul>
+<li class="chapter" data-level="4.3.14.1" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#irreducibility-aperiodicity-and-recurrency"><i class="fa fa-check"></i><b>4.3.14.1</b> Irreducibility, Aperiodicity, and Recurrency</a></li>
+<li class="chapter" data-level="4.3.14.2" data-path="bayesian-statistics.html"><a href="bayesian-statistics.html#ergodic-theorem"><i class="fa fa-check"></i><b>4.3.14.2</b> Ergodic Theorem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="cs50.html"><a href="cs50.html"><i class="fa fa-check"></i><b>4.4</b> CS50</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="cs50.html"><a href="cs50.html#introduction"><i class="fa fa-check"></i><b>4.4.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="4.4.1.1" data-path="cs50.html"><a href="cs50.html#unicode"><i class="fa fa-check"></i><b>4.4.1.1</b> Unicode</a></li>
+<li class="chapter" data-level="4.4.1.2" data-path="cs50.html"><a href="cs50.html#color"><i class="fa fa-check"></i><b>4.4.1.2</b> Color</a></li>
+<li class="chapter" data-level="4.4.1.3" data-path="cs50.html"><a href="cs50.html#algorithms"><i class="fa fa-check"></i><b>4.4.1.3</b> Algorithms</a></li>
+<li class="chapter" data-level="4.4.1.4" data-path="cs50.html"><a href="cs50.html#artificial-intelligence"><i class="fa fa-check"></i><b>4.4.1.4</b> Artificial Intelligence</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4.2" data-path="cs50.html"><a href="cs50.html#c"><i class="fa fa-check"></i><b>4.4.2</b> C</a>
+<ul>
+<li class="chapter" data-level="4.4.2.1" data-path="cs50.html"><a href="cs50.html#running-cs50-locally"><i class="fa fa-check"></i><b>4.4.2.1</b> Running CS50 locally</a></li>
+<li class="chapter" data-level="4.4.2.2" data-path="cs50.html"><a href="cs50.html#source-code"><i class="fa fa-check"></i><b>4.4.2.2</b> Source code</a></li>
+<li class="chapter" data-level="4.4.2.3" data-path="cs50.html"><a href="cs50.html#from-scratch-to-c"><i class="fa fa-check"></i><b>4.4.2.3</b> From Scratch to C</a></li>
+<li class="chapter" data-level="4.4.2.4" data-path="cs50.html"><a href="cs50.html#header-files"><i class="fa fa-check"></i><b>4.4.2.4</b> Header Files</a></li>
+<li class="chapter" data-level="4.4.2.5" data-path="cs50.html"><a href="cs50.html#hello-you"><i class="fa fa-check"></i><b>4.4.2.5</b> Hello, You</a></li>
+<li class="chapter" data-level="4.4.2.6" data-path="cs50.html"><a href="cs50.html#terminal-commands"><i class="fa fa-check"></i><b>4.4.2.6</b> Terminal Commands</a></li>
+<li class="chapter" data-level="4.4.2.7" data-path="cs50.html"><a href="cs50.html#types"><i class="fa fa-check"></i><b>4.4.2.7</b> Types</a></li>
+<li class="chapter" data-level="4.4.2.8" data-path="cs50.html"><a href="cs50.html#conditionals"><i class="fa fa-check"></i><b>4.4.2.8</b> Conditionals</a></li>
+<li class="chapter" data-level="4.4.2.9" data-path="cs50.html"><a href="cs50.html#variables-and-compare.c"><i class="fa fa-check"></i><b>4.4.2.9</b> Variables and compare.c</a></li>
+<li class="chapter" data-level="4.4.2.10" data-path="cs50.html"><a href="cs50.html#agree.c"><i class="fa fa-check"></i><b>4.4.2.10</b> agree.c</a></li>
+<li class="chapter" data-level="4.4.2.11" data-path="cs50.html"><a href="cs50.html#loops-cat.c"><i class="fa fa-check"></i><b>4.4.2.11</b> Loops cat.c</a></li>
+<li class="chapter" data-level="4.4.2.12" data-path="cs50.html"><a href="cs50.html#functions"><i class="fa fa-check"></i><b>4.4.2.12</b> Functions</a></li>
+<li class="chapter" data-level="4.4.2.13" data-path="cs50.html"><a href="cs50.html#correctness-design-style"><i class="fa fa-check"></i><b>4.4.2.13</b> Correctness, Design, Style</a></li>
+<li class="chapter" data-level="4.4.2.14" data-path="cs50.html"><a href="cs50.html#mario"><i class="fa fa-check"></i><b>4.4.2.14</b> Mario</a></li>
+<li class="chapter" data-level="4.4.2.15" data-path="cs50.html"><a href="cs50.html#calculator.c"><i class="fa fa-check"></i><b>4.4.2.15</b> calculator.c</a></li>
+<li class="chapter" data-level="4.4.2.16" data-path="cs50.html"><a href="cs50.html#integer-overflow"><i class="fa fa-check"></i><b>4.4.2.16</b> Integer Overflow</a></li>
+<li class="chapter" data-level="4.4.2.17" data-path="cs50.html"><a href="cs50.html#boeing"><i class="fa fa-check"></i><b>4.4.2.17</b> Boeing</a></li>
+<li class="chapter" data-level="4.4.2.18" data-path="cs50.html"><a href="cs50.html#pacman"><i class="fa fa-check"></i><b>4.4.2.18</b> Pacman</a></li>
+<li class="chapter" data-level="4.4.2.19" data-path="cs50.html"><a href="cs50.html#truncation"><i class="fa fa-check"></i><b>4.4.2.19</b> Truncation</a></li>
+<li class="chapter" data-level="4.4.2.20" data-path="cs50.html"><a href="cs50.html#type-casting"><i class="fa fa-check"></i><b>4.4.2.20</b> Type Casting</a></li>
+<li class="chapter" data-level="4.4.2.21" data-path="cs50.html"><a href="cs50.html#floating-point-imprecision"><i class="fa fa-check"></i><b>4.4.2.21</b> Floating-Point Imprecision</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4.3" data-path="cs50.html"><a href="cs50.html#arrays"><i class="fa fa-check"></i><b>4.4.3</b> Arrays</a></li>
+<li class="chapter" data-level="4.4.4" data-path="cs50.html"><a href="cs50.html#memory"><i class="fa fa-check"></i><b>4.4.4</b> Memory</a></li>
+<li class="chapter" data-level="4.4.5" data-path="cs50.html"><a href="cs50.html#data-structures"><i class="fa fa-check"></i><b>4.4.5</b> Data Structures</a></li>
+<li class="chapter" data-level="4.4.6" data-path="cs50.html"><a href="cs50.html#python"><i class="fa fa-check"></i><b>4.4.6</b> Python</a></li>
+<li class="chapter" data-level="4.4.7" data-path="cs50.html"><a href="cs50.html#artificial-intelligence-1"><i class="fa fa-check"></i><b>4.4.7</b> Artificial Intelligence</a></li>
+<li class="chapter" data-level="4.4.8" data-path="cs50.html"><a href="cs50.html#sql"><i class="fa fa-check"></i><b>4.4.8</b> SQL</a></li>
+<li class="chapter" data-level="4.4.9" data-path="cs50.html"><a href="cs50.html#html-css-javascript"><i class="fa fa-check"></i><b>4.4.9</b> HTML, CSS, JavaScript</a></li>
+<li class="chapter" data-level="4.4.10" data-path="cs50.html"><a href="cs50.html#flask"><i class="fa fa-check"></i><b>4.4.10</b> Flask</a></li>
+<li class="chapter" data-level="4.4.11" data-path="cs50.html"><a href="cs50.html#the-end"><i class="fa fa-check"></i><b>4.4.11</b> The End</a></li>
+<li class="chapter" data-level="4.4.12" data-path="cs50.html"><a href="cs50.html#ace-reccomendation"><i class="fa fa-check"></i><b>4.4.12</b> ACE Reccomendation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="deep-learning-1.html"><a href="deep-learning-1.html"><i class="fa fa-check"></i><b>4.5</b> Deep Learning</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="deep-learning-1.html"><a href="deep-learning-1.html#introduction-to-neural-networks-and-deep-learning"><i class="fa fa-check"></i><b>4.5.1</b> 9/5 Introduction to Neural Networks and Deep Learning,</a></li>
+<li class="chapter" data-level="4.5.2" data-path="deep-learning-1.html"><a href="deep-learning-1.html#gradient-descent-and-back-propagation"><i class="fa fa-check"></i><b>4.5.2</b> 9/12 Gradient Descent and Back Propagation</a></li>
+<li class="chapter" data-level="4.5.3" data-path="deep-learning-1.html"><a href="deep-learning-1.html#keras"><i class="fa fa-check"></i><b>4.5.3</b> 9/19 Keras</a></li>
+<li class="chapter" data-level="4.5.4" data-path="deep-learning-1.html"><a href="deep-learning-1.html#convolutional-neural-networks-cnns"><i class="fa fa-check"></i><b>4.5.4</b> 9/26 Convolutional Neural Networks (CNNs)</a></li>
+<li class="chapter" data-level="4.5.5" data-path="deep-learning-1.html"><a href="deep-learning-1.html#visualizing-feature-maps-of-cnn-layers-locating-objects-in-images"><i class="fa fa-check"></i><b>4.5.5</b> 10/3 Visualizing Feature Maps of CNN Layers, Locating Objects in Images</a></li>
+<li class="chapter" data-level="4.5.6" data-path="deep-learning-1.html"><a href="deep-learning-1.html#transfer-learning-fine-tuning-augmentation"><i class="fa fa-check"></i><b>4.5.6</b> 10/10: Transfer Learning, Fine Tuning, Augmentation</a></li>
+<li class="chapter" data-level="4.5.7" data-path="deep-learning-1.html"><a href="deep-learning-1.html#autoencoders-variational-autoencoders-and-manifold-hypothesis"><i class="fa fa-check"></i><b>4.5.7</b> 10/17 Autoencoders, Variational Autoencoders and Manifold Hypothesis</a></li>
+<li class="chapter" data-level="4.5.8" data-path="deep-learning-1.html"><a href="deep-learning-1.html#natural-language-processing-nlp-doc2vec-like-api-s-and"><i class="fa fa-check"></i><b>4.5.8</b> 10/24 Natural Language Processing (NLP), Doc2Vec like API-s and</a></li>
+<li class="chapter" data-level="4.5.9" data-path="deep-learning-1.html"><a href="deep-learning-1.html#analysis-and-transcription-of-speech"><i class="fa fa-check"></i><b>4.5.9</b> 10/31 Analysis and Transcription of Speech</a></li>
+<li class="chapter" data-level="4.5.10" data-path="deep-learning-1.html"><a href="deep-learning-1.html#sequence-analysis-seq2seq-models-and-machine-translation"><i class="fa fa-check"></i><b>4.5.10</b> 11/7 Sequence Analysis, Seq2Seq Models and Machine Translation</a></li>
+<li class="chapter" data-level="4.5.11" data-path="deep-learning-1.html"><a href="deep-learning-1.html#transformers"><i class="fa fa-check"></i><b>4.5.11</b> 11/14 Transformers</a></li>
+<li class="chapter" data-level="4.5.12" data-path="deep-learning-1.html"><a href="deep-learning-1.html#class-12-large-language-models-llms"><i class="fa fa-check"></i><b>4.5.12</b> 11/21: Class 12: Large Language Models (LLMs)</a></li>
+<li class="chapter" data-level="4.5.13" data-path="deep-learning-1.html"><a href="deep-learning-1.html#class-13-generative-adversarial-networks-gans"><i class="fa fa-check"></i><b>4.5.13</b> 12/5: Class 13: Generative Adversarial Networks (GANs)</a></li>
+<li class="chapter" data-level="4.5.14" data-path="deep-learning-1.html"><a href="deep-learning-1.html#class-14-graphs-neural-networks-gnns"><i class="fa fa-check"></i><b>4.5.14</b> 12/12: Class 14: Graphs Neural Networks (GNNs)</a></li>
+<li class="chapter" data-level="4.5.15" data-path="deep-learning-1.html"><a href="deep-learning-1.html#the-final-project-presentations"><i class="fa fa-check"></i><b>4.5.15</b> 12/19: The Final Project Presentations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html"><i class="fa fa-check"></i><b>4.6</b> Data Mining, Discovery, and Exploration</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#course-introduction-and-introduction-to-data-mining"><i class="fa fa-check"></i><b>4.6.1</b> 9/3 Course introduction and introduction to data mining</a>
+<ul>
+<li class="chapter" data-level="4.6.1.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#what-is-data-mining"><i class="fa fa-check"></i><b>4.6.1.1</b> What is data mining?</a></li>
+<li class="chapter" data-level="4.6.1.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#goals-of-data-mining"><i class="fa fa-check"></i><b>4.6.1.2</b> Goals of data mining</a></li>
+<li class="chapter" data-level="4.6.1.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#limitations"><i class="fa fa-check"></i><b>4.6.1.3</b> Limitations</a></li>
+<li class="chapter" data-level="4.6.1.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#bonferronis-principle"><i class="fa fa-check"></i><b>4.6.1.4</b> Bonferroni’s Principle</a></li>
+<li class="chapter" data-level="4.6.1.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#what-is-a-hash-function-a-hash-table"><i class="fa fa-check"></i><b>4.6.1.5</b> What is a hash function, a hash table?</a></li>
+<li class="chapter" data-level="4.6.1.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#hashing-for-managing-massive-data-sets"><i class="fa fa-check"></i><b>4.6.1.6</b> Hashing for managing massive data sets</a></li>
+<li class="chapter" data-level="4.6.1.7" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#scalable-hypothesis-test-algorithms-for-data-mining"><i class="fa fa-check"></i><b>4.6.1.7</b> Scalable hypothesis test algorithms for data mining</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#data-mining-massive-and-streaming-data-part-1"><i class="fa fa-check"></i><b>4.6.2</b> 9/10 Data mining massive and streaming data, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.2.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-nature-of-streaming-data"><i class="fa fa-check"></i><b>4.6.2.1</b> The nature of streaming data</a></li>
+<li class="chapter" data-level="4.6.2.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#architectures-for-streaming-data"><i class="fa fa-check"></i><b>4.6.2.2</b> Architectures for streaming data</a></li>
+<li class="chapter" data-level="4.6.2.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#filters-and-counting-for-streams"><i class="fa fa-check"></i><b>4.6.2.3</b> Filters and counting for streams</a></li>
+<li class="chapter" data-level="4.6.2.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#updating-statistics-with-streams"><i class="fa fa-check"></i><b>4.6.2.4</b> Updating statistics with streams</a></li>
+<li class="chapter" data-level="4.6.2.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#quantile-estimation-for-streams"><i class="fa fa-check"></i><b>4.6.2.5</b> Quantile estimation for streams</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#data-mining-massive-and-streaming-data-part-2"><i class="fa fa-check"></i><b>4.6.3</b> 9/17 Data mining massive and streaming data, Part 2</a></li>
+<li class="chapter" data-level="4.6.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#mining-social-network-graphs"><i class="fa fa-check"></i><b>4.6.4</b> 9/24 Mining social-network graphs</a>
+<ul>
+<li class="chapter" data-level="4.6.4.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#nature-of-social-network-graphs"><i class="fa fa-check"></i><b>4.6.4.1</b> Nature of social-network graphs</a></li>
+<li class="chapter" data-level="4.6.4.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#centrality-and-influence"><i class="fa fa-check"></i><b>4.6.4.2</b> Centrality and influence</a></li>
+<li class="chapter" data-level="4.6.4.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#clustering-graphs"><i class="fa fa-check"></i><b>4.6.4.3</b> Clustering graphs</a></li>
+<li class="chapter" data-level="4.6.4.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#spectral-decomposition-of-graphs"><i class="fa fa-check"></i><b>4.6.4.4</b> Spectral decomposition of graphs</a></li>
+<li class="chapter" data-level="4.6.4.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#overlapping-communities-time-permitting"><i class="fa fa-check"></i><b>4.6.4.5</b> Overlapping communities – time permitting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#similarity-search-at-massive-scale-part-1"><i class="fa fa-check"></i><b>4.6.5</b> 10/1 Similarity search at massive scale, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.5.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#distance-measures"><i class="fa fa-check"></i><b>4.6.5.1</b> Distance measures</a></li>
+<li class="chapter" data-level="4.6.5.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#similarity-measures"><i class="fa fa-check"></i><b>4.6.5.2</b> Similarity measures</a></li>
+<li class="chapter" data-level="4.6.5.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#search-with-kd-trees"><i class="fa fa-check"></i><b>4.6.5.3</b> Search with KD-trees</a></li>
+<li class="chapter" data-level="4.6.5.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#approximate-similarity-search-at-massive-scale"><i class="fa fa-check"></i><b>4.6.5.4</b> Approximate similarity search at massive scale</a></li>
+<li class="chapter" data-level="4.6.5.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#indexes-for-massive-similarity-serarch"><i class="fa fa-check"></i><b>4.6.5.5</b> Indexes for massive similarity serarch</a></li>
+<li class="chapter" data-level="4.6.5.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#evaluation-of-approximate-similarity-search-algorithms"><i class="fa fa-check"></i><b>4.6.5.6</b> Evaluation of approximate similarity search algorithms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#similarity-search-at-massive-scale-part-2"><i class="fa fa-check"></i><b>4.6.6</b> 10/8 Similarity search at massive scale, Part 2</a></li>
+<li class="chapter" data-level="4.6.7" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#information-retrieval-for-document-and-web-search"><i class="fa fa-check"></i><b>4.6.7</b> 10/15 Information retrieval for document and web search</a>
+<ul>
+<li class="chapter" data-level="4.6.7.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#dense-vs.-sparse-embedding-for-documents-search"><i class="fa fa-check"></i><b>4.6.7.1</b> Dense vs. sparse embedding for documents search</a></li>
+<li class="chapter" data-level="4.6.7.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#dense-neural-embedding-algorithms"><i class="fa fa-check"></i><b>4.6.7.2</b> Dense neural embedding algorithms</a></li>
+<li class="chapter" data-level="4.6.7.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#sparse-embedding-algorithms"><i class="fa fa-check"></i><b>4.6.7.3</b> Sparse embedding algorithms</a></li>
+<li class="chapter" data-level="4.6.7.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#term-expansion-algorithms"><i class="fa fa-check"></i><b>4.6.7.4</b> Term expansion algorithms</a></li>
+<li class="chapter" data-level="4.6.7.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#embedding-images-and-clip"><i class="fa fa-check"></i><b>4.6.7.5</b> Embedding images and CLIP</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.8" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#learning-to-rank-for-search-and-recommendation-part-1"><i class="fa fa-check"></i><b>4.6.8</b> 10/22 Learning to rank for search and recommendation, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.8.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#embedding-high-cardinality-features"><i class="fa fa-check"></i><b>4.6.8.1</b> Embedding high cardinality features</a></li>
+<li class="chapter" data-level="4.6.8.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#content-based-methods"><i class="fa fa-check"></i><b>4.6.8.2</b> Content based methods</a></li>
+<li class="chapter" data-level="4.6.8.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#collaborative-filtering"><i class="fa fa-check"></i><b>4.6.8.3</b> Collaborative filtering</a></li>
+<li class="chapter" data-level="4.6.8.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#latent-variable-algorithms"><i class="fa fa-check"></i><b>4.6.8.4</b> Latent variable algorithms</a></li>
+<li class="chapter" data-level="4.6.8.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-pagerank-algorithm"><i class="fa fa-check"></i><b>4.6.8.5</b> The PageRank algorithm</a></li>
+<li class="chapter" data-level="4.6.8.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#priority-queues-and-heaps"><i class="fa fa-check"></i><b>4.6.8.6</b> Priority queues and heaps</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.9" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#learning-to-rank-for-search-and-recommendation-part-2"><i class="fa fa-check"></i><b>4.6.9</b> 10/29 Learning to rank for search and recommendation, Part 2</a></li>
+<li class="chapter" data-level="4.6.10" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#clustering-algorithms-part-1"><i class="fa fa-check"></i><b>4.6.10</b> 11/5 Clustering Algorithms, Part 1</a>
+<ul>
+<li class="chapter" data-level="4.6.10.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#finding-structure-in-data"><i class="fa fa-check"></i><b>4.6.10.1</b> Finding structure in data</a></li>
+<li class="chapter" data-level="4.6.10.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-k-means-algorithm"><i class="fa fa-check"></i><b>4.6.10.2</b> The k-means algorithm</a></li>
+<li class="chapter" data-level="4.6.10.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#problems-with-evaluating-clustering-results"><i class="fa fa-check"></i><b>4.6.10.3</b> Problems with evaluating clustering results</a></li>
+<li class="chapter" data-level="4.6.10.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#probabilistic-clustering-dealing-with-uncertainty"><i class="fa fa-check"></i><b>4.6.10.4</b> Probabilistic clustering, dealing with uncertainty</a></li>
+<li class="chapter" data-level="4.6.10.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#agglomerative-hierarchical-clustering-and-k-medoids-algorithms-for-non-euclidean-spaces"><i class="fa fa-check"></i><b>4.6.10.5</b> Agglomerative hierarchical clustering and k-medoids algorithms for non-Euclidean spaces</a></li>
+<li class="chapter" data-level="4.6.10.6" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#density-based-clustering-algorithms"><i class="fa fa-check"></i><b>4.6.10.6</b> Density-based clustering algorithms</a></li>
+<li class="chapter" data-level="4.6.10.7" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#graph-based-clustering-algorithms"><i class="fa fa-check"></i><b>4.6.10.7</b> Graph-based clustering algorithms</a></li>
+<li class="chapter" data-level="4.6.10.8" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#database-scale-clustering-algorithms"><i class="fa fa-check"></i><b>4.6.10.8</b> Database scale clustering algorithms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.11" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#clustering-algorithms-part-2"><i class="fa fa-check"></i><b>4.6.11</b> 11/12 Clustering Algorithms, Part 2</a></li>
+<li class="chapter" data-level="4.6.12" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#dimensionality-reduction"><i class="fa fa-check"></i><b>4.6.12</b> 11/19 Dimensionality reduction</a>
+<ul>
+<li class="chapter" data-level="4.6.12.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#eigenvalues-and-pca"><i class="fa fa-check"></i><b>4.6.12.1</b> Eigenvalues and PCA</a></li>
+<li class="chapter" data-level="4.6.12.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#singular-value-decomposition-and-its-interpretation"><i class="fa fa-check"></i><b>4.6.12.2</b> Singular value decomposition and its interpretation</a></li>
+<li class="chapter" data-level="4.6.12.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#manifold-learning-and-nonlinear-spaces"><i class="fa fa-check"></i><b>4.6.12.3</b> Manifold learning and nonlinear spaces</a></li>
+<li class="chapter" data-level="4.6.12.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#spectral-embedding"><i class="fa fa-check"></i><b>4.6.12.4</b> Spectral embedding</a></li>
+<li class="chapter" data-level="4.6.12.5" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-umap-algorithm"><i class="fa fa-check"></i><b>4.6.12.5</b> The UMAP algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.13" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#section"><i class="fa fa-check"></i><b>4.6.13</b> 11/23</a></li>
+<li class="chapter" data-level="4.6.14" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#frequent-item-sets-market-basket-analysis"><i class="fa fa-check"></i><b>4.6.14</b> 12/3 Frequent item sets; market basket analysis</a>
+<ul>
+<li class="chapter" data-level="4.6.14.1" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#market-basket-models"><i class="fa fa-check"></i><b>4.6.14.1</b> Market basket models</a></li>
+<li class="chapter" data-level="4.6.14.2" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#the-a-priori-algorithm"><i class="fa fa-check"></i><b>4.6.14.2</b> The A-Priori algorithm</a></li>
+<li class="chapter" data-level="4.6.14.3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#limited-pass-algorithms"><i class="fa fa-check"></i><b>4.6.14.3</b> Limited pass algorithms</a></li>
+<li class="chapter" data-level="4.6.14.4" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#streaming-algorithms-time-permitting"><i class="fa fa-check"></i><b>4.6.14.4</b> Streaming algorithms – time permitting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6.15" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#additional-topics"><i class="fa fa-check"></i><b>4.6.15</b> 12/10 Additional Topics</a></li>
+<li class="chapter" data-level="4.6.16" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html#final-project-due"><i class="fa fa-check"></i><b>4.6.16</b> 12/17: Final Project Due</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Perpetually trying to remember what I forgot</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bayesian-statistics" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Bayesian Statistics:<a href="bayesian-statistics.html#bayesian-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>These notes are based on chapter readings of the textbook A First Course in Bayesian Statistical Methods by Peter D. Hoff. <a href="https://link.springer.com/book/10.1007/978-0-387-92407-6" class="uri">https://link.springer.com/book/10.1007/978-0-387-92407-6</a></p>
+<p>Bayesian statistics is a branch of statistics that is based on the Bayes’ theorem. It describes how we update the probability of a hypothesis as more evidence becomes available. The unknown parameters in our model are treated as random variables and probability is used to describe uncertainty about the parameters.</p>
+<p>This is different from a frequentist approach because the parameters are treated as fixed values. Probability is used to describe long-run frequency of observed data.</p>
+<p>Probabilities can numerically represent a set of rational beliefs. Bayes’ rule provides a rational method for updating belief with new information, i.e. Bayesian Inference.</p>
+<p>Bayesian methods are data analysis tools with uses:
+- Formal interpretation as a means of induction<br />
+- Parameter estimates with good statistical properties<br />
+- Parsimonious descriptions of observed data<br />
+- Predictors for missing data and forecasts of future data  </p>
+<p>Bayesian learnin is about understanding and quantifying uncertainty. Statistical induction means understanding the general characteristics of a population based on a subset of that population.</p>
+<p>Before data, numerical values of a population or subset are uncertain. After data, we can use information to decrease uncertainty in population.</p>
+<p>Why Bayes?</p>
+<ol style="list-style-type: upper-alpha">
+<li>Bayes is a practical analysis, it can be hard to determine and formulate our prior beliefs, therefore, <span class="math inline">\(p(\theta)\)</span> is often chosen ad hoc, or for computational convienence.<br />
+</li>
+</ol>
+<ul>
+<li><span class="math inline">\(p(\phi)\)</span> can approximate our beliefs  </li>
+<li><span class="math inline">\(p(\theta|y)\)</span> is optimal <span class="math inline">\(p(\phi)\)</span> is also approximated.<br />
+</li>
+</ul>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>For complicated statistical problems, there may not be an obvious solution. Bayes’ rule can approximate in these situations and evalute non-Bayesian criteria</li>
+</ol>
+<div id="properties-of-conditional-probability" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Properties of Conditional Probability<a href="bayesian-statistics.html#properties-of-conditional-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="application-of-bayes-theorem-examples" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Application of Bayes Theorem: Examples<a href="bayesian-statistics.html#application-of-bayes-theorem-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="independence" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Independence<a href="bayesian-statistics.html#independence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="random-variables-joint-distributions-law-of-large-numbers-lln-central-limit-theorem-clt" class="section level3 hasAnchor" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Random Variables; Joint Distributions; Law of Large Numbers (LLN); Central Limit Theorem (CLT)<a href="bayesian-statistics.html#random-variables-joint-distributions-law-of-large-numbers-lln-central-limit-theorem-clt" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>this is test<br />
+</p>
+</div>
+<div id="common-probability-distributions-introduction-to-bayesian-inference-one-parameter-models" class="section level3 hasAnchor" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Common Probability Distributions; Introduction to Bayesian Inference; One-parameter Models<a href="bayesian-statistics.html#common-probability-distributions-introduction-to-bayesian-inference-one-parameter-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>this is test<br />
+</p>
+</div>
+<div id="exponential-family-frequentist-confidence-interval-bayesian-credible-interval" class="section level3 hasAnchor" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> Exponential Family; Frequentist Confidence Interval; Bayesian (Credible) Interval<a href="bayesian-statistics.html#exponential-family-frequentist-confidence-interval-bayesian-credible-interval" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>this is test<br />
+</p>
+<p><strong>References:</strong><br />
+- Raiﬀa and Schlaifer (1961) classes of prior distributions<br />
+- Diaconis and Ylvisaker (1979 and 1985) conjugacy for exponential families<br />
+- Welch and Peers (1963), Hartigan (1966), Severini (1991) Bayesian coverage and credible intervals<br />
+- Tibshirani (1989) Sweeting (1999 and 2001) frequentist coverage for contruction of prior distributions<br />
+- Kass and Wasserman (1996) review of formal methods for selecting prior distributions<br />
+</p>
+</div>
+<div id="sufficiency-rao-blackwell-theorem" class="section level3 hasAnchor" number="4.3.7">
+<h3><span class="header-section-number">4.3.7</span> Sufficiency; Rao-Blackwell Theorem;<a href="bayesian-statistics.html#sufficiency-rao-blackwell-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="monte-carlo-approximation" class="section level3 hasAnchor" number="4.3.8">
+<h3><span class="header-section-number">4.3.8</span> Monte Carlo Approximation<a href="bayesian-statistics.html#monte-carlo-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="monte-carlo-expectation" class="section level4 hasAnchor" number="4.3.8.1">
+<h4><span class="header-section-number">4.3.8.1</span> Monte Carlo Expectation<a href="bayesian-statistics.html#monte-carlo-expectation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="additional-information-from-monte-carlo-approximation-other-than-estimating-parameters" class="section level4 hasAnchor" number="4.3.8.2">
+<h4><span class="header-section-number">4.3.8.2</span> Additional information from Monte Carlo approximation, other than estimating parameters<a href="bayesian-statistics.html#additional-information-from-monte-carlo-approximation-other-than-estimating-parameters" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Calculating the log-odds from Monte Carlo approximation:</strong><br />
+Fifty-four percent of the respondents in the 1998 General Social Survey re-ported their religious preference as Protestant, leaving non-Protestants in the minority. Respondents were also asked if they agreed with a Supreme Court ruling that prohibited state or local governments from requiring the reading of religious texts in public schools. Of the <span class="math inline">\(n\)</span> = 860 individuals in the religious minority (non-Protestant), <span class="math inline">\(y\)</span>= 441 (51%) said they agreed with the Supreme Court ruling, whereas 353 of the 1011 Protestants (35%) agreed with the ruling.<br />
+Let θ be the population proportion agreeing with the ruling in the minority population. Using a binomial sampling model and a uniform prior distribution, the posterior distribution of θ is beta(442,420). Using the Monte Carlo algorithm described above, we can obtain samples of the log-odds <span class="math inline">\(Y\)</span> = log[θ/(1-θ)] from both the prior distribution and the posterior distribution of <span class="math inline">\(Y\)</span>. In R, the Monte Carlo algorithm involves only a few commands:</p>
+<p>If you have two parameters you want to test a numerical value for, say for example <span class="math inline">\(\theta_{1}\)</span> &gt; <span class="math inline">\(\theta_{2}\)</span>, or <span class="math inline">\(\theta_{1}\)</span> / <span class="math inline">\(\theta_{2}\)</span> then monte carlo sampling can be completed to perform posterior summaries or comparisons between the two parameters</p>
+<p>Approach:<br />
+1. Draw S samples from each posterior:</p>
+<ul>
+<li>For each s=1,…,S:
+<ul>
+<li>Sample <span class="math inline">\(\theta_{1}^{(s)}\)</span> from gamma(219,112)</li>
+<li>Sample <span class="math inline">\(\theta_{2}^{(s)}\)</span>​ from gamma(68,45)</li>
+</ul></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Compare the samples:
+<ul>
+<li>For each pair (<span class="math inline">\(\theta_{1}^{(s)}\)</span>,<span class="math inline">\(\theta_{2}^{(s)}\)</span>​):
+<ul>
+<li>Check if <span class="math inline">\(\theta_{1}^{(s)}\)</span> &gt; <span class="math inline">\(\theta_{2}^{(s)}\)</span>​</li>
+</ul></li>
+<li>The proportion of times this is true estimates <span class="math inline">\(Pr(\theta_{1}^{(s)}\)</span> &gt; <span class="math inline">\(\theta_{2}^{(s)} | data)\)</span></li>
+</ul></li>
+</ol>
+<p>This can be expressed as:<br />
+<span class="math display">\[
+   \Pr(\theta_1 &gt; \theta_2 \mid \text{data}) \approx \frac{1}{S} \sum_{s=1}^S 1(\theta_1^{(s)} &gt; \theta_2^{(s)})
+   \]</span></p>
+<p>where 1 if condition is true, 0 otherwise. This can be calculated as:<br />
+This peak suggests that <span class="math inline">\(\theta_{1}\)</span> is more likely than <span class="math inline">\(\theta_{2}\)</span>. For spread and uncertainty the width of the density plot shows how uncertain you are about the ratio. A narrow peak means high certainty, a wide spread means more uncertainty.</p>
+<p><strong>Sampling from a predictive distributio</strong><br />
+What does this mean? “Given what I know (my data and prior beliefs), what is the probability distribution for a future or unobserved outcome?” It is a probability distribution for a random variable <span class="math inline">\(\tilde{Y}\)</span> (a new or future observation). We can’t just plug in to predict for future observations because we need to account for the uncertainty or variability that the future data will have.</p>
+<p>It is constructed on:<br />
+- known quantities have been conditioned on; such as the observed data or the fixed covariates
+- unknown quantities have been integrated out (like parameters θ).</p>
+<p>Special Case: Conjugate Priors<br />
+Example:
+Y~ = number of children for a randomly chosen woman aged 40 with a college degree.
+θ = mean birthrate for this population.</p>
+<p>If we knew θ, we’d model Y~ as (Poisson):
+<span class="math display">\[
+\Pr(\tilde{Y} = \tilde{y} | \theta) = \frac{\theta^{\tilde{y}} e^{-\theta}}{\tilde{y}!}
+\]</span>
+But We Usually Don’t Know θ:<br />
+- We have uncertainty about θ, described by a prior or posterior distribution p(θ).
+- To predict <span class="math inline">\(tilde{Y}\)</span>, we must integrate out θ:<br />
+<span class="math display">\[
+\Pr(\tilde{Y} = \tilde{y}) = \int p(\tilde{y} | \theta) p(\theta) d\theta
+\]</span></p>
+<p>This is the predictive distribution.<br />
+If <span class="math inline">\(\theta \sim \operatorname{gamma}(a, b)\)</span>, the predictive distribution for <span class="math inline">\(\tilde{Y}\)</span> is a negative binomial distribution with parameters <span class="math inline">\(a, b\)</span>.</p>
+</div>
+<div id="understanding-discrepencies" class="section level4 hasAnchor" number="4.3.8.3">
+<h4><span class="header-section-number">4.3.8.3</span> Understanding discrepencies<a href="bayesian-statistics.html#understanding-discrepencies" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Checking your work in Monte Carlo approximation</strong><br />
+If there are descrepencies from the empirical distribution vs the predictive distribution, these are due to:<br />
+1. sampling variability as the observed data might just have a statistical fluke<br />
+2. model misfit as the model may not be flexible enough to capture the true pattern of the data</p>
+<p>To check if this is unusual, you can quantify the conflict using simulation.
+1. For each sim
+- Draw a parameter value <span class="math inline">\(\theta^{(s)}\)</span> from the posterior.
+- Generate a new dataset <span class="math inline">\(\tilde{\boldsymbol{Y}}^{(s)}\)</span> of size 111, using the model (<span class="math inline">\(\text{Poisson}(\theta^{(s)})\)</span>) for each woman).
+- Compute a summary statistic for each simulated dataset (here, the ratio <span class="math inline">\(t^{(s)}\)</span> of # with 2 children to # with 1 child).</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Repeat for many simulations to get a distribution of <span class="math inline">\(t^{(s)}\)</span> under the model.
+<ul>
+<li>Compare your observed statistic tobs​ (here, 2) to the simulated values.
+<ul>
+<li>If very few simulated datasets have t(s) as extreme as tobs​, this suggests the model is not consistent with the data.</li>
+</ul></li>
+</ul></li>
+</ol>
+<p><strong>References:</strong><br />
+- Rubinstein and Kroese (2008): Monte Carlo methods for a wide variety of statistical problems<br />
+- Robert and Casella (2004) include more coverage of Bayesian applications (and cover Markov chain Monte Carlo methods as well).<br />
+- Guttman (1967) and Rubin (1984) posterior predictive distribution to assess model fit<br />
+- Gelman et al (1996) and more recently in Johnson (2007) evaluate goodness-of-fit using functions that depend on parameters as well as predicted data<br />
+- Bayarri and Berger (2000) posterior predictive p-values<br />
+</p>
+</div>
+</div>
+<div id="normal-model" class="section level3 hasAnchor" number="4.3.9">
+<h3><span class="header-section-number">4.3.9</span> Normal Model<a href="bayesian-statistics.html#normal-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="conjugate-analysis" class="section level4 hasAnchor" number="4.3.9.1">
+<h4><span class="header-section-number">4.3.9.1</span> Conjugate analysis<a href="bayesian-statistics.html#conjugate-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Useful and most utilixed for data analysis because of the central limit theorem and due to simple model with separate parameters for mean and variance.
+<span class="math display">\[
+p(y \mid \theta, \sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{1}{2}\left(\frac{y-\theta}{\sigma}\right)^2\right), \quad -\infty &lt; y &lt; \infty
+\]</span>
+- the distribution is symmetric about θ, and the mode, median and mean are all equal to <span class="math inline">\(\theta\)</span>
+- Mean, median, and more are all equal to <span class="math inline">\(\theta\)</span>.
+- about 95% of the population lies within two standard deviations (<span class="math inline">\(\pm 2\sigma\)</span>) of the mean (more precisely, 1.96 standard deviations (<span class="math inline">\(\pm 1.96\sigma\)</span>))
+- if <span class="math inline">\(X \sim \operatorname{Normal}(\mu, \tau^2)\)</span>, <span class="math inline">\(Y \sim \operatorname{Normal}(\theta, \sigma^2)\)</span> and <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then for constants <span class="math inline">\(a, b\)</span>:<br />
+<span class="math display">\[
+  aX + bY \sim \operatorname{Normal}(a\mu + b\theta, a^2\tau^2 + b^2\sigma^2)
+  \]</span>
+- the dnorm, rnorm, pnorm, and qnorm commands in R take the standard deviation <span class="math inline">\(\sigma\)</span> as their argument, not the variance <span class="math inline">\(\sigma^2\)</span>. Be very careful about this when using R - confusing as these can drastically change your results.</p>
+<p><strong>Inference for the mean, condinitional on the variance:</strong><br />
+Suppose you observe <span class="math inline">\(Y_1, Y_2, \ldots, Y_n\)</span> and assume iid.
+<span class="math display">\[
+Y_i \sim \operatorname{Normal}(\theta, \sigma^2)
+\]</span></p>
+<p>The joing probability (likelihood) of seeing you data given <span class="math inline">\(\theta, \sigma^2\)</span> is:</p>
+<p><span class="math display">\[
+p(y_1, \ldots, y_n | \theta, \sigma^2) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{1}{2} \left( \frac{y_i - \theta}{\sigma} \right)^2 \right )
+\]</span></p>
+<p><span class="math display">\[
+= (2\pi\sigma^2)^{-n/2} \exp\left( -\frac{1}{2} \sum_{i=1}^n \left( \frac{y_i - \theta}{\sigma} \right)^2 \right )
+\]</span></p>
+<p>which we can expand on the quadratic term in the exponent to get :<br />
+<span class="math display">\[
+\sum_{i=1}^n \left( \frac{y_i - \theta}{\sigma} \right)^2 = \frac{1}{\sigma^2} \sum y_i^2 - 2\frac{\theta}{\sigma^2} \sum y_i + n\frac{\theta^2}{\sigma^2}
+\]</span>
+therefore, the likelihood depends on <span class="math inline">\(\sum y_i\)</span> the sample mean and <span class="math inline">\(\sum y_i^2\)</span>. These are the sufficent statistics.</p>
+<p><strong>Updating based on prior belief</strong></p>
+<p>If you started with a normal prior, the posterior is also normal.
+<span class="math display">\[
+\theta \sim \operatorname{Normal}(\mu_0, \tau_0^2)
+\]</span>
+<span class="math display">\[
+p(\theta | y_1, \ldots, y_n, \sigma^2) \sim \operatorname{Normal}(\mu_n, \tau_n^2)
+\]</span>
+<span class="math display">\[
+\tau_n^2 = \frac{1}{ \frac{1}{\tau_0^2} + \frac{n}{\sigma^2} }
+\]</span>
+<span class="math display">\[
+\mu_n = \frac{ \frac{1}{\tau_0^2} \mu_0 + \frac{n}{\sigma^2} \bar{y} }{ \frac{1}{\tau_0^2} + \frac{n}{\sigma^2} }
+\]</span></p>
+<p><span class="math inline">\(\mu_0, \tau_0^2\)</span> are the prior mean and variance
+<span class="math inline">\(\bar{y}\)</span> is sample mean</p>
+</div>
+<div id="precision-and-combining-information" class="section level4 hasAnchor" number="4.3.9.2">
+<h4><span class="header-section-number">4.3.9.2</span> Precision and combining information<a href="bayesian-statistics.html#precision-and-combining-information" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>posterior variance for the mean, <span class="math inline">\(\tau_n^2\)</span>, is determined by combining the inverse variances (precisions) from the prior and the data:
+<span class="math display">\[
+  \frac{1}{\tau_n^2} = \frac{1}{\tau_0^2} + \frac{n}{\sigma^2}
+  \]</span></p>
+<p><span class="math inline">\(\tau_0^2\)</span> prior variance (how uncertain you are about the prior mean)
+<span class="math inline">\(\sigma^2\)</span> data variance (spread of the data)
+<span class="math inline">\(n\)</span> sample size</p>
+<p>Precision is the inverse of variance:
+Prior precision: <span class="math inline">\(1/\tau_0^2\)</span>
+Data precision: <span class="math inline">\(n/\sigma^2\)</span> (since you have n data points, each with variance <span class="math inline">\(\sigma^2\)</span>)
+Posterior precision: <span class="math inline">\(1/\tau_n^2\)</span></p>
+<p>Posterior mean is a weighted average number of “prior” and “data” observations<br />
+<span class="math display">\[
+  \mu_n = \frac{1/\tau_0^2}{1/\tau_0^2 + n/\sigma^2} \mu_0 + \frac{n/\sigma^2}{1/\tau_0^2 + n/\sigma^2} \bar{y}
+  \]</span>
+Prior mean weight: <span class="math inline">\(1/\tau_0^2\)</span>
+Sample mean weight: <span class="math inline">\(n/\sigma^2\)</span></p>
+<p>If you think of your prior as coming from κ0 “pseudo-observations” with variance <span class="math inline">\(\sigma^2\)</span>, set <span class="math inline">\(\tau_0^2 = \sigma^2 / \kappa_0\)</span>, and the formula simplifies to:
+<span class="math display">\[
+  \mu_n = \frac{\kappa_0}{\kappa_0 + n} \mu_0 + \frac{n}{\kappa_0 + n} \bar{y}
+  \]</span>
+The final posterior belief about the mean is a compromise between prior belief and evidence from the data, weighted by reliability (precision). With more data, the posterior reliers on the sample mean more than the prior.</p>
+</div>
+<div id="prediction-for-a-new-observation" class="section level4 hasAnchor" number="4.3.9.3">
+<h4><span class="header-section-number">4.3.9.3</span> Prediction for a new observation<a href="bayesian-statistics.html#prediction-for-a-new-observation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Use the posterior distribution for <span class="math inline">\(theta\)</span> after seeing data</p>
+<p>Posterior mean of <span class="math inline">\(\theta\)</span>: <span class="math inline">\(\mu_n\)</span>
+Posterior variance of <span class="math inline">\(\theta\)</span>: <span class="math inline">\(\tau_n^2\)</span>
+this also represents our uncertainty about the center of the population</p>
+<p>Now, the new observation <span class="math inline">\(\tilde{Y}\)</span> is the sum of:</p>
+<p><span class="math inline">\(\theta \sim \operatorname{Normal}(\mu_n, \tau_n^2)\)</span>
+<span class="math inline">\(\tilde{\epsilon} \sim \operatorname{Normal}(0, \sigma^2)\)</span> (independent noise)</p>
+<p>Sum of independent normals is normal:
+<span class="math display">\[
+\tilde{Y} \mid y_1, ..., y_n, \sigma^2 \sim \operatorname{Normal}(\mu_n, \tau_n^2 + \sigma^2)
+\]</span>
+mean <span class="math inline">\(\mathrm{E}[\tilde{Y} \mid y_1, ..., y_n, \sigma^2] = \mu_n\)</span>
+variance <span class="math inline">\(\operatorname{Var}[\tilde{Y} \mid y_1, ..., y_n, \sigma^2] = \tau_n^2 + \sigma^2\)</span></p>
+<p><span class="math inline">\(\sigma^2\)</span> is t irreducible noise that can’t be predicted. The total uncertainty of <span class="math inline">\(\tilde{Y}\)</span> is at least <span class="math inline">\(\sigma^2\)</span>, but bigger if uncertain about <span class="math inline">\(\theta\)</span>.</p>
+<p>uncertainty is a combination about how well you know the mean and how much natural variability is in the data.</p>
+</div>
+<div id="joint-inference-for-the-mean-and-variance" class="section level4 hasAnchor" number="4.3.9.4">
+<h4><span class="header-section-number">4.3.9.4</span> Joint inference for the mean and variance<a href="bayesian-statistics.html#joint-inference-for-the-mean-and-variance" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This uses a joint prior on <span class="math inline">\((\theta, \sigma^2)\)</span>. The conjugate priors make it easy to compute the posterior. The parameters of these priors can be interpretated as if they come from previous (pseudo-)data.<br />
+</p>
+<p>Recall from axioms of probability that a joint distribution for two quantities can be expressed as the product of a conditional probability and a marginal probability:
+<span class="math display">\[
+p(\theta, \sigma^2) = p(\theta | \sigma^2) \, p(\sigma^2)
+\]</span></p>
+<p>For a normal distribution, a convinient choice of a prior is <span class="math inline">\(\tau_0^2 = \sigma^2/\kappa_0\)</span>, so the prior can be thought of as coming from <span class="math inline">\(\kappa_0\)</span> pseudo-observations with mean <span class="math inline">\(\mu_0\)</span> and variance <span class="math inline">\(\sigma^2\)</span></p>
+<p>Prior for the variance: the variance must be positive, so we use the inverse-gamma prior ( a gamma prior for the precision<span class="math inline">\(1/\sigma^2\)</span>):
+<span class="math display">\[
+  1/\sigma^2 \sim \operatorname{gamma}\left(\frac{\nu_0}{2}, \frac{\nu_0}{2}\sigma_0^2\right)
+  \]</span>
+<span class="math inline">\(\sigma_0^2\)</span> is the prior guess for the variance,
+<span class="math inline">\(\nu_0\)</span> is the “prior sample size” reflecting your confidence in <span class="math inline">\(\sigma_0^2\)</span>.</p>
+<p><span class="math inline">\(\mu_0\)</span>​: Prior mean for θ<br />
+<span class="math inline">\(\kappa_0\)</span>: Number of pseudo-observations supporting μ0​<br />
+<span class="math inline">\(\sigma_0^2\)</span>​: Prior guess for variance<br />
+<span class="math inline">\(\nu_0\)</span>​: “Prior sample size” for the variance<br />
+</p>
+<p>Properties of the inverse-gamma prior<br />
+mean: <span class="math inline">\(E[\sigma^2] = \sigma_0^2 \frac{\nu_0/2}{\nu_0/2-1}\)</span><br />
+mode: <span class="math inline">\(\sigma_0^2 \frac{\nu_0/2}{\nu_0/2+1} &lt; \sigma_0^2 &lt; E[\sigma^2]\)</span><br />
+Variance decreases as <span class="math inline">\(\nu_0\)</span> increases (more prior data, more certainty).</p>
+</div>
+<div id="posterior-inference" class="section level4 hasAnchor" number="4.3.9.5">
+<h4><span class="header-section-number">4.3.9.5</span> Posterior inference<a href="bayesian-statistics.html#posterior-inference" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We determined:<br />
+</p>
+<p>Data: <span class="math display">\[
+  \(Y_1, ..., Y_n \mid \theta, \sigma^2 \sim \text{i.i.d. normal}(\theta, \sigma^2)\)
+  \]</span><br />
+Prior for variance (precision):<br />
+</p>
+<p><span class="math display">\[
+  \(1/\sigma^2 \sim \operatorname{gamma}(\nu_0/2, \nu_0 \sigma_0^2/2)\)
+\]</span><br />
+Prior for mean (conditional on variance):  </p>
+<p><span class="math display">\[
+  \(\theta \mid \sigma^2 \sim \text{normal}(\mu_0, \sigma^2/\kappa_0)\)
+  \]</span><br />
+</p>
+<p>As the prior can be facrotized:  
+<span class="math display">\[
+\(p(\theta, \sigma^2) = p(\theta \mid \sigma^2)p(\sigma^2)\)
+\]</span>
+The posterior can be factored as:<br />
+<span class="math display">\[
+p(\theta, \sigma^2 \mid y_1, ..., y_n) = p(\theta \mid \sigma^2, y_1, ..., y_n) \; p(\sigma^2 \mid y_1, ..., y_n)
+\]</span><br />
+</p>
+<p><strong>The posterior for the mean <span class="math inline">\(\theta\)</span> is a conditional. The posterior of <span class="math inline">\(\theta\)</span> is normal:</strong><br />
+<span class="math display">\[
+\theta \mid \sigma^2, y_1, ..., y_n \sim \text{normal}\left(\mu_n, \frac{\sigma^2}{\kappa_n}\right)
+\]</span>
+<span class="math inline">\(\kappa_n = \kappa_0 + n\)</span><br />
+<span class="math inline">\(\mu_n = \frac{\kappa_0 \mu_0 + n \bar{y}}{\kappa_0 + n}\)</span><br />
+<span class="math inline">\(\bar{y}\)</span> = sample mean of the data<br />
+<span class="math inline">\(\mu_n\)</span> is a weighted average of the prior mean and the sample mean, weighted by their respective “sample sizes”.</p>
+<p>this is all prior observed data weighted by the sample size</p>
+<p><strong>The posterior for variance <span class="math inline">\(\sigma^2\)</span></strong><br />
+The marginal posterior for <span class="math inline">\(\sigma^2\)</span> is inverse-gamma (or, equivalently, the precision <span class="math inline">\(1/\sigma^2\)</span> is gamma):
+<span class="math display">\[
+1/\sigma^2 \mid y_1, ..., y_n \sim \operatorname{gamma}(\nu_n/2, \nu_n \sigma_n^2/2)
+\]</span>
+<span class="math inline">\(\nu_n = \nu_0 + n\)</span> (prior sample size + data sample size)<br />
+<span class="math inline">\(\sigma_n^2 = \frac{1}{\nu_n}\left[\nu_0 \sigma_0^2 + (n-1)s^2 + \frac{\kappa_0 n}{\kappa_0 + n}(\bar{y} - \mu_0)^2\right]\)</span><br />
+<span class="math inline">\(s^2\)</span> is the sample variance<br />
+<span class="math inline">\(\nu_0 \sigma_0^2\)</span> is the prior sum of squares<br />
+<span class="math inline">\((n-1)s^2\)</span> is the data sum of squares<br />
+</p>
+<p>The last term <span class="math inline">\(\frac{\kappa_0 n}{\kappa_0 + n}(\bar{y} - \mu_0)^2\)</span> measures the difference between the prior mean and the sample mean; if they are very different, the posterior variance increases.</p>
+<p>This incorporates prior and observed data, giving penalty if the sample mean and prior are far apart</p>
+<p>If <span class="math inline">\(\mu_0\)</span> is truly the mean of <span class="math inline">\(\kappa_0\)</span> prior observations, everything works in an “add up the data” fashion. If not, the last term in <span class="math inline">\(\sigma_n^2\)</span> corrects for disagreement between prior and observed data.</p>
+</div>
+<div id="monte-carlo-sampling" class="section level4 hasAnchor" number="4.3.9.6">
+<h4><span class="header-section-number">4.3.9.6</span> Monte Carlo sampling<a href="bayesian-statistics.html#monte-carlo-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>It is common to want to analyse population mean, standard deviation, quantiles, probabilities, and credible intervals, however, the posterior for parameted <span class="math inline">\(\theta\)</span> depends on the unknown variance of <span class="math inline">\(\sigma^2\)</span> and the joint posterior is not a simple normal distribution.</p>
+<p>for the posterior structure, the conditional posterior mean given variance is normal is <span class="math display">\[
+  \theta | \sigma^2, y \sim \operatorname{Normal}(\mu_n, \sigma^2 / \kappa_n)
+  \]</span>
+the marginal posterior for the variance is the inverse-gamma:
+<span class="math display">\[
+  \sigma^2 | y \sim \text{Inverse-Gamma}(\nu_n/2, \nu_n \sigma_n^2 / 2)
+  \]</span>
+but you want to discuss about <span class="math inline">\(\theta\)</span> <strong>marginally</strong>, not just conditionally. We can perform Monte Carlo Sampling to generate samples from the join posterior:
+<span class="math inline">\(p(\theta, \sigma^2 | y_1, ..., y_n)\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Sample <span class="math inline">\(\sigma^{2(s)}\)</span> from its marginal posterior:<br />
+<span class="math display">\[
+\sigma^{2(s)} \sim \text{Inverse-Gamma}(\nu_n / 2, \nu_n \sigma_n^2 / 2)
+\]</span></p></li>
+<li><p>Sample <span class="math inline">\(\theta^{(s)}\)</span> from its conditional posterior given <span class="math inline">\(\sigma^{2(s)}\)</span><br />
+<span class="math display">\[
+\theta^{(s)} \sim \operatorname{Normal}(\mu_n, \sigma^{2(s)} / \kappa_n)
+\]</span>
+This is repeated <span class="math inline">\(S\)</span> times to get <span class="math inline">\(S\)</span> pairs <span class="math inline">\((\theta^{(s)}, \sigma^{2(s)})\)</span>.</p></li>
+</ol>
+<p>This works because each <span class="math inline">\(\theta^{(s)}\)</span> is a conditional on a different sampled value of <span class="math inline">\(\sigma^{2(s)}\)</span> ie conditional posterior <span class="math inline">\(p(\theta | \sigma^{2(s)}, y)\)</span>.</p>
+<p>The set of <span class="math inline">\(\{\theta^{(1)}, ..., \theta^{(S)}\}\)</span> are samples from the marginal posterior of <span class="math inline">\(\theta\)</span> and represent the fun uncertainty about <span class="math inline">\(\theta\)</span> after accounting for both mean and variance. These can be used to compute anything about the posterior of <span class="math inline">\(\theta\)</span> like:<br />
+</p>
+<ul>
+<li>Posterior mean: average of samples</li>
+<li>Posterior sd: standard deviation of samples</li>
+<li>Credible intervals: quantiles of samples</li>
+<li>Probabilities: proportion of samples with desired property</li>
+</ul>
+<p>the marginal posterior of <span class="math inline">\(\theta\)</span> is a t-distribution:<br />
+</p>
+<p><span class="math display">\[
+t(\theta) = \frac{\theta - \mu_n}{\sigma_n / \sqrt{\kappa_n}}
+\]</span></p>
+<p>with <span class="math inline">\(\nu_0 + n\)</span> degrees of freedom (if the prior is small
+then close to classical <span class="math inline">\(t_{n-1}\)</span> distribution).</p>
+<p>This is useful because it allows you to work through complex posteriors that may not be writable. It also lets you estimate expectations, std, quantiles, and probabilities even if the formula is not simple.</p>
+</div>
+<div id="improper-priors" class="section level4 hasAnchor" number="4.3.9.7">
+<h4><span class="header-section-number">4.3.9.7</span> Improper Priors<a href="bayesian-statistics.html#improper-priors" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>When you to use Bayesian methods but you don’t want a heavy influence of the priors over the answers, in otherwords, you want to be objective. In a normal model the priors for the mean and variance are set using prior sample sizes (<span class="math inline">\(\kappa_0\)</span> and <span class="math inline">\(\nu_0\)</span>) which measures how much weight you give to the prior beliefs. These uninformative priors make Bayesian answers almost identical to frequentist answers. The idea is to be able to use Bayesian logic to discover informaiton about the parameters while being objective.</p>
+<p>The reason one may approach the question through Bayesian is because it is more intuitive and asks the question “What do I believe in the paramater given the data?”</p>
+<p>It can handle complex models that frequentist methods have a difficult time computing.</p>
+<p>As you decrease the prior influence, the posterior mean and variance become:<br />
+<span class="math display">\[
+  \mu_n = \frac{\kappa_0 \mu_0 + n\bar{y}}{\kappa_0 + n}
+  \]</span>
+<span class="math display">\[
+  \sigma_n^2 = \frac{1}{\nu_0 + n} \left[ \nu_0 \sigma_0^2 + (n-1)s^2 + \frac{\kappa_0 n}{\kappa_0 + n} (\bar{y} - \mu_0)^2 \right]
+  \]</span>
+As <span class="math inline">\(\kappa_0 \to 0\)</span> and <span class="math inline">\(\nu_0 \to 0\)</span> (i.e., as you put less weight to the prior information)<br />
+- <span class="math inline">\(\mu_n \to \bar{y}\)</span> posterior mean becomes the sample mean.<br />
+- <span class="math inline">\(\sigma_n^2 \to \frac{n-1}{n} s^2\)</span> posterior variance becomes the sample variance (but divided by <span class="math inline">\(n\)</span>, <span class="math inline">\(n-1\)</span>).<br />
+</p>
+<p>Setting <span class="math inline">\(\kappa_0, \nu_0 \to 0\)</span> is equivalent to using an improper prior, a prior that does not need to integrate to 1 in the way that <span class="math inline">\(p(\theta, \sigma^2) \propto 1/\sigma^2\)</span> does.<br />
+</p>
+<p>The posterior with the improper prior becomes:<br />
+<span class="math display">\[
+1/\sigma^2 \mid y \sim \text{gamma}\left(\frac{n}{2}, \frac{n}{2} \frac{1}{n} \sum (y_i - \bar{y})^2 \right)
+\]</span>
+<span class="math display">\[
+\theta \mid \sigma^2, y \sim \text{normal}\left(\bar{y}, \frac{\sigma^2}{n}\right)
+\]</span></p>
+<p>t-distribution: if you integrate out <span class="math inline">\(\sigma^2\)</span>, the posterior distribution of <span class="math inline">\(\theta\)</span> after observing the data is
+<span class="math display">\[
+  \frac{\theta - \bar{y}}{s/\sqrt{n}} \mid y \sim t_{n-1}
+  \]</span>
+This is the same as the sampling distribution of the sample mean in frequentist statistics
+uncertainty about the sample mean, given the true mean: 
+<span class="math display">\[
+  \frac{\bar{Y} - \theta}{s/\sqrt{n}} \mid \theta \sim t_{n-1}
+  \]</span></p>
+<p>uncertainty about the true mean, given the sample mean:<br />
+<span class="math display">\[
+  \frac{\theta - \bar{y}}{s/\sqrt{n}} \mid y \sim t_{n-1}
+  \]</span></p>
+<p>These results are not formally Bayesian, as there is no proper probability distribution on <span class="math inline">\((\theta, \sigma^2)\)</span> that yields this <span class="math inline">\(t_{n-1}\)</span> posterior for <span class="math inline">\(\theta\)</span>. But these are reasonable and have desirable properties so they are admissible from a descision-theoretical standpoint.</p>
+<p><strong>References</strong><br />
+- Stein (1955) and Berger (1980) any reasonable estimator is a Bayesian estimator or a limit of a sequence of Bayesian estimators, and that any Bayesian estimator is reasonable</p>
+</div>
+<div id="bias-variance-and-mean-squared-error-mse" class="section level4 hasAnchor" number="4.3.9.8">
+<h4><span class="header-section-number">4.3.9.8</span> Bias, Variance, and Mean Squared Error (MSE);<a href="bayesian-statistics.html#bias-variance-and-mean-squared-error-mse" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A <em>point estimator</em> is a single number calculated from the data to estimate an unknown parameter <span class="math inline">\(\theta\)</span></p>
+<p>In the normal model with a conjugate prior:<br />
+</p>
+<p><span class="math display">\[
+\hat{\theta}_{b}\left(y_{1}, \ldots, y_{n}\right)
+= \mathrm{E}\left[\theta \mid y_{1}, \ldots, y_{n}\right]
+= \frac{n}{\kappa_{0} + n} \, \bar{y}
++ \frac{\kappa_{0}}{\kappa_{0} + n} \, \mu_{0}
+= w \, \bar{y} + (1 - w)\mu_{0}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(w = \frac{n}{\kappa_0 + n}\)</span><br />
+</li>
+<li><span class="math inline">\(\mu_0\)</span>: prior mean<br />
+</li>
+<li><span class="math inline">\(\kappa_0\)</span>: prior “sample size”</li>
+<li><span class="math inline">\(\bar{y}\)</span>: sample mean</li>
+</ul>
+<p><strong>Sampling Properties and Bias</strong><br />
+<em>Bias</em> measures how close the expected value of the estimator is to the true parameter value. The <em>sampling properties</em> are the behavior of estimators under repeated experiments/surveys/sampling.</p>
+<p>The unbiased sample mean is <span class="math inline">\(\hat{\theta}_e = \bar{y}\)</span>:<br />
+</p>
+<p><span class="math display">\[
+  \mathbb{E}[\hat{\theta}_e \mid \theta = \theta_0] = \theta_0
+  \]</span></p>
+<p>The Bayesian estimator <span class="math inline">\(\hat{\theta}_b\)</span>:</p>
+<p><span class="math display">\[
+  \mathbb{E}[\hat{\theta}_b \mid \theta = \theta_0] = w\theta_0 + (1-w)\mu_0
+  \]</span>
+If <span class="math inline">\(\mu_0 \neq \theta_0\)</span> this estimator is biased.</p>
+<p>The bias tells us that an estimator is close to the center of mass of the sampling distribution of an estimator is to the true value, but it does not tell you how far away it is from the true value.</p>
+<p>Sample mean variance:  
+<span class="math display">\[
+  \operatorname{Var}[\hat{\theta}_e \mid \theta_0, \sigma^2] = \frac{\sigma^2}{n}
+  \]</span>
+Bayesian estimator variance:<br />
+</p>
+<p><span class="math display">\[
+  \operatorname{Var}[\hat{\theta}_b \mid \theta_0, \sigma^2] = w^2 \frac{\sigma^2}{n} &lt; \frac{\sigma^2}{n}
+  \]</span>
+The Bayesian estimator is less variable than the sample mean.</p>
+<p>To measure bias, we use mean squared error (MSE). MSE combines both bias and variance:<br />
+</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{MSE}\left[\hat{\theta} \mid \theta_{0}\right]
+&amp;= \mathrm{E}\left[\left(\hat{\theta} - \theta_{0}\right)^2 \mid \theta_{0}\right] \\
+&amp;= \mathrm{E}\left[\left(\hat{\theta} - m + m - \theta_{0}\right)^2 \mid \theta_{0}\right] \\
+&amp;= \mathrm{E}\left[(\hat{\theta} - m)^2 \mid \theta_{0}\right]
++ 2\mathrm{E}\left[(\hat{\theta} - m)(m - \theta_{0}) \mid \theta_{0}\right]
++ \mathrm{E}\left[(m - \theta_{0})^2 \mid \theta_{0}\right].
+\end{aligned}
+\]</span></p>
+<p>This is equivalent to:<br />
+</p>
+<p><span class="math display">\[
+\operatorname{MSE}[\hat{\theta}\mid \theta_0] = \operatorname{Var}[\hat{\theta}\mid \theta_0] + \text{Bias}^2[\hat{\theta}\mid \theta_0]
+\]</span></p>
+<p>Variance comparisons:<br />
+</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Var}\left[\hat{\theta}_{e} \mid \theta=\theta_{0}, \sigma^{2}\right] &amp;= \frac{\sigma^{2}}{n}, \quad \text{whereas} \\
+\operatorname{Var}\left[\hat{\theta}_{b} \mid \theta=\theta_{0}, \sigma^{2}\right] &amp;= w^{2} \times \frac{\sigma^{2}}{n} &lt; \frac{\sigma^{2}}{n},
+\end{aligned}
+\]</span></p>
+<p>Sample mean:  
+<span class="math display">\[
+  \operatorname{MSE}[\hat{\theta}_e \mid \theta_0] = \frac{\sigma^2}{n}
+  \]</span></p>
+<p>Bayesian estimator:  </p>
+<p><span class="math display">\[
+  \operatorname{MSE}[\hat{\theta}_b \mid \theta_0] = w^2 \frac{\sigma^2}{n} + (1-w)^2 (\mu_0 - \theta_0)^2
+  \]</span></p>
+<ul>
+<li>First term: less than sample mean’s variance (because w&lt;1)<br />
+</li>
+<li>Second term: squared bias (penalty if prior is wrong)<br />
+</li>
+</ul>
+<p><strong>When is the Bayesian Estimator Better?</strong>
+The Bayesian estimator has a lower MSE than the sample mean if your prior mean <span class="math inline">\(\mu_0\)</span> is “close enough” to the true mean <span class="math inline">\(\theta_0\)</span>, the Bayesian estimator is better on average (lower squared error):  
+<span class="math display">\[
+(\mu_0 - \theta_0)^2 &lt; \frac{\sigma^2}{n} \frac{1+w}{1-w}
+\]</span></p>
+<p>A good prior guess (<span class="math inline">\(\mu_0\)</span> close to <span class="math inline">\(\theta_0\)</span>) reduces the risk (MSE) by shrinking the estimates toward the prior. This can outperform the frequentist approach if the prior information is good. In the bias and variance tradeoff, adding a little bias can reduce variance to make the overall MSE smaller. If the prior is very wrong, then the MSE will end up higher. As the sample size n increases, <span class="math inline">\(w \to 1\)</span>, therefore, teh estimators are dominated by the data and the estimators are closer to the data.</p>
+<p>If there is no reliable prior, use the sample mean. Otherwise, use the Bayesian estimator.</p>
+</div>
+<div id="prior-specification-based-on-expectations" class="section level4 hasAnchor" number="4.3.9.9">
+<h4><span class="header-section-number">4.3.9.9</span> Prior specification based on expectations<a href="bayesian-statistics.html#prior-specification-based-on-expectations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The normal model is written in exponential family form. The sufficient statistics for a single observation <span class="math inline">\(y\)</span> are <span class="math inline">\(t(y) = (y, y^2)\)</span>.
+The natural parameters are <span class="math inline">\(\phi = (\theta/\sigma^2, -1/(2\sigma^2))\)</span>.</p>
+<p>For exponential families, the conjugate prior can be written as:<br />
+<span class="math display">\[
+  p(\phi|n_0, t_0) \propto c(\phi)^{n_0} \exp(n_0 t_0^T \phi)
+  \]</span></p>
+<p>where <span class="math inline">\(t_0 = (t_{01}, t_{02}) = (\mathrm{E}[Y], \mathrm{E}[Y^2])\)</span>, the prior expectations of <span class="math inline">\(Y\)</span> and <span class="math inline">\(Y^2\)</span>.
+<span class="math inline">\(n_0\)</span>​ is a “prior sample size” (how strongly you believe the prior).</p>
+<p>Reparameterize in prior terms of <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\sigma^2\)</span> from the natural parameters <span class="math inline">\(\phi\)</span> to the familiar mean/variance parameters.
+The prior for <span class="math inline">\((\theta, \sigma^2)\)</span> becomes:<br />
+</p>
+<p><span class="math display">\[
+  \begin{aligned}
+  p(\theta, \sigma^2 | n_0, t_0) \propto\ &amp; (\sigma^2)^{-1/2} \exp\left\{ \frac{-n_0(\theta-t_{01})^2}{2\sigma^2} \right\} \\
+  &amp; \times (\sigma^2)^{-(n_0+5)/2} \exp\left\{ \frac{-n_0(t_{02}-t_{01}^2)}{2\sigma^2} \right\}
+  \end{aligned}
+  \]</span></p>
+<ul>
+<li>The first term is a normal density for <span class="math inline">\(\theta\)</span> given <span class="math inline">\(\sigma^2\)</span>.<br />
+</li>
+<li>The second term is an inverse-gamma density for <span class="math inline">\(\sigma^2\)</span>.<br />
+</li>
+</ul>
+<p>To setting the prior parameters:<br />
+</p>
+<ul>
+<li><span class="math inline">\(\mathrm{E}[Y] = \mu_0\)</span>(prior mean for the population)<br />
+</li>
+<li><span class="math inline">\(\mathrm{E}[\mathrm{Var}(Y|\theta, \sigma^2)] = \sigma_0^2\)</span> (prior variance for the population)<br />
+</li>
+<li>Set <span class="math inline">\(t_{01} = \mu_0\)</span><br />
+</li>
+</ul>
+<p>For <span class="math inline">\(t_{02}\)</span>:<br />
+<span class="math display">\[
+\begin{aligned}
+t_{02} &amp;= \mathrm{E}[Y^2] = \mathrm{E}[\sigma^2 + \theta^2] \\
+&amp;= \sigma_0^2 + \sigma_0^2/n_0 + \mu_0^2 \\
+&amp;= \sigma_0^2(n_0+1)/n_0 + \mu_0^2
+\end{aligned}
+\]</span></p>
+<p>So, <span class="math inline">\(n_0(t_{02} - t_{01}^2) = (n_0+1)\sigma_0^2\)</span><br />
+</p>
+<p>The resulting priors are then<br />
+<span class="math display">\[
+\begin{aligned}
+\theta \mid \sigma^2 &amp;\sim \mathrm{Normal}(\mu_0, \sigma^2/n_0) \\
+\sigma^2 &amp;\sim \mathrm{Inv\text{-}Gamma}((n_0+3)/2,\, (n_0+1)\sigma_0^2/2)
+\end{aligned}
+\]</span></p>
+<p>If you want a weak prior (low information), set <span class="math inline">\(n_0 = 1\)</span>:<br />
+</p>
+<ul>
+<li><span class="math inline">\(\theta|\sigma^2 \sim \mathrm{Normal}(\mu_0, \sigma^2)\)</span><br />
+</li>
+<li><span class="math inline">\(1/\sigma^2 \sim \mathrm{Gamma}(2, \sigma_0^2)\)</span> or equivalently <span class="math inline">\(\sigma^2 \sim \mathrm{Inv\text{-}Gamma}(2, \sigma_0^2)\)</span><br />
+</li>
+</ul>
+<p>We then update the posterior:<br />
+Given data <span class="math inline">\(y_1, \dots, y_n\)</span> the posterior distributions are:  
+For <span class="math inline">\(\theta\)</span> given <span class="math inline">\(\sigma^2\)</span> and data:<br />
+</p>
+<p><span class="math display">\[
+  \theta|\sigma^2, y_1,\dots,y_n \sim \mathrm{Normal}\left(\frac{\mu_0/\sigma^2 + n\bar{y}}{1/\sigma^2 + n},\, \frac{\sigma^2}{n+1}\right)
+  \]</span></p>
+<p>For <span class="math inline">\(\sigma^2\)</span> given data:<br />
+</p>
+<p><span class="math display">\[
+  \sigma^2|y_1,\dots,y_n \sim \mathrm{Inv\text{-}Gamma}\left(2 + n/2,\, \sigma_0^2 + (n-1)s^2 + \frac{n}{n+1}(\bar{y}-\mu_0)^2\right)
+  \]</span></p>
+<p>where s2 is the sample variance.</p>
+</div>
+<div id="the-normal-model-on-non-normal-data" class="section level4 hasAnchor" number="4.3.9.10">
+<h4><span class="header-section-number">4.3.9.10</span> The normal model on non-normal data<a href="bayesian-statistics.html#the-normal-model-on-non-normal-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We often use the normal model for inference even when the data is not normally distributed for convienence because the although the data point is not normal, the sample mean is approximately normal due to the central limit theorem.</p>
+<p><strong>References</strong><br />
+- Lukacs (1942) shows that a characterizing feature of the normal distribution is that the sample mean and the sample variance are independent (see also Rao (1958)).<br />
+- White (1982) confidence intervals for the population mean based on the normal model will generally be asymptotically correct<br />
+</p>
+</div>
+</div>
+<div id="posterior-approximation-with-the-gibbs-sampler." class="section level3 hasAnchor" number="4.3.10">
+<h3><span class="header-section-number">4.3.10</span> Posterior approximation with the Gibbs sampler.<a href="bayesian-statistics.html#posterior-approximation-with-the-gibbs-sampler." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In single parameter or two-parameter models, there is some standard or well-known form of the posterior distribution that makes it possible to sample directly. However, this is not the case for multiparameter models. This is because with many coefficients or hierarchial models, the joint posterior distributino can become complex and hard to sample from because:<br />
+- it may not have a closed-form expression<br />
+- it might not be from a standard distribution<br />
+- it may involve complicated dependencies between parameters  </p>
+<p>Its is possible to sample from the full conditional distribution of each parameter, when this is the case we can use the Gibbs sampler. The Gibbs sampler is a type of Markov Chain Monte Carlo algorithm, interative algorithm that constructs a dependent sequence of the parameter values who distribution convergest to the target join posterior distribution.</p>
+<p>The algorithm works as such:
+1. Start with initial guesses for all parameters.
+2. Update each parameter in turn by sampling from its full conditional distribution, using the current values of all the other parameters.
+3. Repeat this process many times.</p>
+<p>Through the iterations, the sequence of parameter values forms a Markov chain. Under certain conditions, the distribution of these parameter values will converge to the joint posterior distribution of interest.</p>
+<p>This algorithm works because the Markov chain has the correct stationary distribution (the target posterior).
+Even though each step only samples from one parameter’s conditional distribution, the process as a whole explores the joint space correctly.</p>
+<p>Classic cases are the normal models with conjugate of semiconjugate priors</p>
+<div id="a-semiconjugate-prior-distribution" class="section level4 hasAnchor" number="4.3.10.1">
+<h4><span class="header-section-number">4.3.10.1</span> A semiconjugate prior distribution<a href="bayesian-statistics.html#a-semiconjugate-prior-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Modeling data <span class="math inline">\(Y_1, \ldots, Y_n\)</span> i.i.d. obs. from a normal distribution with mean <span class="math inline">\(\theta\)</span> and variance <span class="math inline">\(\sigma^2\)</span>:  
+<span class="math display">\[
+Y_i \sim \text{Normal}(\theta, \sigma^2)
+\]</span></p>
+<p><strong>Conjugate Priors</strong><br />
+Normal conjugate prior
+<span class="math display">\[
+p(\theta \mid \sigma^2) = \text{Normal}\left(\mu_0, \frac{\sigma^2}{\kappa_0}\right)
+\]</span>
+<span class="math display">\[
+1/\sigma^2 \sim \text{Gamma}\left(\nu_0/2, \nu_0 \sigma_0^2/2\right)
+\]</span>
+The prior variance of <span class="math inline">\(\theta\)</span> depends on the unknown variance of <span class="math inline">\(\sigma^2\)</span> and the <span class="math inline">\(\mu_0\)</span> represents the mean from <span class="math inline">\(\kappa_0\)</span> prior pseudo-observations with variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<ul>
+<li>clean, easy to calculate from  </li>
+</ul>
+<p>However, dependence of <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\sigma^2\)</span> may not be desireable and you may want the mean to be independent of the uncertainty.</p>
+<p>A semiconjugate prior breaks dependence by specifying independent priors for <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\sigma^2\)</span>:<br />
+<span class="math display">\[
+\theta \sim \text{Normal}(\mu_0, \tau_0^2)
+\]</span></p>
+<ul>
+<li>The prior variance <span class="math inline">\(\tau_0^2\)</span> for <span class="math inline">\(\theta\)</span> is fixed and does not depend on <span class="math inline">\(\sigma^2\)</span><br />
+</li>
+<li>Therefore, the joint prior is <span class="math inline">\(p(\theta, \sigma^2) = p(\theta) \times p(\sigma^2)\)</span></li>
+<li>This add model flexibility</li>
+</ul>
+<p>Posterior calculations given <span class="math inline">\(Y_1, \ldots, Y_n\)</span> with likelihood <span class="math inline">\(Y_i \sim \text{Normal}(\theta, \sigma^2)\)</span>:  </p>
+<ul>
+<li><p>conditional posterior <span class="math inline">\(p(\theta \mid \sigma^2, y_1, \ldots, y_n)\)</span> is normal:<br />
+<span class="math display">\[
+\theta \mid \sigma^2, y_1, \ldots, y_n \sim \text{Normal}(\mu_n, \tau_n^2)
+\]</span>
+<span class="math display">\[
+\mu_n = \frac{\mu_0/\tau_0^2 + n\bar{y}/\sigma^2}{1/\tau_0^2 + n/\sigma^2}
+\quad \text{and} \quad
+\tau_n^2 = \left(\frac{1}{\tau_0^2} + \frac{n}{\sigma^2}\right)^{-1}
+\]</span>  </p></li>
+<li><p>The marginal posterior for <span class="math inline">\(\sigma^2\)</span> is not a standard distribution.</p></li>
+</ul>
+<p><strong>Conjugate vs. Semiconjugate Posterior Sampling</strong>
+Conjugate case <span class="math inline">\(\tau_0^2 \propto \sigma^2\)</span>:<br />
+</p>
+<ul>
+<li>Posterior for <span class="math inline">\(\sigma^2\)</span> is inverse-gamma.</li>
+<li>Posterior for <span class="math inline">\(\theta \mid \sigma^2, \text{data}\)</span> is normal.</li>
+<li>You can use Gibbs sampling directly: alternate between sampling <span class="math inline">\(\sigma^2\)</span> and <span class="math inline">\(\theta\)</span> from their standard conditional distributions.</li>
+</ul>
+<p>Semiconjugate Case <span class="math inline">\(\tau_0^2\)</span> fixed:<br />
+- Posterior for <span class="math inline">\(\theta \mid \sigma^2, \text{data}\)</span> is still normal.
+= But the marginal posterior for <span class="math inline">\(\sigma^2\)</span>is not a gamma or inverse-gamma—it’s more complicated.
+- This makes direct Gibbs sampling or analytic integration more challenging.</p>
+<p>With semiconjugate priors you gain flexibility by being able to specify mean and variance seprately, sometimes this is also more realistic.</p>
+<p>The computation is harder as the marginal for <span class="math inline">\(\sigma^2\)</span> is not a standard form.</p>
+</div>
+<div id="discrete-approximations" class="section level4 hasAnchor" number="4.3.10.2">
+<h4><span class="header-section-number">4.3.10.2</span> Discrete approximations<a href="bayesian-statistics.html#discrete-approximations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We want to approximate the joint posterior distribution of our parameters <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\tilde{\sigma}^2\)</span> (where <span class="math inline">\(\tilde{\sigma}^2 = 1/\sigma^2\)</span>, the precision), given observed data <span class="math inline">\(y_1, \ldots, y_n\)</span>.
+The posterior is:  </p>
+<p><span class="math display">\[
+p(\theta, \tilde{\sigma}^2 \mid y_1, \ldots, y_n)
+\]</span></p>
+<p>For many models, this posterior does not have a simple, closed form from which we can sample directly or compute probabilities exactly. However, when you have a small number of parameters, the understanding of the posterior distribution is straightforward and practical. We will replace continuous and potential complicated posterior with a set of probabilities on a grid of parameters. Instead of formulas, tables of numbers that approximate the probabilities at different points are used.</p>
+<p>From the joint distribution, we know from Bayes’ theorem:
+<span class="math display">\[
+p(\theta, \tilde{\sigma}^2 \mid y_1, \ldots, y_n) = \frac{p(\theta, \tilde{\sigma}^2, y_1, \ldots, y_n)}{p(y_1, \ldots, y_n)}
+\]</span></p>
+<p>But the denominator doesn’t depend on the parameters. So, relative posterior probabilities for different parameter values can be computed directly from the joint distribution in the numerator.<br />
+</p>
+<p>This means, for any two sets of parameter values <span class="math inline">\((\theta_1, \tilde{\sigma}_1^2)\)</span> and <span class="math inline">\((\theta_2, \tilde{\sigma}_2^2)\)</span>:<br />
+</p>
+<p><span class="math display">\[
+\frac{p(\theta_1, \tilde{\sigma}_1^2 \mid y)}{p(\theta_2, \tilde{\sigma}_2^2 \mid y)} = \frac{p(\theta_1, \tilde{\sigma}_1^2, y)}{p(\theta_2, \tilde{\sigma}_2^2, y)}
+\]</span></p>
+<p>We can then compute the joint distribution from:<br />
+</p>
+<ul>
+<li>The prior on <span class="math inline">\(\theta\)</span>: <span class="math inline">\(\text{dnorm}(\theta, \mu_0, \tau_0)\)</span><br />
+</li>
+<li>The prior on <span class="math inline">\(\tilde{\sigma}^2\)</span>:<span class="math inline">\(\text{dgamma}(\tilde{\sigma}^2, \nu_0/2, \nu_0 \sigma_0^2/2)\)</span>  </li>
+<li>The likelihood: <span class="math inline">\(\prod_{i=1}^n \text{dnorm}(y_i, \theta, 1/\sqrt{\tilde{\sigma}^2})\)</span><br />
+</li>
+</ul>
+<p>So:  
+<span class="math display">\[
+p(\theta, \tilde{\sigma}^2, y_1, ..., y_n) = \text{dnorm}(\theta, \mu_0, \tau_0) \times \text{dgamma}(\tilde{\sigma}^2, \nu_0/2, \nu_0 \sigma_0^2/2) \times \prod_{i=1}^n \text{dnorm}(y_i, \theta, 1/\sqrt{\tilde{\sigma}^2})
+\]</span></p>
+<p>Matricies: Discrete Grid Construction<br />
+Because the posterior is difficult to compute analytically, we approximate it discretely:<br />
+</p>
+<ul>
+<li>Choose a grid of possible values for <span class="math inline">\(\theta\)</span>: <span class="math inline">\(\{\theta_1, ..., \theta_G\}\)</span><br />
+Choose a grid of possible values for <span class="math inline">\(\tilde{\sigma}^2\)</span>: <span class="math inline">\(\{\tilde{\sigma}_1^2, ..., \tilde{\sigma}_H^2\}\)</span><br />
+</li>
+</ul>
+<p>For each combination <span class="math inline">\((\theta_k, \tilde{\sigma}_l^2)\)</span>, compute the joint probability <span class="math inline">\(p(\theta_k, \tilde{\sigma}_l^2, y_1, ..., y_n)\)</span>.</p>
+<p>Next, normalize to get posterior probabilities. To get a valid joint posterior probability at each grid point, normalize these values so they sum to 1:<br />
+<span class="math display">\[
+p_D(\theta_k, \tilde{\sigma}_l^2 \mid y_1, ..., y_n) = \frac{p(\theta_k, \tilde{\sigma}_l^2, y_1, ..., y_n)}{\sum_{g=1}^G \sum_{h=1}^H p(\theta_g, \tilde{\sigma}_h^2, y_1, ..., y_n)}
+\]</span>
+This is the discrete approximation to the true posterior.</p>
+<p>Step 6: Marginalizing to Get Marginals
+To get the marginal posterior for <span class="math inline">\(\theta_k\)</span> (across all <span class="math inline">\(\tilde{\sigma}^2\)</span>):
+<span class="math display">\[
+p_D(\theta_k \mid y_1, ..., y_n) = \sum_{h=1}^H p_D(\theta_k, \tilde{\sigma}_h^2 \mid y_1, ..., y_n)
+\]</span>
+And similarly for <span class="math inline">\(\tilde{\sigma}_l^2\)</span>.<br />
+</p>
+<p>There are limits for discrete approximations. For two parameters, a fine grid (e.g., 100 values for each) is manageable. For more parameters, the number of grid points grows exponentially (aka the “curse of dimensionality”): for <span class="math inline">\(p\)</span> parameters, <span class="math inline">\(100^p\)</span> grid points are needed. Thus, discrete grid approximation is practical only for models with very few parameters.</p>
+</div>
+<div id="sampling-from-the-conditional-distributions" class="section level4 hasAnchor" number="4.3.10.3">
+<h4><span class="header-section-number">4.3.10.3</span> Sampling from the conditional distributions<a href="bayesian-statistics.html#sampling-from-the-conditional-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Sampling from the join posterior distribution of <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\sigma^2\)</span> given the data <span class="math inline">\(p(\theta, \sigma^2 | y_1, \ldots, y_n)\)</span> is difficult because in the semiconjugate prior, the joint distribution is not in a standard form.</p>
+<p>Based on the Gibbs sample, instead of sampling form the join distribution directly, you can sample alternately from the conditional distributions. This allows you to generate samples from the joint posterior. Overall, this also allows Bayesian inference to estimate parameters even though the direct analytical or discrete-grid methods are infeasible.</p>
+<ul>
+<li><span class="math inline">\(p(\theta | \sigma^2, y_1, \ldots, y_n)\)</span><br />
+</li>
+<li><span class="math inline">\(p(\sigma^2 | \theta, y_1, \ldots, y_n)\)</span><br />
+</li>
+</ul>
+<p>Here’s an example of deriving the conditional for precision <span class="math inline">\(\tilde{\sigma}^2\)</span>. Suppose you know the value of <span class="math inline">\(\theta\)</span>. Then, the conditional distribution of <span class="math inline">\(\tilde{\sigma}^2\)</span> (where <span class="math inline">\(\tilde{\sigma}^2 = 1/\sigma^2\)</span>) given <span class="math inline">\(\theta\)</span> and the data is:  </p>
+<p><span class="math display">\[
+p(\tilde{\sigma}^2 | \theta, y_1, ..., y_n) \propto p(y_1, ..., y_n | \theta, \tilde{\sigma}^2) \, p(\tilde{\sigma}^2)
+\]</span></p>
+<p>Plug in the normal likelihood and gamma prior for <span class="math inline">\(\tilde{\sigma}^2\)</span>:<br />
+</p>
+<p><span class="math display">\[
+\propto (\tilde{\sigma}^2)^{n/2} \exp\left(-\tilde{\sigma}^2 \sum_{i=1}^n (y_i - \theta)^2 / 2 \right) \times (\tilde{\sigma}^2)^{\nu_0/2 - 1} \exp(-\tilde{\sigma}^2 \nu_0 \sigma_0^2 / 2)
+\]</span></p>
+<p>Combine exponents and powers and you the kernel of a gamma distribution for <span class="math inline">\(\tilde{\sigma}^2\)</span>, or equivalently, an inverse-gamma for <span class="math inline">\(\sigma^2\)</span>.<br />
+(<sup>2)</sup>{(_0 + n)/2 - 1} (-^2 [_0 <em>0^2 + </em>{i=1}^n (y_i - )^2 ] / 2)
+]</p>
+<p>For the parameters for the update posterior are:<br />
+Let:<br />
+- <span class="math inline">\(\nu_n = \nu_0 + n\)</span><br />
+- <span class="math inline">\(\sigma_n^2(\theta) = \frac{1}{\nu_n} \left[ - \nu_0 \sigma_0^2 + n s_n^2(\theta) \right]\)</span><br />
+- <span class="math inline">\(s_n^2(\theta) = \frac{1}{n} \sum_{i=1}^n (y_i - \theta)^2\)</span><br />
+</p>
+<p>Therefore:  </p>
+<p><span class="math display">\[
+\sigma^2 | \theta, y_1, ..., y_n \sim \text{Inv-Gamma}\left(\frac{\nu_n}{2}, \frac{\nu_n \sigma_n^2(\theta)}{2}\right)
+\]</span></p>
+<p>The Gibbs sample procedure can now use the full conitional distributions to sample from the joint posterior:<br />
+</p>
+<ol style="list-style-type: decimal">
+<li>Initialize with a value for <span class="math inline">\(\sigma^{2(1)}\)</span> (or <span class="math inline">\(\theta^{(1)}\)</span>. You can use a random value or a value informed by the data (e.g., the sample variance or mean).</li>
+<li>Repeat for many iterations:<br />
+</li>
+</ol>
+<ul>
+<li>Sample <span class="math inline">\(\theta^{(t)}\)</span> from <span class="math inline">\(p(\theta | \sigma^{2(t-1)}, y_1, ..., y_n)\)</span> (this is a normal distribution).<br />
+</li>
+<li>Sample <span class="math inline">\(\sigma^{2(t)}\)</span> from <span class="math inline">\(p(\sigma^2 | \theta^{(t)}, y_1, ..., y_n)\)</span> (this is an inverse-gamma distribution).</li>
+</ul>
+<p>Each pair <span class="math inline">\((\theta^{(t)}, \sigma^{2(t)})\)</span> after a burn-in period is (approximately) a sample from the joint posterior.</p>
+<ul>
+<li>Even though you cannot sample from the joint posterior directly, you can sample from each parameter’s conditional distribution.</li>
+<li>By alternately sampling from these conditionals (Gibbs sampling), you generate a sequence whose stationary distribution is the desired joint posterior.</li>
+</ul>
+</div>
+<div id="gibbs-sampling" class="section level4 hasAnchor" number="4.3.10.4">
+<h4><span class="header-section-number">4.3.10.4</span> Gibbs sampling<a href="bayesian-statistics.html#gibbs-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>You have data <span class="math inline">\(y_1, ..., y_n\)</span><br />
+</li>
+<li>You have two unknowns: the mean <span class="math inline">\(\theta\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.<br />
+</li>
+<li>You want to sample from the joint posterior <span class="math inline">\(p(\theta, \sigma^2 \mid y_1, ..., y_n)\)</span>.<br />
+</li>
+<li>You know how to sample from the <em>full conditional distributions</em>:<br />
+
+<ul>
+<li><span class="math inline">\(p(\theta \mid \sigma^2, y_1, ..., y_n)\)</span></li>
+<li><span class="math inline">\(p(\sigma^2 \mid \theta, y_1, ..., y_n)\)</span></li>
+</ul></li>
+</ul>
+<p>The Gibbs sampler generates samples from the joint posterior by alternating between the full conditionals:<br />
+Given current values <span class="math inline">\(\theta^{(s)}\)</span> and <span class="math inline">\(\sigma^{2(s)}\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Sample <span class="math inline">\(\theta\)</span> given <span class="math inline">\(\sigma^2\)</span>:  
+<span class="math display">\[
+\theta^{(s+1)} \sim p(\theta \mid \sigma^{2(s)}, y_1, ..., y_n)
+\]</span></li>
+<li>Sample <span class="math inline">\(\sigma^2\)</span> given new <span class="math inline">\(\theta\)</span>:<br />
+<span class="math display">\[
+\sigma^{2(s+1)} \sim p(\sigma^2 \mid \theta^{(s+1)}, y_1, ..., y_n)
+\]</span></li>
+<li>Update your state: <span class="math inline">\((\theta^{(s+1)}, \sigma^{2(s+1)})\)</span>.</li>
+</ol>
+<p>Repeat this process for many steps and the sequence of samples <span class="math inline">\(\{ (\theta^{(s)}, \sigma^{2(s)}) \}\)</span> is called a Markov chain. The samples are dependent on the latest values.</p>
+<span class="math display">\[\begin{align*}
+n s_{n}^{2}(\theta) &amp;= \sum_{i=1}^{n} (y_{i} - \theta)^{2} \\
+&amp;= \sum_{i=1}^{n} (y_{i} - \bar{y} + \bar{y} - \theta)^{2} \\
+&amp;= \sum_{i=1}^{n} \left[ (y_{i} - \bar{y})^{2} + 2(y_{i} - \bar{y})(\bar{y} - \theta) + (\bar{y} - \theta)^{2} \right] \\
+&amp;= \sum_{i=1}^{n} (y_{i} - \bar{y})^{2} + 0 + \sum_{i=1}^{n} (\bar{y} - \theta)^{2} \\
+&amp;= (n-1)s^{2} + n(\bar{y} - \theta)^{2}.
+\end{align*}\]</span>
+</div>
+<div id="general-properties-of-the-gibbs-sampler" class="section level4 hasAnchor" number="4.3.10.5">
+<h4><span class="header-section-number">4.3.10.5</span> General properties of the Gibbs sampler<a href="bayesian-statistics.html#general-properties-of-the-gibbs-sampler" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Vector of parameters <span class="math display">\[
+\boldsymbol{\phi} = \{\phi_1, \phi_2, \ldots, \phi_p\}
+\]</span> where you are interested in sampling from their joint posterior distribution (e.g. <span class="math inline">\(p(\theta, \sigma^2 \mid y_1, \ldots, y_n)\)</span> in the normal model)</p>
+<p>The Gibbs sample generates this algorithm:<br />
+Given the starting point <span class="math inline">\(\phi^{(0)} = \{\phi_1^{(0)}, \ldots, \phi_p^{(0)}\}\)</span>, for each iteration <span class="math inline">\(s = 1, 2, ..., S\)</span> each parameter using the full conditional distribution:<br />
+</p>
+<ol style="list-style-type: decimal">
+<li>Sample the first parameter  
+<span class="math display">\[
+\phi_1^{(s)} \sim p\left(\phi_1 \mid \phi_2^{(s-1)}, \phi_3^{(s-1)}, \ldots, \phi_p^{(s-1)}\right)
+\]</span>  
+using the most recent values for all parameters</li>
+<li>Sample the second parameter<br />
+<span class="math display">\[
+\phi_2^{(s)} \sim p\left(\phi_2 \mid \phi_1^{(s)}, \phi_3^{(s-1)}, \ldots, \phi_p^{(s-1)}\right)
+\]</span>
+update only the parameter you just sampled, <span class="math inline">\(\phi_1\)</span>, use the most recent value for the rest.<br />
+</li>
+<li>Continue for all parameters<br />
+<span class="math display">\[
+\phi_p^{(s)} \sim p\left(\phi_p \mid \phi_1^{(s)}, \ldots, \phi_{p-1}^{(s)}\right)
+\]</span></li>
+</ol>
+<p>New vector generated:<br />
+<span class="math inline">\(\phi^{(s)} = \{\phi_1^{(s)}, ..., \phi_p^{(s)}\}\)</span><br />
+</p>
+<ul>
+<li>The next state depending on the previous state is called a <strong>Markov property</strong> and the sequence is called a <strong>Markov chain</strong></li>
+<li>Under certain mild conditions, the distribution of <span class="math inline">\(\phi^{(s)}\)</span> will converge to the target posterior <span class="math inline">\(p(\phi)\)</span>, regardless of where you started.</li>
+</ul>
+<p>According to the Monte Carlo Approximation, as <span class="math inline">\(s \to \infty\)</span> the distribution of the samples approaches the target distribution for any region A.
+<span class="math display">\[
+\text{Pr}(\phi^{(s)} \in A) \to \int_A p(\phi) d\phi
+\]</span></p>
+<p>For a function of the parameter <span class="math inline">\(g(\phi)\)</span>, the sample mean converges on the posterior mean as <span class="math inline">\(S \to \infty\)</span>:<br />
+</p>
+<p><span class="math display">\[
+\frac{1}{S} \sum_{s=1}^S g(\phi^{(s)}) \to \mathbb{E}[g(\phi)] = \int g(\phi) p(\phi) d\phi
+\]</span></p>
+<p>Once there are a large collection of samples <span class="math inline">\(\{\phi^{(1)}, \ldots, \phi^{(S)}\}\)</span> you can:<br />
+- Estimate posterior means, medians, quantiles, credible intervals, etc.
+- Approximate posterior probabilities, e.g. <span class="math inline">\(\Pr(\phi \leq c \mid y)\)</span>.
+<span class="math display">\[
+\frac{1}{S} \sum_{s=1}^S \phi^{(s)} \approx \mathbb{E}[\phi|y]
+\]</span></p>
+<p><span class="math display">\[
+\frac{1}{S} \sum_{s=1}^S 1(\phi^{(s)} \leq c) \approx \Pr(\phi \leq c | y)
+\]</span></p>
+<p><strong>Distinguishing model from approximation:</strong>
+- Model specification: Define your likelihood <span class="math inline">\(p(y|\phi)\)</span> and prior <span class="math inline">\(p(\phi)\)</span>:<br />
+<span class="math display">\[
+p(\phi \mid \mathbf{y}) = \frac{p(\phi)\,p(\mathbf{y} \mid \phi)}{p(\mathbf{y})} = \frac{p(\phi)\,p(\mathbf{y} \mid \phi)}{\int p(\phi)\,p(\mathbf{y} \mid \phi)\, d\phi}
+\]</span>
+After this, there is no more modeling or estimation, all that is left is the posterior summary which is a description of the posterior distribution <span class="math inline">\(p(\phi|y)\)</span>. This information may be posterior means, medians, modes, predictive probabilities and confidence regions.</p>
+<ul>
+<li>Monte Carlo and MCMC sampling algorithms are not models. They do not generate more information and are simply approximation computational tools used to explore and and summarize a given posterior of <span class="math inline">\(p(y|\phi)\)</span>.</li>
+</ul>
+</div>
+<div id="introduction-to-mcmc-diagnostics" class="section level4 hasAnchor" number="4.3.10.6">
+<h4><span class="header-section-number">4.3.10.6</span> Introduction to MCMC diagnostics<a href="bayesian-statistics.html#introduction-to-mcmc-diagnostics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The goal of Monte Carlo (MC) or Markov chain Monte Carlo (MCMC) approximation is to estimate expectations with respect to a target probability distribution <span class="math inline">\(p(\phi)\)</span>.
+Suppose you want to compute the expected value of some function <span class="math inline">\(g(\phi)\)</span> under <span class="math inline">\(p(\phi)\)</span>:
+<span class="math display">\[
+\int g(\phi)p(\phi) d\phi
+\]</span>
+However, this integral is often analytically intractable because <span class="math inline">\(p(\phi)\)</span> may have a complicated form or the parameter space may be high-dimensional.
+Instead of direct calculation, you obtain a sequence of samples <span class="math inline">\(\{\phi^{(1)}, \ldots, \phi^{(S)}\}\)</span> and approximate the expectation with the empirical average:
+<span class="math display">\[
+\frac{1}{S} \sum_{s=1}^{S} g(\phi^{(s)}) \approx \int g(\phi) p(\phi) d\phi
+\]</span>
+This means: for any function <span class="math inline">\(g\)</span> of interest, you can approximate its expected value under <span class="math inline">\(p(\phi)\)</span> by averaging <span class="math inline">\(g\)</span> over the samples.</p>
+<p>What is Required for an Accurate Approximation?<br />
+</p>
+<p>For this method to be effective for many different functions <span class="math inline">\(g\)</span>, the empirical distribution of the samples <span class="math inline">\(\{\phi^{(1)}, \ldots, \phi^{(S)}\}\)</span> must be a good approximation to the target distribution <span class="math inline">\(p(\phi)\)</span>. That is, the histogram (or kernel density estimate, or empirical CDF, etc.) of the simulated values should closely resemble the true shape of <span class="math inline">\(p(\phi)\)</span>.</p>
+<p>Generating a Sequence: Monte Carlo vs. Markov Chain Monte Carlo
+Monte Carlo (MC) simulation and Markov chain Monte Carlo (MCMC) simulation are two different ways to generate a sequence of samples.</p>
+<p>Monte Carlo Simulation</p>
+<p>In “ordinary” MC, each sample <span class="math inline">\(\phi^{(s)}\)</span> is drawn independently from the target distribution <span class="math inline">\(p(\phi)\)</span>. This means:<br />
+</p>
+<ul>
+<li>Each sample is uncorrelated with the others.<br />
+</li>
+<li>For any subset <span class="math inline">\(A\)</span> of the parameter space, the probability that <span class="math inline">\(\phi^{(s)}\)</span> falls in <span class="math inline">\(A\)</span> is exactly <span class="math inline">\(\int_A p(\phi) d\phi\)</span> for every <span class="math inline">\(s\)</span>.<br />
+</li>
+<li>The set of samples, collectively, automatically represents the distribution <span class="math inline">\(p(\phi)\)</span> perfectly in a probabilistic sense.<br />
+</li>
+<li>This is considered the “gold standard” of sampling.  </li>
+</ul>
+<p>Markov Chain Monte Carlo (MCMC) Simulation<br />
+</p>
+<p>In MCMC, the samples <span class="math inline">\(\{\phi^{(1)}, \ldots, \phi^{(S)}\}\)</span> are not independent; rather, they are generated by a Markov process, where each sample depends on the previous one.<br />
+- For MCMC, the limiting distribution of the chain is <span class="math inline">\(p(\phi)\)</span>, meaning that as <span class="math inline">\(s \rightarrow \infty\)</span>, the distribution of <span class="math inline">\(\phi^{(s)}\)</span> approaches <span class="math inline">\(p(\phi)\)</span>.
+- This is expressed mathematically:  
+<span class="math display">\[
+    \lim_{s \to \infty} \operatorname{Pr}(\phi^{(s)} \in A) = \int_A p(\phi) d\phi
+    \]</span>
+- For any finite <span class="math inline">\(s\)</span>, the sample distribution may not yet match <span class="math inline">\(p(\phi)\)</span> exactly, especially early in the chain.</p>
+<p>Example: Mixture Model with Discrete and Continuous Variables
+Let’s consider the example provided, which helps illustrate the differences between MC and MCMC.</p>
+<p>Target Distribution:<br />
+Two variables: <span class="math inline">\(\phi = (\delta, \theta)\)</span></p>
+<ul>
+<li><span class="math inline">\(\delta\)</span> is a discrete variable: <span class="math inline">\(\delta \in \{1,2,3\}\)</span></li>
+<li><span class="math inline">\(\theta\)</span> is a continuous variable: <span class="math inline">\(\theta \in \mathbb{R}\)</span></li>
+</ul>
+<p>The joint distribution is specified as:<br />
+- <span class="math inline">\(\Pr(\delta = 1) = 0.45\)</span><br />
+- <span class="math inline">\(\Pr(\delta = 2) = 0.10\)</span><br />
+- <span class="math inline">\(\Pr(\delta = 3) = 0.45\)</span><br />
+- <span class="math inline">\(p(\theta|\delta) = \text{Normal}(\mu_\delta, \sigma_\delta)\)</span> with <span class="math inline">\(\mu_1 = -3, \mu_2 = 0, \mu_3 = 3\)</span> and <span class="math inline">\(\sigma_1^2 = \sigma_2^2 = \sigma_3^2 = 1/3\)</span></p>
+<p>This is a mixture of three normal distributions with means at -3, 0, and +3.
+The marginal distribution for <span class="math inline">\(\theta\)</span> is:  
+<span class="math display">\[
+p(\theta) = \sum_{\delta=1}^3 p(\theta|\delta)p(\delta)
+\]</span>
+which is a mixture with three “bumps” at the group means.</p>
+<p>Monte Carlo Sampling (Independent Samples)
+To generate independent Monte Carlo samples from the joint distribution <span class="math inline">\(p(\delta, \theta)\)</span>:<br />
+</p>
+<ol style="list-style-type: decimal">
+<li>Sample <span class="math inline">\(\delta\)</span> from its marginal distribution.<br />
+</li>
+<li>Given <span class="math inline">\(\delta\)</span>, sample <span class="math inline">\(\theta\)</span> from <span class="math inline">\(p(\theta|\delta)\)</span>.<br />
+</li>
+<li>The pair <span class="math inline">\((\delta, \theta)\)</span> is a sample from <span class="math inline">\(p(\delta, \theta)\)</span>.</li>
+</ol>
+<p>If you repeat this process 1,000 times, you get 1,000 independent samples. Plotting a histogram of the <span class="math inline">\(\theta\)</span> values gives a good approximation to the true marginal <span class="math inline">\(p(\theta)\)</span>, as shown in Figure 6.4.</p>
+<p>Gibbs Sampling (Dependent Samples, MCMC)<br />
+</p>
+<p>In contrast, to sample from the same distribution using a Gibbs sampler:<br />
+</p>
+<ul>
+<li>Alternately sample <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\delta\)</span> from their full conditional distributions:<br />
+
+<ul>
+<li>Sample <span class="math inline">\(\theta\)</span> from <span class="math inline">\(p(\theta | \delta)\)</span> (already specified as normal).</li>
+<li>Sample <span class="math inline">\(\delta\)</span> from <span class="math inline">\(p(\delta | \theta)\)</span>, which can be computed by Bayes’ Rule:</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+    \operatorname{Pr}(\delta = d | \theta) = \frac{\operatorname{Pr}(\delta = d) \times \operatorname{dnorm}(\theta, \mu_d, \sigma_d)}{\sum_{d=1}^3 \operatorname{Pr}(\delta = d) \times \operatorname{dnorm}(\theta, \mu_d, \sigma_d)}
+    \]</span></p>
+<p>The sequence of pairs <span class="math inline">\((\delta^{(s)}, \theta^{(s)})\)</span> forms a Markov chain.</p>
+<p>Problems with MCMC: Autocorrelation and “Stickiness”<br />
+When you run the Gibbs sampler, you might notice problems:<br />
+- The histogram of <span class="math inline">\(\theta\)</span> values after 1,000 MCMC samples (Figure 6.5) does not match <span class="math inline">\(p(\theta)\)</span> well.
+- Some regions (e.g., around -3) are underrepresented.
+- Other regions (e.g., around 0 or +3) are overrepresented.</p>
+<p>The traceplot (plot of <span class="math inline">\(\theta\)</span> vs iteration) shows that the chain gets “stuck” in certain regions, not moving freely between the three modes.  
+- This is called autocorrelation: values of θ are highly correlated with their previous values in the sequence.
+- If <span class="math inline">\(\theta\)</span> is near 0, it is likely to stay near 0 for many steps because the chain keeps sampling <span class="math inline">\(\delta = 2\)</span> (which has mean 0), and so on.
+- The Markov chain does not mix well; it does not move rapidly between different modes.</p>
+<p>Is MCMC Guaranteed to Work?  
+Yes, in theory, the Gibbs sampler is guaranteed to eventually provide samples from the true distribution p(θ), but “eventually” can mean a very long time in practice, especially if the chain moves slowly (poor mixing, high autocorrelation).  
+- Figure 6.6 shows that after 10,000 iterations, the empirical distribution is much closer to the true marginal, but may still not be perfect.
+- The traceplot with 10,000 samples shows better movement between regions, but “stickiness” can still be present.</p>
+<p>Interpreting the MCMC Chain as a Particle Trajectory<br />
+- You can think of the sequence <span class="math inline">\(\{\phi^{(1)}, ..., \phi^{(S)}\}\)</span> as a particle moving around the parameter space.<br />
+- In terms of MCMC integration, the amount of time the particle spends in any set A is proportional to the target probability <span class="math inline">\(\int_A p(\phi) d\phi\)</span>.</p>
+<p>Suppose the parameter space has three regions of interest, <span class="math inline">\(A_1, A_2, A_3\)</span>:<br />
+- If <span class="math inline">\(\Pr(A_2) &lt; \Pr(A_1) \approx \Pr(A_3)\)</span>, we want the chain to spend less time in A2​ and roughly equal time in <span class="math inline">\(A_1\)</span>​ and <span class="math inline">\(A_3\)</span>​.
+- If the chain starts in <span class="math inline">\(A_2\)</span>, it might take a long time to “escape” to the higher probability regions. This is why burn-in and sufficient iterations are important.</p>
+<p>Stationarity and Convergence<br />
+- Stationarity (or convergence): The chain has “forgotten” its starting value and samples from the stationary distribution. In essence, the chaing does not change as you move along the chain and matches the target distribution <span class="math inline">\(p(\phi)\)</span>.<br />
+- If the chain starts in a high probability region, stationarity is achieved quickly.<br />
+- If not, it may take a long time, and you may not be able to tell if your chain has converged unless you use diagnostics.  
+- Assessing convergence is difficult because you do not know <span class="math inline">\(p(\phi)\)</span> exactly. You can check for stationarity by comparing samples from different parts of the chain.<br />
+- For simple models (like the normal model with semiconjugate priors), stationarity is quickly achieved. For complex, highly parameterized models, autocorrelation can be high, and mixing can be poor, so stationarity takes longer and is more difficult to diagnose.<br />
+- Thus, it is often necessary to run the MCMC sampler for many iterations to ensure the samples you collect are representative of <span class="math inline">\(p(\phi)\)</span></p>
+<p>Mixing and Speed of Movement in Parameter Space<br />
+- Mixing is a term used to describe how quickly the MCMC chain explores the parameter space. It is closely related to autocorrelation.<br />
+- Perfect mixing occurs when each new sample is completely independent of the previous sample (as in independent Monte Carlo sampling); there is zero autocorrelation.<br />
+- In MCMC, samples are correlated, and if the chain moves slowly between regions, autocorrelation is high and mixing is poor.<br />
+- Poor mixing means the chain may take a long time to move between areas of high probability, reducing the efficiency of the MCMC estimation.<br />
+</p>
+<p>Variance of the Sample Mean: Monte Carlo vs. MCMC  
+Monte Carlo (Independent Sampling)  
+Suppose you want to approximate the expectation:<br />
+<span class="math display">\[
+\mathrm{E}[\phi] = \int \phi p(\phi) d\phi = \phi_0
+\]</span>
+using the empirical mean:  
+<span class="math display">\[
+\bar{\phi} = \frac{1}{S} \sum_{s=1}^S \phi^{(s)}
+\]</span>
+where the <span class="math inline">\(\phi^{(s)}\)</span> are independent samples from <span class="math inline">\(p(\phi)\)</span>.
+The variance of <span class="math inline">\(\bar{\phi}\)</span>​, denoted<span class="math inline">\(\mathrm{Var}_{\mathrm{MC}}[\bar{\phi}]\)</span>, measures how much <span class="math inline">\(\bar{\phi}\)</span> fluctuates around the true value <span class="math inline">\(\phi_0\)</span> if you repeated the MC approximation many times:
+<span class="math display">\[
+\mathrm{Var}_{\mathrm{MC}}[\bar{\phi}] = \mathrm{E}[(\bar{\phi} - \phi_0)^2] = \frac{\mathrm{Var}[\phi]}{S}
+\]</span>
+where  
+<span class="math display">\[
+\mathrm{Var}[\phi] = \int \phi^2 p(\phi) d\phi - \phi_0^2
+\]</span></p>
+<p>The square root of <span class="math inline">\(\mathrm{Var}_{\mathrm{MC}}[\bar{\phi}]\)</span> is the Monte Carlo standard error.
+This tells you how close <span class="math inline">\(\bar{\phi}\)</span>​ is expected to be to <span class="math inline">\(\phi_0\)</span>​.
+If you repeat the MC procedure many times, about 95% of the time the true value <span class="math inline">\(\phi_0\)</span>​ will be within the interval <span class="math inline">\(\bar{\phi} \pm 2\sqrt{\mathrm{Var}_{\mathrm{MC}}[\bar{\phi}]}\)</span>​.
+You can make this interval as narrow as you want by increasing S (the number of samples), because variance decreases as <span class="math inline">\(1/S\)</span>.</p>
+<p>Markov Chain Monte Carlo (MCMC, Dependent Sampling)  
+In MCMC, the samples <span class="math inline">\(\phi^{(s)}\)</span> are not independent; they are correlated, especially for nearby <span class="math inline">\(s\)</span>.<br />
+- This correlation (autocorrelation) increases the variance of the empirical mean compared to independent MC.<br />
+- Assuming the chain has reached stationarity, the variance of the MCMC estimate is:
+<span class="math display">\[
+\mathrm{Var}_{\mathrm{MCMC}}[\bar{\phi}] = \mathrm{E}[(\bar{\phi} - \phi_0)^2]
+\]</span>
+Let’s expand the algebra:  
+<span class="math display">\[
+\bar{\phi} = \frac{1}{S} \sum_{s=1}^{S} \phi^{(s)}
+\]</span>
+<span class="math display">\[
+\mathrm{Var}_{\mathrm{MCMC}}[\bar{\phi}] = \mathrm{E}\left[ \left( \bar{\phi} - \phi_0 \right)^2 \right]
+= \mathrm{E}\left[ \left( \frac{1}{S} \sum_{s=1}^{S} (\phi^{(s)} - \phi_0) \right)^2 \right]
+\]</span>
+Expanding the square:  
+<span class="math display">\[
+= \frac{1}{S^2} \mathrm{E} \left[ \sum_{s=1}^S (\phi^{(s)} - \phi_0)^2 + \sum_{s \neq t} (\phi^{(s)} - \phi_0)(\phi^{(t)} - \phi_0) \right]
+\]</span>
+<span class="math display">\[
+= \frac{1}{S^2} \sum_{s=1}^S \mathrm{E}\left[ (\phi^{(s)} - \phi_0)^2 \right] + \frac{1}{S^2} \sum_{s \neq t} \mathrm{E}\left[ (\phi^{(s)} - \phi_0)(\phi^{(t)} - \phi_0) \right]
+\]</span>
+The first term is the same as the MC variance:  
+<span class="math display">\[
+\mathrm{Var}_{\mathrm{MC}}[\bar{\phi}] = \frac{1}{S} \mathrm{Var}[\phi]
+\]</span>
+The second term is new: it involves the correlation between different samples in the chain.
+<span class="math display">\[
+\mathrm{Var}_{\mathrm{MCMC}}[\bar{\phi}] = \mathrm{Var}_{\mathrm{MC}}[\bar{\phi}] + \frac{1}{S^2} \sum_{s \neq t} \mathrm{E}[ (\phi^{(s)} - \phi_0)(\phi^{(t)} - \phi_0) ]
+\]</span>  </p>
+<ul>
+<li>This second sum is zero if the samples are independent (as in MC), but is positive if there is autocorrelation.  </li>
+<li>The greater the autocorrelation (the more similar nearby samples are), the larger this term will be, and the less efficient the sampler becomes.</li>
+</ul>
+<p>Effective Sample Size and Practical Implications  
+- In practice, we often calculate the effective sample size: the number of independent samples that would give the same variance as our correlated MCMC samples.  
+- For instance, in the normal model example, the autocorrelation for <span class="math inline">\(\{\theta^{(1)}, ..., \theta^{(1000)}\}\)</span> is essentially zero, so the effective sample size is 1,000, matching the number of actual samples.
+- For <span class="math inline">\(\sigma^2\)</span>, the lag-1 autocorrelation is 0.147, corresponding to an effective sample size of 742. This means that 1,000 MCMC samples with this autocorrelation are about as informative as 742 independent samples.</p>
+<p>Summary of the Variance Formulas  
+MC (Independent):  
+<span class="math display">\[
+  \mathrm{Var}_{\mathrm{MC}}[\bar{\phi}] = \frac{\mathrm{Var}[\phi]}{S}
+  \]</span>
+MCMC (Correlated):<br />
+<span class="math display">\[
+  \mathrm{Var}_{\mathrm{MCMC}}[\bar{\phi}] = \mathrm{Var}_{\mathrm{MC}}[\bar{\phi}] + \frac{1}{S^2} \sum_{s \neq t} \mathrm{E}[ (\phi^{(s)} - \phi_0)(\phi^{(t)} - \phi_0) ]
+  \]</span><br />
+- The second term only appears if the samples are correlated (as in MCMC), and increases the variance of your estimate.</p>
+<p>Visualizing the Chains<br />
+- Traceplots (Fig 6.7) show the sequence of sampled values for parameters like <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\sigma^2\)</span> over iterations.<br />
+- If the traceplot looks like a “hairy caterpillar,” with the chain moving freely, mixing is good and autocorrelation is low.  
+- If the traceplot shows long stretches with little movement, mixing is poor and autocorrelation is high.<br />
+</p>
+<p><strong>References</strong>  
+- German and German (1984) Gibbs sampling coined<br />
+- Besag (1974) and Ripley (1979) spatial statistics algorithm<br />
+- Gelfand and Smith (1990) general utility of the Gibbs sampler for Bayesian data analysis
+- Robert and Casella (2008) historical review of the Gibbs sampler
+- Gleman and Rubin (1992), Geweke (1992), Raftery and Lewis (1992), Geyer (1992) MCMC approximation and convergence diagnostics</p>
+</div>
+</div>
+<div id="multivariate-normal-model" class="section level3 hasAnchor" number="4.3.11">
+<h3><span class="header-section-number">4.3.11</span> Multivariate Normal Model<a href="bayesian-statistics.html#multivariate-normal-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="group-comparisons-and-hierarchial-modeling" class="section level3 hasAnchor" number="4.3.12">
+<h3><span class="header-section-number">4.3.12</span> Group comparisons and hierarchial modeling<a href="bayesian-statistics.html#group-comparisons-and-hierarchial-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="linear-regression-1" class="section level3 hasAnchor" number="4.3.13">
+<h3><span class="header-section-number">4.3.13</span> Linear Regression<a href="bayesian-statistics.html#linear-regression-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="nonconjugate-priors-and-metropolis-hastings-algorithm" class="section level3 hasAnchor" number="4.3.14">
+<h3><span class="header-section-number">4.3.14</span> Nonconjugate priors and Metropolis-Hastings algorithm<a href="bayesian-statistics.html#nonconjugate-priors-and-metropolis-hastings-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="irreducibility-aperiodicity-and-recurrency" class="section level4 hasAnchor" number="4.3.14.1">
+<h4><span class="header-section-number">4.3.14.1</span> Irreducibility, Aperiodicity, and Recurrency<a href="bayesian-statistics.html#irreducibility-aperiodicity-and-recurrency" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="ergodic-theorem" class="section level4 hasAnchor" number="4.3.14.2">
+<h4><span class="header-section-number">4.3.14.2</span> Ergodic Theorem<a href="bayesian-statistics.html#ergodic-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="statistical-inference.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cs50.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": false,
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
