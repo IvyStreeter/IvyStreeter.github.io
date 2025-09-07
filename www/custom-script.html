@@ -1,0 +1,10 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all TOC sections that are expanded (usually have class 'open')
+  document.querySelectorAll(".book-summary li.open").forEach(function(item) {
+    // Remove 'open' class and add 'closed' class to collapse
+    item.classList.remove("open");
+    item.classList.add("closed");
+  });
+});
+</script>

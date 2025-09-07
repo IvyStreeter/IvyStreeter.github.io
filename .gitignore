@@ -1,0 +1,7 @@
+# Ignore R files
+*.RData
+*.log
+*.tmp
+.Rhistory
+*.Rmd
+

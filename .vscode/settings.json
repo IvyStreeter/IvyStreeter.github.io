@@ -1,0 +1,29 @@
+{
+  "version": "20.1.8",
+  "tasks": [
+    {
+      "label": "C/C++: clang++ build active file",
+      "type": "shell",
+      "command": "/opt/homebrew/opt/llvm/bin/clang++",
+      "args": [
+        "-std=gnu++17",
+        "-fcolor-diagnostics",
+        "-fansi-escape-codes",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ],
+  "files.associations": {
+    "print": "cpp"
+  }
+}

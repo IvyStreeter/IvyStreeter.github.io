@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.1 Basics and Fundamentals | Ivy’s Digital Garden</title>
+  <meta name="description" content="4.1 Basics and Fundamentals | Ivy’s Digital Garden" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.1 Basics and Fundamentals | Ivy’s Digital Garden" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.1 Basics and Fundamentals | Ivy’s Digital Garden" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c-for-complete-beginners.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Index</a></li>
+<li class="chapter" data-level="" data-path="about-the-digital-garden.html"><a href="about-the-digital-garden.html"><i class="fa fa-check"></i>About the Digital Garden</a></li>
+<li class="chapter" data-level="" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i>SetUp</a>
+<ul>
+<li class="chapter" data-level="" data-path="how-to-setup-vscode.html"><a href="how-to-setup-vscode.html"><i class="fa fa-check"></i>How to setup VSCode</a></li>
+<li class="chapter" data-level="" data-path="weird-behaviors.html"><a href="weird-behaviors.html"><i class="fa fa-check"></i>Weird behaviors:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="cs50.html"><a href="cs50.html"><i class="fa fa-check"></i><b>1</b> CS50</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i><b>1.2</b> C</a></li>
+<li class="chapter" data-level="1.3" data-path="arrays.html"><a href="arrays.html"><i class="fa fa-check"></i><b>1.3</b> Arrays</a></li>
+<li class="chapter" data-level="1.4" data-path="memory.html"><a href="memory.html"><i class="fa fa-check"></i><b>1.4</b> Memory</a></li>
+<li class="chapter" data-level="1.5" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>1.5</b> Data Structures</a></li>
+<li class="chapter" data-level="1.6" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>1.6</b> Python</a></li>
+<li class="chapter" data-level="1.7" data-path="artificial-intelligence-1.html"><a href="artificial-intelligence-1.html"><i class="fa fa-check"></i><b>1.7</b> Artificial Intelligence</a></li>
+<li class="chapter" data-level="1.8" data-path="sql.html"><a href="sql.html"><i class="fa fa-check"></i><b>1.8</b> SQL</a></li>
+<li class="chapter" data-level="1.9" data-path="html-css-javascript.html"><a href="html-css-javascript.html"><i class="fa fa-check"></i><b>1.9</b> HTML, CSS, JavaScript</a></li>
+<li class="chapter" data-level="1.10" data-path="flask.html"><a href="flask.html"><i class="fa fa-check"></i><b>1.10</b> Flask</a></li>
+<li class="chapter" data-level="1.11" data-path="the-end.html"><a href="the-end.html"><i class="fa fa-check"></i><b>1.11</b> The End</a></li>
+<li class="chapter" data-level="1.12" data-path="ace-reccomendation.html"><a href="ace-reccomendation.html"><i class="fa fa-check"></i><b>1.12</b> ACE Reccomendation</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="deep-learning.html"><a href="deep-learning.html"><i class="fa fa-check"></i><b>2</b> Deep Learning</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-neural-networks-and-deep-learning.html"><a href="introduction-to-neural-networks-and-deep-learning.html"><i class="fa fa-check"></i><b>2.1</b> 9/5 Introduction to Neural Networks and Deep Learning,</a></li>
+<li class="chapter" data-level="2.2" data-path="gradient-descent-and-back-propagation.html"><a href="gradient-descent-and-back-propagation.html"><i class="fa fa-check"></i><b>2.2</b> 9/12 Gradient Descent and Back Propagation</a></li>
+<li class="chapter" data-level="2.3" data-path="keras.html"><a href="keras.html"><i class="fa fa-check"></i><b>2.3</b> 9/19 Keras</a></li>
+<li class="chapter" data-level="2.4" data-path="convolutional-neural-networks-cnns.html"><a href="convolutional-neural-networks-cnns.html"><i class="fa fa-check"></i><b>2.4</b> 9/26 Convolutional Neural Networks (CNNs)</a></li>
+<li class="chapter" data-level="2.5" data-path="visualizing-feature-maps-of-cnn-layers-locating-objects-in-images.html"><a href="visualizing-feature-maps-of-cnn-layers-locating-objects-in-images.html"><i class="fa fa-check"></i><b>2.5</b> 10/3 Visualizing Feature Maps of CNN Layers, Locating Objects in Images</a></li>
+<li class="chapter" data-level="2.6" data-path="transfer-learning-fine-tuning-augmentation.html"><a href="transfer-learning-fine-tuning-augmentation.html"><i class="fa fa-check"></i><b>2.6</b> 10/10: Transfer Learning, Fine Tuning, Augmentation</a></li>
+<li class="chapter" data-level="2.7" data-path="autoencoders-variational-autoencoders-and-manifold-hypothesis.html"><a href="autoencoders-variational-autoencoders-and-manifold-hypothesis.html"><i class="fa fa-check"></i><b>2.7</b> 10/17 Autoencoders, Variational Autoencoders and Manifold Hypothesis</a></li>
+<li class="chapter" data-level="2.8" data-path="natural-language-processing-nlp-doc2vec-like-api-s-and.html"><a href="natural-language-processing-nlp-doc2vec-like-api-s-and.html"><i class="fa fa-check"></i><b>2.8</b> 10/24 Natural Language Processing (NLP), Doc2Vec like API-s and</a></li>
+<li class="chapter" data-level="2.9" data-path="analysis-and-transcription-of-speech.html"><a href="analysis-and-transcription-of-speech.html"><i class="fa fa-check"></i><b>2.9</b> 10/31 Analysis and Transcription of Speech</a></li>
+<li class="chapter" data-level="2.10" data-path="sequence-analysis-seq2seq-models-and-machine-translation.html"><a href="sequence-analysis-seq2seq-models-and-machine-translation.html"><i class="fa fa-check"></i><b>2.10</b> 11/7 Sequence Analysis, Seq2Seq Models and Machine Translation</a></li>
+<li class="chapter" data-level="2.11" data-path="transformers.html"><a href="transformers.html"><i class="fa fa-check"></i><b>2.11</b> 11/14 Transformers</a></li>
+<li class="chapter" data-level="2.12" data-path="class-12-large-language-models-llms.html"><a href="class-12-large-language-models-llms.html"><i class="fa fa-check"></i><b>2.12</b> 11/21: Class 12: Large Language Models (LLMs)</a></li>
+<li class="chapter" data-level="2.13" data-path="class-13-generative-adversarial-networks-gans.html"><a href="class-13-generative-adversarial-networks-gans.html"><i class="fa fa-check"></i><b>2.13</b> 12/5: Class 13: Generative Adversarial Networks (GANs)</a></li>
+<li class="chapter" data-level="2.14" data-path="class-14-graphs-neural-networks-gnns.html"><a href="class-14-graphs-neural-networks-gnns.html"><i class="fa fa-check"></i><b>2.14</b> 12/12: Class 14: Graphs Neural Networks (GNNs)</a></li>
+<li class="chapter" data-level="2.15" data-path="the-final-project-presentations.html"><a href="the-final-project-presentations.html"><i class="fa fa-check"></i><b>2.15</b> 12/19: The Final Project Presentations</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-mining-discovery-and-exploration.html"><a href="data-mining-discovery-and-exploration.html"><i class="fa fa-check"></i><b>3</b> Data Mining, Discovery, and Exploration</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="course-introduction-and-introduction-to-data-mining.html"><a href="course-introduction-and-introduction-to-data-mining.html"><i class="fa fa-check"></i><b>3.1</b> 9/3 Course introduction and introduction to data mining</a></li>
+<li class="chapter" data-level="3.2" data-path="data-mining-massive-and-streaming-data-part-1.html"><a href="data-mining-massive-and-streaming-data-part-1.html"><i class="fa fa-check"></i><b>3.2</b> 9/10 Data mining massive and streaming data, Part 1</a></li>
+<li class="chapter" data-level="3.3" data-path="data-mining-massive-and-streaming-data-part-2.html"><a href="data-mining-massive-and-streaming-data-part-2.html"><i class="fa fa-check"></i><b>3.3</b> 9/17 Data mining massive and streaming data, Part 2</a></li>
+<li class="chapter" data-level="3.4" data-path="mining-social-network-graphs.html"><a href="mining-social-network-graphs.html"><i class="fa fa-check"></i><b>3.4</b> 9/24 Mining social-network graphs</a></li>
+<li class="chapter" data-level="3.5" data-path="similarity-search-at-massive-scale-part-1.html"><a href="similarity-search-at-massive-scale-part-1.html"><i class="fa fa-check"></i><b>3.5</b> 10/1 Similarity search at massive scale, Part 1</a></li>
+<li class="chapter" data-level="3.6" data-path="similarity-search-at-massive-scale-part-2.html"><a href="similarity-search-at-massive-scale-part-2.html"><i class="fa fa-check"></i><b>3.6</b> 10/8 Similarity search at massive scale, Part 2</a></li>
+<li class="chapter" data-level="3.7" data-path="information-retrieval-for-document-and-web-search.html"><a href="information-retrieval-for-document-and-web-search.html"><i class="fa fa-check"></i><b>3.7</b> 10/15 Information retrieval for document and web search</a></li>
+<li class="chapter" data-level="3.8" data-path="learning-to-rank-for-search-and-recommendation-part-1.html"><a href="learning-to-rank-for-search-and-recommendation-part-1.html"><i class="fa fa-check"></i><b>3.8</b> 10/22 Learning to rank for search and recommendation, Part 1</a></li>
+<li class="chapter" data-level="3.9" data-path="learning-to-rank-for-search-and-recommendation-part-2.html"><a href="learning-to-rank-for-search-and-recommendation-part-2.html"><i class="fa fa-check"></i><b>3.9</b> 10/29 Learning to rank for search and recommendation, Part 2</a></li>
+<li class="chapter" data-level="3.10" data-path="clustering-algorithms-part-1.html"><a href="clustering-algorithms-part-1.html"><i class="fa fa-check"></i><b>3.10</b> 11/5 Clustering Algorithms, Part 1</a></li>
+<li class="chapter" data-level="3.11" data-path="clustering-algorithms-part-2.html"><a href="clustering-algorithms-part-2.html"><i class="fa fa-check"></i><b>3.11</b> 11/12 Clustering Algorithms, Part 2</a></li>
+<li class="chapter" data-level="3.12" data-path="dimensionality-reduction.html"><a href="dimensionality-reduction.html"><i class="fa fa-check"></i><b>3.12</b> 11/19 Dimensionality reduction</a></li>
+<li class="chapter" data-level="3.13" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>3.13</b> 11/23</a></li>
+<li class="chapter" data-level="3.14" data-path="frequent-item-sets-market-basket-analysis.html"><a href="frequent-item-sets-market-basket-analysis.html"><i class="fa fa-check"></i><b>3.14</b> 12/3 Frequent item sets; market basket analysis</a></li>
+<li class="chapter" data-level="3.15" data-path="additional-topics.html"><a href="additional-topics.html"><i class="fa fa-check"></i><b>3.15</b> 12/10 Additional Topics</a></li>
+<li class="chapter" data-level="3.16" data-path="final-project-due.html"><a href="final-project-due.html"><i class="fa fa-check"></i><b>3.16</b> 12/17: Final Project Due</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-for-complete-beginners.html"><a href="c-for-complete-beginners.html"><i class="fa fa-check"></i><b>4</b> C++ For Complete Beginners</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="basics-and-fundamentals.html"><a href="basics-and-fundamentals.html"><i class="fa fa-check"></i><b>4.1</b> Basics and Fundamentals</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ivy’s Digital Garden</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basics-and-fundamentals" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Basics and Fundamentals<a href="basics-and-fundamentals.html#basics-and-fundamentals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introduction-to-c" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Introduction to C++<a href="basics-and-fundamentals.html#introduction-to-c" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cons:</p>
+<ul>
+<li>Considered challengin to learn</li>
+<li>Easy to instroduce but has terrible bugs (has no fallback to protect you from your own poor coding)</li>
+<li>Often time-consuming, compiling is complicated on different platforms and computers. Whereas Java and Python do not have this issue.</li>
+<li>Not truly platform-independent</li>
+</ul>
+<p>Pros:
+- Fast
+- Low-level / hardware access
+- Can get a lot of processing done in a short time
+- Good for high-end games, AI, device drivers
+- Pushes you to understand your computer
+- Bade of honor</p>
+</div>
+<div id="setting-up-environment" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Setting up environment<a href="basics-and-fundamentals.html#setting-up-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What you need</p>
+<p>Compilers:</p>
+<ul>
+<li>GNU G++/ GCC (linux/mac)</li>
+<li>MinGW (windows)</li>
+<li>Visual C++ Compiler</li>
+</ul>
+<p>IDE:
+- Eclipse CDT
+- Visual C++
+- Codeblocks (Windows)
+- Emacs, Vim etc</p>
+<p>Could not run C++ file</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb58-1"><a href="basics-and-fundamentals.html#cb58-1" tabindex="-1"></a><span class="ex">brew</span> install llvm</span></code></pre></div>
+<pre><code>## Warning: llvm 21.1.0 is already installed and up-to-date.
+## To reinstall 21.1.0, run:
+##   brew reinstall llvm</code></pre>
+<p>Download Rcpp (to run C++ in R)</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="basics-and-fundamentals.html#cb60-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;Rcpp&quot;</span>)</span></code></pre></div>
+</div>
+<div id="hello-world-program" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Hello World program<a href="basics-and-fundamentals.html#hello-world-program" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Day 2: Variables, data types (int, float, char, bool), and basic I/O (cin, cout)</p>
+<p>Day 3: Operators (arithmetic, relational, logical) and expressions
+Day 4: Control flow: if, if-else, nested if
+Day 5: Loops: for, while, do-while
+Day 6: Functions: declaration, definition, calling, return types
+Day 7: Practice simple programs combining above concepts</p>
+<p>Week 2: Object-Oriented Programming (OOP)
+Day 1: Classes and objects, defining a class with data members and member functions
+Day 2: Constructors and destructors
+Day 3: Encapsulation: access specifiers (public, private, protected)
+Day 4: Inheritance basics and types of inheritance
+Day 5: Polymorphism: function overloading and overriding
+Day 6: Virtual functions and abstract classes
+Day 7: Practice OOP programs</p>
+<p>Week 3: Advanced Features
+Day 1: Pointers: declaration, dereferencing, pointer arithmetic
+Day 2: References and their differences from pointers
+Day 3: Dynamic memory allocation: new and delete
+Day 4: Arrays and multidimensional arrays
+Day 5: C-strings and string handling
+Day 6: Introduction to vectors (dynamic arrays)
+Day 7: Practice memory management and data structure problems</p>
+<p>Week 4: Standard Template Library (STL)
+Day 1: Introduction to STL and containers overview
+Day 2: Vector and list containers
+Day 3: Map and set containers
+Day 4: Iterators: types and usage
+Day 5: STL algorithms: sort, find, count, etc.
+Day 6: Practice STL with coding problems
+Day 7: Review and integrate STL in small programs</p>
+<p>Week 5: File I/O and Exception Handling
+Day 1: File input and output streams (ifstream, ofstream)
+Day 2: Reading and writing files with examples
+Day 3: Exception handling basics: try, catch, throw
+Day 4: Standard exceptions and creating custom exceptions
+Day 5: Practice error handling in programs
+Day 6: Combine file I/O and exception handling
+Day 7: Mini project involving file operations and error handling</p>
+<p>Week 6: Templates and Advanced Concepts
+Day 1: Function templates and usage
+Day 2: Class templates
+Day 3: Lambda expressions basics
+Day 4: Smart pointers: unique_ptr, shared_ptr, weak_ptr
+Day 5: Move semantics and rvalue references
+Day 6: Understand and practice RAII (Resource Acquisition Is Initialization)
+Day 7: Practice advanced C++ features in small programs</p>
+<p>Week 7: Projects and Optimization
+Day 1: Choose a small project idea (e.g., a simple game, calculator, or file manager)
+Day 2: Design the project structure and classes
+Day 3: Implement core functionality
+Day 4: Add error handling and user input validation
+Day 5: Debug and profile code for performance
+Day 6: Optimize code and memory usage
+Day 7: Final testing and documentation</p>
+<!-- 
+# PreCalc
+## Introduction
+
+Based off the book Functions Modeling Change
+
+## Chapter 1: Functions, lines, and change - Sections 1.1 - 1.3
+## Functions, lines, and change - Sections 1.4 - 1.5
+## Chapter 2: Functions - Sections 2.1 - 2.6
+## Chapter 3: Quadratic and exponential functions - Sections 3.1 - 3.2
+## Exponential functions - Sections 4.1 - 4.5 
+## Logarithmic functions 5.1 - 5.3
+## Chapter 6: Transformations of functions and their graphs - Sections 6.1 – 6.3
+## Chapter 7: Trigonometry and periodic functions - Section 7.1 - 7.2
+## Chapter 7: Trigonometry and periodic functions - Sections 7.3 - 7.5 
+## Chapter 7: Trigonometry and periodic functions - Sections 7.6 - 7.8
+## Chapter 8: Triangle trigonometry - Sections 8.1 - 8.2
+## Chapter 9: Trigonometric identities - Sections 9.1 - 9.3 
+## Chapter 10: Composition of functions, inverse functions Sections 10.1 - 10.2
+## Chapter 11: Polynomial functions - Sections 11.1 - 11.3 
+## Chapter 11: Rational functions - Sections 11.4 - 11.5
+
+# Calculus
+## Functions: linear, exponential, and new from old (sections 1.1-1.3 in textbook)
+## Logarithmic, power, and trigonometric functions, continuity (sections 1.4-1.7 in textbook)
+## Rates of change, definition of the derivative (sections 2.1-2.3[except graph sketching content] in textbook) 
+##  Sketching and interpreting derivatives, the second derivative, differentiability (sections 2.3[only graph sketching content], 2.4-2.6 in textbook)
+## Derivatives of powers, exponentials, products, quotients (sections 3.1-3.3 in textbook)
+## Derivatives of composite, logarithmic, and trigonometric functions (sections 3.4-3.6 in textbook)
+##   Implicit differentiation, local linearization, L’Hospital’s Rule, extreme values (sections 3.7, 3.9, 4.1, 4.7 in textbook)
+## Optimization, families of curves (sections 4.2-4.3, 4.5 [4th edition]
+4.2-4.4 [5th/6th/7th/8th editions] in textbook)
+## The definite integral, the Fundamental Theorem of Calculus (sections 5.1-5.3[Fundamental Theorem only] in textbook)
+## Integration by substitution, applications of the definite integral (sections 5.3[Fundamental Theorem only], 5.4, 7.1 in textbook)
+## Applications of the indefinite integral (sections 6.1-6.3 in textbook)
+
+## Definite Integrals, Antiderivatives, and Direct Substitution 
+## Integration by Parts, Partial Fractions, Integration Tables 
+## Numerical Approximations, Improper Integrals
+## Applications of Definite Integrals to Geometry 
+## Applications of Definite Integrals to Densities
+## Applications of Definite Integrals to Economics
+## Applications of Definite Integrals to Probability
+## Intro to DE’s, Slope Fields, Euler’s Method 
+## Separation of Variables, Applications of DE’s
+## More Applications of DE’s 
+## Sequences and Series of Numbers 
+## Geometric Series and Convergence Tests 
+## Taylor Polynomials and Taylor Series
+## Taylor Series and Review
+
+
+
+# Bioinformatics
+## Pairwise sequence alignment
+## BLAST
+## Markov model
+## Hidden Markov model
+## motif detection
+## Multiple sequence alignment
+## phylogenetic approaches
+## Short-read sequencing data
+## standard file formats
+## alignment
+## variant detection
+## peak calling
+## Web-based bioinformatics tools
+## Reproducible bioinformatics pipeline development
+
+
+Introduction and Java review
+Recursion and recursive backtracking
+Sorting and algorithm analysis I
+Sorting and algorithm analysis II
+Linked lists
+Lists, stacks and queues I
+Lists, stacks and queues II
+Binary trees and Huffman encoding
+Binary search trees
+Balanced seacrh trees (2-3 trees, B-trees)
+Heaps and priority queues
+Heaps and priority queues (cont.)
+Hash tables
+Graphs I
+Graphs II
+
+
+## Metropolis Algorithm Examples of Metropolis Algorithms; Metropolis-Hastings Algorithm
+## Metropolis-Hastings Algorithm and Gibbs Sampler; Convergence of Metropolis- Hastings Algorithm
+ -->
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-for-complete-beginners.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": false,
+  "toc": {
+    "collapse": "subsection",
+    "collapsed": true
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
