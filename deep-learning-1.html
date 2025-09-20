@@ -497,6 +497,13 @@ by the end of this calendar year.</li>
 <div id="gradient-descent-and-back-propagation" class="section level3 hasAnchor" number="5.5.2">
 <h3><span class="header-section-number">5.5.2</span> 9/12 Gradient Descent and Back Propagation<a href="deep-learning-1.html#gradient-descent-and-back-propagation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We introduce the gradient descent, auto-differentiation, and backpropagation the algorithms which make large scale NNs feasible.</p>
+<p>Derivatives</p>
+<pre><code>import sympy
+J, w = sympy.symbols(&#39;J,w&#39;)
+J=w**2
+print(J)
+
+sympy.diff(J,w)</code></pre>
 </div>
 <div id="keras" class="section level3 hasAnchor" number="5.5.3">
 <h3><span class="header-section-number">5.5.3</span> 9/19 Keras<a href="deep-learning-1.html#keras" class="anchor-section" aria-label="Anchor link to header"></a></h3>
