@@ -4,4 +4,5 @@
 *.tmp
 .Rhistory
 *.Rmd
+*.ipynb
 
